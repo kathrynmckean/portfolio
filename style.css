@@ -22,7 +22,7 @@ body {
   margin: 0px;
   padding: 0px;
   line-height: 1.5;
-  background-color: #cad2c5;
+  background-color: #D6D5D7;
   width: 100vw;
   overflow: hidden;
 }
@@ -45,7 +45,7 @@ body {
 .me h1 {
   margin: 0px;
   padding: 15px;
-  font-size: 80px;
+  font-size: 120px;
   /* background-color: blue; */
 }
 
@@ -54,12 +54,13 @@ body {
   height: 100px;
   width: 100vw;
   flex-shrink: 0;
-  background-color: #8ba691;
+  background-color: #525053;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  border-radius: 20px 20px 0px 0px;
+  /* border-radius: 20px 20px 0px 0px; */
 }
 
 .projectsPanel:hover {
@@ -81,11 +82,11 @@ body {
   align-items: center;
   /* max-height: 90vh;
   flex-grow: 25; */
-  height: 640px;
+  height: 450px;
 /* changing height means you have to change the animation keyframes */
   width: 100vw;
   flex-shrink: 0;
-  background-color: #8ba691;
+  background-color: #525053;
 }
 
 .projectCard {
@@ -98,22 +99,67 @@ body {
 }
 
 @keyframes slideOut {
-  from {
-    margin-bottom: 0px;
-  }
-
-  to {
-    margin-bottom: -640px;
-    /*     margin-bottom: -300px; */
-  }
+  from { margin-bottom: 0px; }
+  to { margin-bottom: -450px;  }
 }
 
 @keyframes slideIn {
-  from {
-    /*       margin-bottom: -300px; */
-    margin-bottom: -640px;
-  }
-  to {
-    margin-bottom: 0px;
-  }
+  from {    margin-bottom: -450px; }
+  to { margin-bottom: 0px; }
 }
+
+
+/* second panel */
+
+
+.contactPanel {
+    height: 100px;
+  width: 100vw;
+  flex-shrink: 0;
+  background-color: #363537;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  /* border-radius: 20px 20px 0px 0px; */
+}
+
+.contactPanel:hover {
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+.contactPanel div {
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+.contactPanelContents {
+    animation: 1s ease slideInContact;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* max-height: 90vh;
+  flex-grow: 25; */
+  height: 500px;
+/* changing height means you have to change the animation keyframes */
+  width: 100vw;
+  flex-shrink: 0;
+  background-color: #363537;
+}
+
+
+@keyframes slideOutContact {
+    from { margin-bottom: 0px; }
+    to { margin-bottom: -500px;  }
+  }
+  
+  @keyframes slideInContact {
+    from {    margin-bottom: -500px; }
+    to { margin-bottom: 0px; }
+  }
+  
