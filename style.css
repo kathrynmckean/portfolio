@@ -1,165 +1,270 @@
 .dm-serif display-regular {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.dm-serif display-regular-italic {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-.montserrat-alternates-semibold {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-body {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  margin: 0px;
-  padding: 0px;
-  line-height: 1.5;
-  background-color: #D6D5D7;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  /*   width: 100vw; */
-}
-
-.me {
-  flex-grow: 1;
-  text-align: center;
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.me h1 {
-  margin: 0px;
-  padding: 15px;
-  font-size: 120px;
-  /* background-color: blue; */
-}
-
-.projectsPanel {
-  /*   padding: 20px 10px; */
-  height: 100px;
-  width: 100vw;
-  flex-shrink: 0;
-  background-color: #525053;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  /* border-radius: 20px 20px 0px 0px; */
-}
-
-.projectsPanel:hover {
-  font-weight: 700;
-  font-style: italic;
-}
-
-.projectsPanel div {
-  /*   position: fixed; */
-  font-size: 80px;
-  margin-bottom: 15px;
-}
-
-.projectsPanelContents {
-  animation: 1s ease slideIn;
-  display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* max-height: 90vh;
-  flex-grow: 25; */
-  height: 450px;
-/* changing height means you have to change the animation keyframes */
-  width: 100vw;
-  flex-shrink: 0;
-  background-color: #525053;
-}
-
-.projectCard {
-  display: inherit;
-  margin: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: lightblue;
-}
-
-@keyframes slideOut {
-  from { margin-bottom: 0px; }
-  to { margin-bottom: -450px;  }
-}
-
-@keyframes slideIn {
-  from {    margin-bottom: -450px; }
-  to { margin-bottom: 0px; }
-}
-
-
-/* second panel */
-
-
-.contactPanel {
-    height: 100px;
-  width: 100vw;
-  flex-shrink: 0;
-  background-color: #363537;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  /* border-radius: 20px 20px 0px 0px; */
-}
-
-.contactPanel:hover {
-    font-weight: 700;
-    font-style: italic;
-}
-
-
-
-.contactPanel div {
-    font-size: 80px;
-    margin-bottom: 15px;
-}
-
-.contactPanelContents {
-    animation: 1s ease slideInContact;
-  display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* max-height: 90vh;
-  flex-grow: 25; */
-  height: 500px;
-/* changing height means you have to change the animation keyframes */
-  width: 100vw;
-  flex-shrink: 0;
-  background-color: #363537;
-}
-
-
-@keyframes slideOutContact {
-    from { margin-bottom: 0px; }
-    to { margin-bottom: -500px;  }
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
-  @keyframes slideInContact {
-    from {    margin-bottom: -500px; }
+  .dm-serif display-regular-italic {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .montserrat-alternates-semibold {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.5;
+    background-color: #D6D5D7;
+    width: 100%;
+  /*   overflow: hidden; */
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /*   width: 100vw; */
+  }
+  
+  .me {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  /*   justify-content: center; */
+    align-items: center;
+    text-align: right;
+    font-family: "DM Serif Display", serif;
+  /*   width: auto; */
+    font-weight: 400;
+    font-style: normal;
+  /*   background-color: orange; */
+  }
+  
+  .me h1 {
+    margin: 0px;
+    padding-top: 15px;
+    font-size: 50px;
+  /*   width: auto; */
+  /*   background-color: purple; */
+  }
+  .me div{
+    width: 900px;
+  /*   background-color: green; */
+  }
+  .me h2 {
+    margin-top: -15px;
+    width: auto;
+  /*   background-color: blue; */
+  }
+  
+  
+  .projectsPanel { /* The title */
+    flex-shrink: 0;
+    background-color: #525053;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 70px;
+    box-shadow: 0px 5px 5px 5px black;
+    /* border-radius: 20px 20px 0px 0px; */
+  }
+  
+  .projectsPanel:hover {
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .projectsPanelContents { /* The hidden panel that opens when selecting the title */
+    /* animation: 1s ease slideIn; */
+    /* display: none; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  /* changing height means you have to change the animation keyframes  */
+    /* height: 450px; */
+  /*    */
+    flex-shrink: 0;
+    background-color: #525053;
+    transition: max-height 1s ease-in-out;
+  }
+
+  .projectsPanelContents.visible {
+    max-height: 100vh;
+  }
+  .projectsPanelContents.hidden {
+    max-height: 0px;
+  }
+
+  .projectCardFrame { /* the main container within the hidden panel holding all projects */
+    display: flex;
+  /*  this recenters the box since I offcentered it in the next class  */
+    margin-left: 15px;
+    justify-content: flex-end;
+    min-height: 400px;
+    width: 700px;
+    padding: 20px;
+  }
+  
+  .projectCard { /* the secondary container holding the title and contents for each project card */
+ 
+    display: flex;
+    width: 75px;
+    height: 375px;
+    justify-content: center;
+    align-items: center;
+    background-color: #D6D5D7;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: -15px;
+  }
+
+  .projectTitle {   /* Clicking this will open the project contents */
+    font-size: 40px;
+    text-wrap: nowrap;
+    transform: rotate(-90deg); 
+  }
+  
+  .projectTitle:hover {
+     font-weight: 700;
+     font-style: italic;
+  }
+  
+  /* The hidden contents for ALL project cards */
+  .projectContents {
+    /* display: flex; */
+    /* width: 300px; */
+
+    /* flex-grow: 1; */
+    /* padding: 10px; */
+    height: 375px;
+    overflow: hidden;
+    background-color: gray;
+    border-radius: 0px 10px 10px 0px;
+    transition: max-width 1s ease-in-out;
+  }
+  
+  
+  #waluigiContents {
+    display:flex;
+  }
+
+  #waluigiContents.hidden {
+    max-width: 0px;
+  }
+  #waluigiContents.visible {
+    max-width: 400px;
+  }
+  
+  #memoryContents {
+    display:flex;
+  }
+
+  #memoryContents.hidden {
+    max-width: 0px;
+  }
+  
+  #memoryContents.visible {
+    max-width: 400px;
+  }
+
+/*   
+  @keyframes slideOut {
+    from { margin-bottom: 0px; }
+    to { margin-bottom: -450px;  }
+  }
+  
+  @keyframes slideIn {
+    from {    margin-bottom: -450px; }
     to { margin-bottom: 0px; }
   }
+  
+  @keyframes slideInProject {
+    from { }
+    to {  }
+  }
+  
+  @keyframes slideOutProject {
+    from { }
+    to {  }
+  }
+   */
+
+
+  /* second panel */
+  
+  
+  .contactPanel {
+  /*     height: 100px; */
+  /*   width: 100vw; */
+  /*   flex-grow: 0; */
+    flex-shrink: 0;
+    padding: 0px;
+    margin: 0px;
+    background-color: #363537;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 70px;
+    box-shadow: 0px 5px 5px 5px black;
+
+  }
+  
+  .contactPanel:hover {
+      font-weight: 700;
+      font-style: italic;
+  }
+  
+  
+  .contactPanelContents {
+      /* animation: 1s ease slideInContact; */
+      transition: max-height 0.5s linear;
+      overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* max-height: 90vh;
+    flex-grow: 25; */
+    /* height: 450px; */
+  /* changing height means you have to change the animation keyframes */
+  /*   width: 100vw; */
+    flex-shrink: 0;
+    background-color: #363537;
+  }
+  .contactPanelContents.visible {
+    max-height: 100vh;
+  }
+  .contactPanelContents.hidden {
+    max-height: 0px;
+  }
+
+  .contactPanelContentsContainer {
+    height: 500px;
+  }
+/*   
+  @keyframes slideOutContact {
+      from { margin-bottom: 0px; }
+      to { margin-bottom: -500px;  }
+    }
+    
+    @keyframes slideInContact {
+      from {    margin-bottom: -500px; }
+      to { margin-bottom: 0px; }
+    } 
+  
+   */
   
