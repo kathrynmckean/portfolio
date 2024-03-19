@@ -1,3 +1,5 @@
+
+
 .dm-serif display-regular {
     font-family: "DM Serif Display", serif;
     font-weight: 400;
@@ -22,7 +24,7 @@
     margin: 0px;
     padding: 0px;
     line-height: 1.5;
-    background-color: #D6D5D7;
+    background-color: #FFFEEC;
     width: 100%;
   /*   overflow: hidden; */
   }
@@ -30,16 +32,20 @@
   .page {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     height: 100vh;
     /*   width: 100vw; */
   }
   
   .me {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+/*     flex-grow: 1; */
+/*     display: flex; */
+        position: absolute;
+    top: 10px;
+    right: 10%;
+/*     flex-direction: column; */
   /*   justify-content: center; */
-    align-items: center;
+/*     align-items: center; */
     text-align: right;
     font-family: "DM Serif Display", serif;
   /*   width: auto; */
@@ -49,18 +55,21 @@
   }
   
   .me h1 {
-    margin: 0px;
-    padding-top: 15px;
+    margin: -5px 0px;
+/*     padding-top: 5px; */
     font-size: 50px;
+    z-index: 1;
   /*   width: auto; */
-  /*   background-color: purple; */
+/*     background-color: purple; */
   }
   .me div{
-    width: 900px;
+/*     width: 900px; */
+    width: auto;
   /*   background-color: green; */
   }
   .me h2 {
-    margin-top: -15px;
+    margin-top: -25px;
+    font-size: 23px;
     width: auto;
   /*   background-color: blue; */
   }
@@ -68,17 +77,20 @@
   
   .projectsPanel { /* The title */
     flex-shrink: 0;
-    background-color: #525053;
-    color: white;
+    background-color: #E9FC87;
+/*     color: white; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 10%;
     align-items: center;
-    border: none;
+/*     border: none; */
     font-size: 70px;
-    box-shadow: 0px 5px 5px 5px black;
+    box-shadow: 0px 5px 5px 5px #FFBE98;
     /* border-radius: 20px 20px 0px 0px; */
   }
-  
+.projectsPanel div {
+  margin-left: 10%;
+}
   .projectsPanel:hover {
     font-weight: 700;
     font-style: italic;
@@ -97,8 +109,8 @@
     /* height: 450px; */
   /*    */
     flex-shrink: 0;
-    background-color: #525053;
-    transition: max-height 1s ease-in-out;
+    background-color: #e9fc87;
+    transition: max-height 1s ease-in;
   }
 
   .projectsPanelContents.visible {
@@ -111,11 +123,11 @@
   .projectCardFrame { /* the main container within the hidden panel holding all projects */
     display: flex;
   /*  this recenters the box since I offcentered it in the next class  */
-    margin-left: 15px;
-    justify-content: flex-end;
-    min-height: 400px;
+/*     margin-left: 15px; */
+    justify-content: flex-start;
+    min-height: 200px;
     width: 700px;
-    padding: 20px;
+/*     padding: 20px; */
   }
   
   .projectCard { /* the secondary container holding the title and contents for each project card */
@@ -125,9 +137,11 @@
     height: 375px;
     justify-content: center;
     align-items: center;
-    background-color: #D6D5D7;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: -15px;
+    background-color: #fffeec;
+/*      */
+    box-shadow: -2px 0px 2px 0px gray;
+/*     border-radius: 10px 0px 0px 10px; */
+/*     margin-left: -15px; */
   }
 
   .projectTitle {   /* Clicking this will open the project contents */
@@ -141,31 +155,34 @@
      font-style: italic;
   }
   
-  /* The hidden contents for ALL project cards */
+  /* The hidden contents for each project card */
   .projectContents {
     /* display: flex; */
     /* width: 300px; */
-
-    /* flex-grow: 1; */
+    max-width: 1000px;
+    flex-grow: 1;
     /* padding: 10px; */
     height: 375px;
     overflow: hidden;
-    background-color: gray;
-    border-radius: 0px 10px 10px 0px;
-    transition: max-width 1s ease-in-out;
-  }
-  
-  
-  #waluigiContents {
-    display:flex;
+    background-color: #fffeec;
+/*     border-radius: 0px 10px 10px 0px; */
+    transition: max-width 1s ease-in;
   }
 
+#waluigiContents {
+  background-color: #fffeec;
+}
   #waluigiContents.hidden {
     max-width: 0px;
   }
-  #waluigiContents.visible {
-    max-width: 400px;
-  }
+.waluigiHeader {
+  margin: 15px;
+  font-size: 30px;
+}
+
+.waluigiExplained {
+  font-size: 30px;
+}
   
   #memoryContents {
     display:flex;
@@ -174,11 +191,11 @@
   #memoryContents.hidden {
     max-width: 0px;
   }
-  
-  #memoryContents.visible {
-    max-width: 400px;
-  }
 
+
+  #noteContents.hidden {
+    max-width: 0px;
+  }
 /*   
   @keyframes slideOut {
     from { margin-bottom: 0px; }
@@ -209,20 +226,21 @@
   /*     height: 100px; */
   /*   width: 100vw; */
   /*   flex-grow: 0; */
+    
     flex-shrink: 0;
     padding: 0px;
     margin: 0px;
-    background-color: #363537;
-    color: white;
+    background-color: #FFBE98;
+/*     color: white; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border: none;
     font-size: 70px;
-    box-shadow: 0px 5px 5px 5px black;
+    box-shadow: 0px 5px 5px 5px #BCB4FF;
 
   }
-  
+.contactPanel div { margin-left: 20%;}
   .contactPanel:hover {
       font-weight: 700;
       font-style: italic;
@@ -231,7 +249,8 @@
   
   .contactPanelContents {
       /* animation: 1s ease slideInContact; */
-      transition: max-height 0.5s linear;
+    flex-grow: 1;
+      transition: max-height 1s ease-in;
       overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -243,7 +262,7 @@
   /* changing height means you have to change the animation keyframes */
   /*   width: 100vw; */
     flex-shrink: 0;
-    background-color: #363537;
+background-color: #FFBE98;
   }
   .contactPanelContents.visible {
     max-height: 100vh;
@@ -253,7 +272,7 @@
   }
 
   .contactPanelContentsContainer {
-    height: 500px;
+    max-height: 500px;
   }
 /*   
   @keyframes slideOutContact {

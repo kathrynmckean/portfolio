@@ -2,6 +2,10 @@
 let getProjectsPanel = document.getElementById("projectsPanelContents");
 let getContactPanelContents = document.getElementById("contactPanelContents")
 
+function closePanels() {
+   if (getContactPanelContents.classList.contains("visible")) {closeContactPanelContents()}
+   if (getProjectsPanel.classList.contains("visible")) {closeProjectsPanelContents()} 
+}
 
 function openProjectsPanelContents() {
   // when adding to this function you should likely add it to other panel functions
@@ -12,7 +16,7 @@ function openProjectsPanelContents() {
   //   if .PPC is hidden, change .ProjectsPanelContents display to visible
   if (getProjectsPanel.classList.contains("hidden")) {
     // getProjectsPanel.style.display = "flex";
-    getProjectsPanel.classList.remove("hidden");
+       getProjectsPanel.classList.remove("hidden");
     getProjectsPanel.classList.add("visible");
   } else {
    closeProjectsPanelContents();
@@ -77,7 +81,7 @@ function openWaluigiContents() {
 
 function closeWaluigiContents() {
   console.log("goodbye waluigi")
-    getWaluigiContents.style.animation = "1s slideOutProject";
+    // getWaluigiContents.style.animation = "1s slideOutProject";
   // setTimeout(() => {
     // timeout is so the animation can finish playing before the content becomes officially hidden
     getWaluigiContents.classList.remove("visible");
