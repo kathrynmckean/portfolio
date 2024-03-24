@@ -17,64 +17,72 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    
   </head>
-  <body>
-    <div class="me">
-        <div onclick="closePanels()">
-        <h1>Kathryn McKean</h1>
-        <h2>Website Development</h2>
-          </div>
+  <body><div class="me">
+    <div onclick="closePanels()">
+    <h1>Kathryn McKean</h1>
+    <h2>Website Development</h2>
       </div>
+  </div>
 
 <div class="page">
-      <div class="projectsPanel" onclick="openProjectsPanelContents()">
-        <div>projects</div>
+  <div class="projectsPanel" onclick="openProjectsPanelContents()">
+    <div>projects</div>
+  </div>
+
+  <div class="projectsPanelContents hidden" id="projectsPanelContents">
+    <div class="projectNavigation">
+    <div class="projectCardFrame">
+      <div class="waluigiFolder folder"> 
+        <div class="folderback">
+        <div class="folderTab"></div>
+        <div class="folderfront" style="background-color: #7e0cd6;"></div>
       </div>
-
-      <div class="projectsPanelContents visible" id="projectsPanelContents">
-        <div class="projectCardFrame">
-        <div class="projectCard waluigiCard">
-          <div class="projectTitle waluigiTitle" onclick="openWaluigiContents()">Waluigi Jail</div>
-          </div>
-          <div class="projectContents visible" id="waluigiContents">
-          <div class="waluigiHeader">
-            Waluigi Jail
-          </div>
-             <div class="waluigiExplained">This is a simple project consisting of HTML, CSS, and JS.</div>
-          </div>
-<!--        
-       <div class="projectCard memoryCard">
-          <div class="projectTitle memoryTitle" onclick="openMemoryContents()">Memory Game</div>
-          </div>
-          <div class="projectContents hidden" id="memoryContents">Memory Game Contents</div>
-          
-<div class="projectCard noteCard">
-<div class="projectTitle noteTitle" onclick="openNoteContents()">Note Taker</div>
-</div>
-          <div class="projectContents hidden" id="noteContents">NoteTaker Contents</div>
- -->
-<!--         <div class="projectCard">
-          <a href="https://kathrynmckean.github.io/memoryGame/">Memory Game</a>
-        </div>
-
-        <div class="projectCard">
-          <a href="https://kathrynmckean.github.io/NoteTaker/">Note Taker</a>
-        </div>
-
-        <div class="projectCard">
-          <a href="https://kathrynmckean.github.io/gifFortune//">Gif Fortune</a>
-        </div> -->
-          </div>
-
-        <!-- embed a code editor to show the code and results  -->
-      </div>
-      <div class="contactPanel" onclick="openContactPanelContents()">
-       <div>contact</div>
-        </div>
-        <div class="contactPanelContents hidden" id="contactPanelContents">
-            <div class="contactPanelContentsContainer">INFO</div>
-        </div>
+      <h5 class="folderTitle">waluigiJail</h5>
     </div>
+
+      <div class="memoryFolder folder"> 
+        <div class="folderback">
+        <div class="folderTab"></div>
+        <div class="folderfront" style="background-color: #c76d9d;"></div>
+      </div>
+      <h5 class="folderTitle">memoryGame</h5>
+    </div>
+
+      <div class="noteFolder folder">
+        <div class="folderback">
+            <div class="folderTab"></div>
+            <div class="folderfront" style="background-color: #588157;"></div>
+          </div>
+          <h5 class="folderTitle">noteTaker</h5>
+      </div>
+      <div class="petFolder folder">
+        <div class="folderback">
+            <div class="folderTab"></div>
+            <div class="folderfront" style="background-color: #4367aa;"></div>
+          </div>
+          <h5 class="folderTitle">petCare</h5>
+      </div>
+      <div class="fortuneFolder folder">
+        <div class="folderback">
+            <div class="folderTab"></div>
+            <div class="folderfront" style="background-color: rgb(51, 21, 142);"></div>
+          </div>
+          <h5 class="folderTitle">gifFortune</h5>
+      </div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="contactPanel" onclick="openContactPanelContents()">
+   <div>contact</div>
+    </div>
+    <div class="contactPanelContents hidden" id="contactPanelContents">
+        <div class="contactPanelContentsContainer">INFO</div>
+    </div>
+</div>
   </body>
   <script src="app.js"></script>
 </html>

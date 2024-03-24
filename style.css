@@ -77,11 +77,11 @@
   
   .projectsPanel { /* The title */
     flex-shrink: 0;
-    background-color: #E9FC87;
+    background-color: #aecfac;
 /*     color: white; */
     display: flex;
     justify-content: flex-start;
-    padding-left: 10%;
+/*     padding-left: 5%; */
     align-items: center;
 /*     border: none; */
     font-size: 70px;
@@ -101,7 +101,7 @@
     /* display: none; */
     flex-grow: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -109,7 +109,7 @@
     /* height: 450px; */
   /*    */
     flex-shrink: 0;
-    background-color: #e9fc87;
+    background-color: #aecfac;
     transition: max-height 1s ease-in;
   }
 
@@ -120,104 +120,8 @@
     max-height: 0px;
   }
 
-  .projectCardFrame { /* the main container within the hidden panel holding all projects */
-    display: flex;
-  /*  this recenters the box since I offcentered it in the next class  */
-/*     margin-left: 15px; */
-    justify-content: flex-start;
-    min-height: 200px;
-    width: 700px;
-/*     padding: 20px; */
-  }
-  
-  .projectCard { /* the secondary container holding the title and contents for each project card */
+
  
-    display: flex;
-    width: 75px;
-    height: 375px;
-    justify-content: center;
-    align-items: center;
-    background-color: #fffeec;
-/*      */
-    box-shadow: -2px 0px 2px 0px gray;
-/*     border-radius: 10px 0px 0px 10px; */
-/*     margin-left: -15px; */
-  }
-
-  .projectTitle {   /* Clicking this will open the project contents */
-    font-size: 40px;
-    text-wrap: nowrap;
-    transform: rotate(-90deg); 
-  }
-  
-  .projectTitle:hover {
-     font-weight: 700;
-     font-style: italic;
-  }
-  
-  /* The hidden contents for each project card */
-  .projectContents {
-    /* display: flex; */
-    /* width: 300px; */
-    max-width: 1000px;
-    flex-grow: 1;
-    /* padding: 10px; */
-    height: 375px;
-    overflow: hidden;
-    background-color: #fffeec;
-/*     border-radius: 0px 10px 10px 0px; */
-    transition: max-width 1s ease-in;
-  }
-
-#waluigiContents {
-  background-color: #fffeec;
-}
-  #waluigiContents.hidden {
-    max-width: 0px;
-  }
-.waluigiHeader {
-  margin: 15px;
-  font-size: 30px;
-}
-
-.waluigiExplained {
-  font-size: 30px;
-}
-  
-  #memoryContents {
-    display:flex;
-  }
-
-  #memoryContents.hidden {
-    max-width: 0px;
-  }
-
-
-  #noteContents.hidden {
-    max-width: 0px;
-  }
-/*   
-  @keyframes slideOut {
-    from { margin-bottom: 0px; }
-    to { margin-bottom: -450px;  }
-  }
-  
-  @keyframes slideIn {
-    from {    margin-bottom: -450px; }
-    to { margin-bottom: 0px; }
-  }
-  
-  @keyframes slideInProject {
-    from { }
-    to {  }
-  }
-  
-  @keyframes slideOutProject {
-    from { }
-    to {  }
-  }
-   */
-
 
   /* second panel */
   
@@ -286,4 +190,69 @@ background-color: #FFBE98;
     } 
   
    */
-  
+
+.projectNavigation {
+  /* background-color: #e8ecee; */
+  border-radius: 10px;
+/*   border: 1px solid; */
+}
+.projectNavigation h4{
+  padding: 5px 0px 5px 20px;
+  margin: 0px;
+}
+ .projectCardFrame { /* the main container within the hidden panel holding all projects */
+  display: flex;
+   width: 620px;
+   min-height: 50%;
+/*    margin-top: -5%; */
+   /* background-color: white; */
+/*    justify-content: space-around; */
+    align-items: center;
+   flex-wrap: wrap;
+   border-radius: 0px 0px 10px 10px;
+  }
+
+
+
+.folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 105px;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+  .folderback {
+    width: 120px;
+      height: 80px;
+    border-radius: 0px 10px 15px 15px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .folderTab {
+    background-color: inherit;
+    width: 40px;
+    height: 18px;
+    border-radius: 10px;
+    margin-top: -8px;
+  }
+
+  .folderfront {
+    width: 120px;
+    height: 90px;
+    background-color: purple;
+    border-radius: 10px;
+  }
+
+  .folderTitle {
+    margin: 5px;
+  }
+
