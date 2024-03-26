@@ -236,7 +236,7 @@ animation: fadeOut .1s;
 display: none;
 }
 
-.folderback {
+.folderBack {
   width: 120px;
     height: 80px;
   border-radius: 0px 10px 15px 15px;
@@ -255,7 +255,7 @@ display: none;
   margin-top: -8px;
 }
 
-.folderfront {
+.folderFront {
   width: 120px;
   height: 90px;
   background-color: purple;
