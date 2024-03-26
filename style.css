@@ -1,258 +1,385 @@
 
 
 .dm-serif display-regular {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .dm-serif display-regular-italic {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  .montserrat-alternates-semibold {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  body {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    margin: 0px;
-    padding: 0px;
-    line-height: 1.5;
-    background-color: #FFFEEC;
-    width: 100%;
-  /*   overflow: hidden; */
-  }
-  
-  .page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100vh;
-    /*   width: 100vw; */
-  }
-  
-  .me {
-/*     flex-grow: 1; */
-/*     display: flex; */
-        position: absolute;
-    top: 10px;
-    right: 10%;
-/*     flex-direction: column; */
-  /*   justify-content: center; */
-/*     align-items: center; */
-    text-align: right;
-    font-family: "DM Serif Display", serif;
-  /*   width: auto; */
-    font-weight: 400;
-    font-style: normal;
-  /*   background-color: orange; */
-  }
-  
-  .me h1 {
-    margin: -5px 0px;
-/*     padding-top: 5px; */
-    font-size: 50px;
-    z-index: 1;
-  /*   width: auto; */
-/*     background-color: purple; */
-  }
-  .me div{
-/*     width: 900px; */
-    width: auto;
-  /*   background-color: green; */
-  }
-  .me h2 {
-    margin-top: -25px;
-    font-size: 23px;
-    width: auto;
-  /*   background-color: blue; */
-  }
-  
-  
-  .projectsPanel { /* The title */
-    flex-shrink: 0;
-    background-color: #aecfac;
-/*     color: white; */
-    display: flex;
-    justify-content: flex-start;
-/*     padding-left: 5%; */
-    align-items: center;
-/*     border: none; */
-    font-size: 70px;
-    box-shadow: 0px 5px 5px 5px #FFBE98;
-    /* border-radius: 20px 20px 0px 0px; */
-  }
-.projectsPanel div {
-  margin-left: 10%;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-  .projectsPanel:hover {
+
+.dm-serif display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.montserrat-alternates-semibold {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5;
+  background-color: #FFFEEC;
+  width: 100%;
+  
+/*   overflow: hidden; */
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+/*     justify-content: flex-end; */
+  min-height: 400px;
+/*   for some reason this pushes content off the top of the screen annoyingly!!!!!!!!!!!!!!   */
+  height: 100vh;
+
+  /*   width: 100vw; */
+}
+.shrink {
+flex-grow: 1;
+}  
+
+
+.me {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  text-align: right;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.me h1 {
+  margin: 0px 0px;
+  font-size: 60px;
+  z-index: 1;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.me div{
+/*     width: 900px; */
+  width: auto;
+/*   background-color: green; */
+}
+.me h2 {
+  margin-top: -30px;
+  font-size: 25px;
+  width: auto;
+/*   background-color: blue; */
+}
+
+
+.projectsPanel { /* The title */
+  flex-shrink: 0;
+  background-color: #aecfac;
+/*     color: white; */
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+/*      */
+/*      */
+/*      */
+/*      */
+/*     padding-left: 5%; */
+  align-items: center;
+/*     border: none; */
+  font-size: 70px;
+  box-shadow: 0px 5px 5px 5px #FFBE98;
+    
+  /* border-radius: 20px 20px 0px 0px; */
+}
+.projectsPanel div {
+margin-left: 10%;
+}
+.projectsPanel:hover {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.projectsPanelContents { /* The hidden panel that opens when selecting the Projects tab */
+  flex-grow: 1000;
+/*   transition: all 1s linear; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*      */
+/*      */
+/*      */
+/*      */
+/*     overflow: hidden; */
+  flex-shrink: 0;
+  background-color: #aecfac;
+  transition: all 1s;
+  
+}
+
+.projectsPanelContents.visible {
+  max-height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+/*     min-height: 360px; */
+/*  having a min-height messes with the transition, might have the folders delayed 1s    */
+}
+.projectsPanelContents.hidden {
+  max-height: 0px;
+}
+
+
+
+
+/* second panel */
+
+
+.contactPanel {
+/*     height: 100px; */
+/*   width: 100vw; */
+  flex-grow: 0;
+   z-index: 2;
+  flex-shrink: 0;
+  padding: 0px;
+  margin: 0px;
+  background-color: #FFBE98;
+/*     color: white; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  font-size: 70px;
+  box-shadow: 0px 5px 5px 5px #BCB4FF;
+
+}
+.contactPanel div { margin-left: 20%;}
+.contactPanel:hover {
     font-weight: 700;
     font-style: italic;
-  }
-  
-  .projectsPanelContents { /* The hidden panel that opens when selecting the title */
-    /* animation: 1s ease slideIn; */
-    /* display: none; */
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+
+.contactPanelContents {
+flex-grow: 20;
+/*       transition: max-height 1s ease-in; */
     overflow: hidden;
-  /* changing height means you have to change the animation keyframes  */
-    /* height: 450px; */
-  /*    */
-    flex-shrink: 0;
-    background-color: #aecfac;
-    transition: max-height 1s ease-in;
-  }
-
-  .projectsPanelContents.visible {
-    max-height: 100vh;
-  }
-  .projectsPanelContents.hidden {
-    max-height: 0px;
-  }
-
-
- 
-
-  /* second panel */
-  
-  
-  .contactPanel {
-  /*     height: 100px; */
-  /*   width: 100vw; */
-  /*   flex-grow: 0; */
-    
-    flex-shrink: 0;
-    padding: 0px;
-    margin: 0px;
-    background-color: #FFBE98;
-/*     color: white; */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border: none;
-    font-size: 70px;
-    box-shadow: 0px 5px 5px 5px #BCB4FF;
-
-  }
-.contactPanel div { margin-left: 20%;}
-  .contactPanel:hover {
-      font-weight: 700;
-      font-style: italic;
-  }
-  
-  
-  .contactPanelContents {
-      /* animation: 1s ease slideInContact; */
-    flex-grow: 1;
-      transition: max-height 1s ease-in;
-      overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* max-height: 90vh;
-    flex-grow: 25; */
-    /* height: 450px; */
-  /* changing height means you have to change the animation keyframes */
-  /*   width: 100vw; */
-    flex-shrink: 0;
-background-color: #FFBE98;
-  }
-  .contactPanelContents.visible {
-    max-height: 100vh;
-  }
-  .contactPanelContents.hidden {
-    max-height: 0px;
-  }
-
-  .contactPanelContentsContainer {
-    max-height: 500px;
-  }
-/*   
-  @keyframes slideOutContact {
-      from { margin-bottom: 0px; }
-      to { margin-bottom: -500px;  }
-    }
-    
-    @keyframes slideInContact {
-      from {    margin-bottom: -500px; }
-      to { margin-bottom: 0px; }
-    } 
-  
-   */
-
-.projectNavigation {
-  /* background-color: #e8ecee; */
-  border-radius: 10px;
-/*   border: 1px solid; */
-}
-.projectNavigation h4{
-  padding: 5px 0px 5px 20px;
-  margin: 0px;
-}
- .projectCardFrame { /* the main container within the hidden panel holding all projects */
   display: flex;
-   width: 620px;
-   min-height: 50%;
-/*    margin-top: -5%; */
-   /* background-color: white; */
-/*    justify-content: space-around; */
-    align-items: center;
-   flex-wrap: wrap;
-   border-radius: 0px 0px 10px 10px;
-  }
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+background-color: #FFBE98;
+}
+.contactPanelContents.visible {
+  max-height: 100vh;
+  min-height: 300px;
+}
+.contactPanelContents.hidden {
+  max-height: 0px;
+}
+
+.contactPanelContentsContainer {
+  max-height: 500px;
+}
+
+
+
+.projectNavigation h4{
+padding: 5px 0px 5px 20px;
+margin: 0px;
+}
+
+
+.projectCardFrame.hidden {
+
+display: none;
+}
+.projectCardFrame { /* the main container within the hidden panel holding all projects */
+  
+ display: inherit;
+ width: 555px;
+ min-height: 50%;
+  align-items: center;
+ flex-wrap: wrap;
+ border-radius: 0px 0px 10px 10px;
+ min-height: 300px;
+/*    transition: fadeIn .1s; */
+/*    animation: fadeIn .25s; */
+/*    overflow: hidden; */
+}
 
 
 
 .folder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100px;
-  width: 105px;
-  margin: 15px;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 17px;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100px;
+width: 105px;
+margin: 30px;
+padding: 10px;
+border-radius: 10px;
+font-size: 17px;
 }
 
-  .folderback {
-    width: 120px;
-      height: 80px;
-    border-radius: 0px 10px 15px 15px;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
+.folder:hover {
+font-weight: 700;
+  font-style: italic;
+}
+.projectCardFrame.hidden {
+animation: fadeOut .1s;
+display: none;
+}
 
-  .folderTab {
-    background-color: inherit;
-    width: 40px;
-    height: 18px;
-    border-radius: 10px;
-    margin-top: -8px;
-  }
+.folderback {
+  width: 120px;
+    height: 80px;
+  border-radius: 0px 10px 15px 15px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
 
-  .folderfront {
-    width: 120px;
-    height: 90px;
-    background-color: purple;
-    border-radius: 10px;
-  }
+.folderTab {
+  background-color: inherit;
+  width: 40px;
+  height: 18px;
+  border-radius: 10px;
+  margin-top: -8px;
+}
 
-  .folderTitle {
-    margin: 5px;
-  }
+.folderfront {
+  width: 120px;
+  height: 90px;
+  background-color: purple;
+  border-radius: 10px;
+}
 
+.folderTitle {
+  margin: 5px;
+}
+
+
+
+.projectContentsFrame {
+  width: 600px;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*     opacity: 0; */
+animation: fadeIn .25s;
+}
+
+.projectContentsFrame.hidden {
+  animation: fadeOut .25s;
+  display: none;
+}
+
+
+.folderLayout {
+  width: 600px;
+/*     height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to{ opacity: 1;}
+}
+@keyframes fadeOut {
+from {
+  display: flex;
+}
+to{ opacity: 0;}
+}
+
+.backButton {
+margin: 0px;
+padding: 5px 5px 0px 15px;
+}
+.backButton:hover {
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.tabs {
+display: flex;
+}
+.tab {
+width: auto;
+border-radius: 10px 10px  0px 0px;
+padding: 5px 15px 0px 15px;
+margin-left: 10px;
+}
+.tab:hover {
+font-weight: 700;
+  font-style: italic;
+}
+
+.tab1 {
+background-color: #FFFEEC;}
+.tab2 {
+background-color: #FFBE98;}
+.tab3 {
+background-color: #BCB4FF;}
+
+.main { 
+background-color: #FFFEEC;
+/* width: 100%; */
+height: 100%;
+border-radius: 10px;
+padding: 30px;
+display: grid;
+grid-gap: 10px;
+grid-template-rows: 15% 70% 15%;
+grid-template-columns: 60% 40%;
+grid-template-areas:
+  "title skill"
+  "subtitle skill"
+  "subtitle link"
+}
+
+.mainTitle {
+grid-area: title;
+font-size: 25px;
+/*   background-color: blue; */
+}
+
+.mainSubtitle {
+grid-area: subtitle;
+
+/*   background-color: purple; */
+}
+
+.mainBulletPoints {
+grid-area: skill;
+  border-radius: 10px;
+  background-color: #fad648;
+padding: 10px;
+}
+
+.mainLink {
+grid-area: link;
+text-align: center;
+padding: 15px;
+/*   background-color: yellow; */
+}
+
+.mainLink:hover {
+font-weight: 700;
+  font-style: italic;
+}

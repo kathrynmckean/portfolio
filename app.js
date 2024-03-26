@@ -1,6 +1,14 @@
 
 let getProjectsPanel = document.getElementById("projectsPanelContents");
-let getContactPanelContents = document.getElementById("contactPanelContents")
+let getContactPanelContents = document.getElementById("contactPanelContents");
+let getInnerProjectFrame = document.getElementById("projectContentsFrame");
+let getWaluigiContents = document.getElementById("waluigiContents");
+let getMemoryContents = document.getElementById("memoryContents");
+let getFolders = document.getElementById("projectCardFrame");
+let getTitle = document.getElementById("mainTitle");
+let getSubtitle = document.getElementById("mainSubtitle");
+let getBulletPoints = document.getElementById("mainBulletPoints");
+let getLink = document.getElementById("mainLink");
 
 function closePanels() {
    if (getContactPanelContents.classList.contains("visible")) {closeContactPanelContents()}
@@ -18,21 +26,33 @@ function openProjectsPanelContents() {
     // getProjectsPanel.style.display = "flex";
        getProjectsPanel.classList.remove("hidden");
     getProjectsPanel.classList.add("visible");
+    // when you open the projects panel the folders frame will automatically appear after 1s
+    // setTimeout (() => {
+      getFolders.classList.remove("hidden")
+    getFolders.classList.add("visible")
+    // }, 500);
+//     make the excess page shrink
+    // document.getElementById("shrink").style.flexGrow = ".001";
+    // document.getElementById("shrink").style.maxHeight = "0px";
   } else {
    closeProjectsPanelContents();
   }
 }
 function closeProjectsPanelContents() {
-    // when adding to this function you should likely add it to other panel functions
-  // getProjectsPanel.style.animation = "1s slideOut";
-  // setTimeout(() => {
-    // timeout is so the animation can finish playing before the content becomes officially hidden
     getProjectsPanel.classList.remove("visible");
     getProjectsPanel.classList.add("hidden");
-    // getProjectsPanel.style.display = "none";
-    // reapplies the slideIn animation for future click
-    // getProjectsPanel.style.animation = "1s slideIn";
-  // }, 995);
+      //     make the excess page grow
+    // document.getElementById("shrink").style.flexGrow = "1";
+//   closing the inner project frame
+  if (getInnerProjectFrame.classList.contains('visible')) {
+    getInnerProjectFrame.classList.remove("visible")
+    getInnerProjectFrame.classList.add("hidden")
+  }
+//   closing the outer folder frame
+    if (getFolders.classList.contains('visible')) {
+    getFolders.classList.remove("visible")
+    getFolders.classList.add("hidden")
+  }
 }
 
 
@@ -46,6 +66,8 @@ closeProjectsPanelContents();
     // getContactPanelContents.style.display = "flex";
     getContactPanelContents.classList.remove("hidden");
     getContactPanelContents.classList.add("visible");
+    //     make the excess page shrink
+    // document.getElementById("shrink").style.flexGrow = ".001";
   } else {
     closeContactPanelContents();
   }
@@ -56,65 +78,57 @@ function closeContactPanelContents() {
   // setTimeout(() => {
     getContactPanelContents.classList.remove("visible");
     getContactPanelContents.classList.add("hidden");
+  //     make the excess page grow
+    // document.getElementById("shrink").style.flexGrow = "1";
     // getContactPanelContents.style.display = "none";
     // getContactPanelContents.style.animation = "1s slideInContact";
   // }, 995);
 }
 
 
-let getWaluigiContents = document.getElementById("waluigiContents");
-let getMemoryContents = document.getElementById("memoryContents");
+
 
 function openWaluigiContents() {
-  console.log("hello waluigi")
-  if (getMemoryContents.classList.contains("visible")) {
-    closeMemoryContents();
-  }
-  if (getWaluigiContents.classList.contains("hidden")) {
-    // getWaluigiContents.style.display = "flex";
-    getWaluigiContents.classList.remove("hidden");
-    getWaluigiContents.classList.add("visible");
-  } else {
-   closeWaluigiContents();
-  }
+hideFolders();
+  setTimeout (() => {
+showProjectContents();
+    }, 100)
+  getTitle.innerHTML = "Waluigi Jail";
+  getSubtitle.innerHTML = "This is an introductory web development project intended to develop HTML, CSS, and JavaScript skills. Users interact with the central image, triggering dynamic transformations and text display with each click, demonstrating foundational coding proficiency and creativity."
+  getBulletPoints.innerHTML = "123";
+  getLink.setAttribute("href", "kathryn.mckean.github.io/waluigijail/");
 }
-
-function closeWaluigiContents() {
-  console.log("goodbye waluigi")
-    // getWaluigiContents.style.animation = "1s slideOutProject";
-  // setTimeout(() => {
-    // timeout is so the animation can finish playing before the content becomes officially hidden
-    getWaluigiContents.classList.remove("visible");
-    getWaluigiContents.classList.add("hidden");
-    // getWaluigiContents.style.display = "none";
-    // reapplies the slideIn animation for future click
-    // getWaluigiContents.style.animation = "1s slideInProject";
-  // }, 980);
-}
-
 function openMemoryContents() {
-  console.log("hello memory")
-  if (getWaluigiContents.classList.contains("visible")) {
-    closeWaluigiContents();
-  }
-  if (getMemoryContents.classList.contains("hidden")) {
-    // getMemoryContents.style.display = "flex";
-    getMemoryContents.classList.remove("hidden");
-    getMemoryContents.classList.add("visible");
-  } else {
-   closeMemoryContents();
-  }
+hideFolders();
+  setTimeout (() => {
+showProjectContents();
+     }, 100)
+  getTitle.innerHTML = "Memory Game";
+  getSubtitle.innerHTML = "This is a simple project centered around JavaScript, focusing on state management and the utilization of for loops."
+  getBulletPoints.innerHTML = "1234";
+  getLink.setAttribute("href", "kathryn.mckean.github.io/memorygame/");
 }
 
-function closeMemoryContents() {
-  console.log("goodbye memory")
-      // getMemoryContents.style.animation = "1s slideOutProject";
-  // setTimeout(() => {
-    // timeout is so the animation can finish playing before the content becomes officially hidden
-    getMemoryContents.classList.remove("visible");
-    getMemoryContents.classList.add("hidden");
-    // getMemoryContents.style.display = "none";
-    // reapplies the slideIn animation for future click
-    // getMemoryContents.style.animation = "1s slideInProject";
-  // }, 980);
+function showFolders() {
+  console.log("go back to folder screen");
+  setTimeout (() => {
+  getFolders.classList.remove("hidden");
+  getFolders.classList.add("visible");
+          }, 300)
+  getProjectContents.classList.remove('visible');
+  getProjectContents.classList.add("hidden");
+}
+
+function hideFolders() {
+ console.log("hiding folders");
+ getFolders.classList.remove("visible");
+ getFolders.classList.add("hidden");
+}
+
+let getProjectContents = document.getElementById("projectContentsFrame");
+
+function showProjectContents() {
+  console.log("showing content frame")    
+  getProjectContents.classList.remove('hidden');
+  getProjectContents.classList.add("visible");
 }
