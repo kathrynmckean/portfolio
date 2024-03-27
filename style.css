@@ -4,8 +4,7 @@
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
-}
-
+}  
 .dm-serif display-regular-italic {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
@@ -19,188 +18,116 @@
 
 body {
   font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  font-weight: 500;
   margin: 0px;
-  padding: 0px;
   line-height: 1.5;
   background-color: #FFFEEC;
-  width: 100%;
-  
-/*   overflow: hidden; */
+  min-width: 800px;
 }
 
+
+/* The container holding everything but the header */
 .page {
   display: flex;
   flex-direction: column;
-/*     justify-content: flex-end; */
   min-height: 400px;
-/*   for some reason this pushes content off the top of the screen annoyingly!!!!!!!!!!!!!!   */
   height: 100vh;
-
-  /*   width: 100vw; */
 }
+
+/* .shrink takes up the rest of the page when the tabs are all closed
+I can't use flex-end because it forces content above the window */
 .shrink {
 flex-grow: 1;
 }  
 
-
+/* My name, the header for the page */
 .me {
   position: absolute;
   top: 10px;
-  right: 5%;
+  right: 10%;
   text-align: right;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
-  
+  width: 300px;
+
+  line-height: .8;
 }
 
+/* My name, Kathryn McKean */
 .me h1 {
   margin: 0px 0px;
-  font-size: 60px;
-  z-index: 1;
+  font-size: 54px;
+  z-index: 5;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 600;
-  font-style: normal;
 }
-.me div{
-/*     width: 900px; */
-  width: auto;
-/*   background-color: green; */
-}
+
+/* My descriptor */
 .me h2 {
-  margin-top: -30px;
+  margin-top: 12px;
   font-size: 25px;
-  width: auto;
-/*   background-color: blue; */
+  z-index: -50;
+/*     z-index: -5; */
 }
 
 
-.projectsPanel { /* The title */
+/* ~~~~~~~~~~~~~~~~~~~~~~ Projects Title ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* clickable "Projects" title */
+.projectsPanel {
   flex-shrink: 0;
   background-color: #aecfac;
-/*     color: white; */
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
-/*      */
-/*      */
-/*      */
-/*      */
-/*     padding-left: 5%; */
   align-items: center;
-/*     border: none; */
   font-size: 70px;
   box-shadow: 0px 5px 5px 5px #FFBE98;
-    
-  /* border-radius: 20px 20px 0px 0px; */
+  padding-left: 10%;
 }
-.projectsPanel div {
-margin-left: 10%;
-}
+
+/* highlights the words "projects" */
 .projectsPanel:hover {
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
 }
 
-.projectsPanelContents { /* The hidden panel that opens when selecting the Projects tab */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Projects Contents Container ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* The hidden panel that opens when selecting the Projects tab
+Holds EVERYTHING inside the projects panel*/
+.projectsPanelContents { 
   flex-grow: 1000;
-/*   transition: all 1s linear; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-/*      */
-/*      */
-/*      */
-/*      */
-/*     overflow: hidden; */
   flex-shrink: 0;
   background-color: #aecfac;
   transition: all 1s;
-  
 }
 
+/* When the "projects" title is selected, the contents become visible and they slide up */
 .projectsPanelContents.visible {
   max-height: 100vh;
   z-index: 1;
   overflow: hidden;
 /*     min-height: 360px; */
-/*  having a min-height messes with the transition, might have the folders delayed 1s    */
+/*  having a min-height messes with the transition  */
 }
+
+/* When the "projects" title isn't selected, the contents are still technically there, but slide out until they have no height */
 .projectsPanelContents.hidden {
   max-height: 0px;
 }
 
+/* ~~~~~~~~ First project content page: FOLDERS ~~~~~~~~ */
 
-
-
-/* second panel */
-
-
-.contactPanel {
-/*     height: 100px; */
-/*   width: 100vw; */
-  flex-grow: 0;
-   z-index: 2;
-  flex-shrink: 0;
-  padding: 0px;
-  margin: 0px;
-  background-color: #FFBE98;
-/*     color: white; */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border: none;
-  font-size: 70px;
-  box-shadow: 0px 5px 5px 5px #BCB4FF;
-
-}
-.contactPanel div { margin-left: 20%;}
-.contactPanel:hover {
-    font-weight: 700;
-    font-style: italic;
-}
-
-
-.contactPanelContents {
-flex-grow: 20;
-/*       transition: max-height 1s ease-in; */
-    overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-background-color: #FFBE98;
-}
-.contactPanelContents.visible {
-  max-height: 100vh;
-  min-height: 300px;
-}
-.contactPanelContents.hidden {
-  max-height: 0px;
-}
-
-.contactPanelContentsContainer {
-  max-height: 500px;
-}
-
-
-
-.projectNavigation h4{
-padding: 5px 0px 5px 20px;
-margin: 0px;
-}
-
-
-.projectCardFrame.hidden {
-
-display: none;
-}
-.projectCardFrame { /* the main container within the hidden panel holding all projects */
-  
+/* The container holding clickable FOLDERS for each project */
+.projectCardFrame {
  display: inherit;
  width: 555px;
  min-height: 50%;
@@ -208,13 +135,15 @@ display: none;
  flex-wrap: wrap;
  border-radius: 0px 0px 10px 10px;
  min-height: 300px;
-/*    transition: fadeIn .1s; */
-/*    animation: fadeIn .25s; */
-/*    overflow: hidden; */
+}
+.projectCardFrame.hidden {
+animation: fadeOut .1s;
+display: none;
 }
 
+/* ~~~~~~~~~~~~~~ FOLDERS ~~~~~~~~~~~~~~~~~~~~~~ */
 
-
+/* the class stylizing all folder icons and names of icons */
 .folder {
 display: flex;
 flex-direction: column;
@@ -227,14 +156,7 @@ border-radius: 10px;
 font-size: 17px;
 }
 
-.folder:hover {
-font-weight: 700;
-  font-style: italic;
-}
-.projectCardFrame.hidden {
-animation: fadeOut .1s;
-display: none;
-}
+/* ~~~~~~~~~~~~~~~~~~~~ FOLDER ICON ~~~~~~~~~~~~~~~~~~ */
 
 .folderBack {
   width: 120px;
@@ -265,47 +187,49 @@ display: none;
 .folderTitle {
   margin: 5px;
 }
+/* highlights the text under the folder icon */
+.folder:hover {
+font-weight: 700;
+  font-style: italic;
+}
 
 
+/* ~~~~~~~~~~~~~~~~~~ Inner Details ~~~~~~~~~~~~~~~~~ */
 
+/* the container holding inner details */
 .projectContentsFrame {
   width: 600px;
   max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-/*     opacity: 0; */
-animation: fadeIn .25s;
+  animation: fadeIn .25s;
 }
-
 .projectContentsFrame.hidden {
   animation: fadeOut .25s;
   display: none;
 }
 
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+@keyframes fadeOut {
+from {display: flex;}
+to {opacity: 0;}
+}
 
+
+/* The layout of the inner details */
 .folderLayout {
   width: 600px;
-/*     height: 400px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
-@keyframes fadeIn {
-from {
-  opacity: 0;
-}
-to{ opacity: 1;}
-}
-@keyframes fadeOut {
-from {
-  display: flex;
-}
-to{ opacity: 0;}
-}
 
+/* Takes you back to the folder page, inline with tabs but not the same style */
 .backButton {
 margin: 0px;
 padding: 5px 5px 0px 15px;
@@ -315,10 +239,12 @@ padding: 5px 5px 0px 15px;
   font-style: italic;
 }
 
-
-.tabs {
+/* The container holding the three tabs on the inner project details */
+.tabContainer {
 display: flex;
 }
+
+/* Stylizes all three tabs */
 .tab {
 width: auto;
 border-radius: 10px 10px  0px 0px;
@@ -329,7 +255,6 @@ margin-left: 10px;
 font-weight: 700;
   font-style: italic;
 }
-
 .tab1 {
 background-color: #FFFEEC;}
 .tab2 {
@@ -337,9 +262,10 @@ background-color: #FFBE98;}
 .tab3 {
 background-color: #BCB4FF;}
 
+/* ~~~~~~~~~~~~~~~~~ inner project main content ~~~~~~~~~~~~ */
+
 .main { 
 background-color: #FFFEEC;
-/* width: 100%; */
 height: 100%;
 border-radius: 10px;
 padding: 30px;
@@ -353,18 +279,19 @@ grid-template-areas:
   "subtitle link"
 }
 
+
+/* template for project title */
 .mainTitle {
 grid-area: title;
 font-size: 25px;
-/*   background-color: blue; */
 }
 
+/* template for project description */
 .mainSubtitle {
 grid-area: subtitle;
-
-/*   background-color: purple; */
 }
 
+/* template for the bullet points to the side of project details */
 .mainBulletPoints {
 grid-area: skill;
   border-radius: 10px;
@@ -372,14 +299,94 @@ grid-area: skill;
 padding: 10px;
 }
 
+/* template for "visit webpage" button */
 .mainLink {
 grid-area: link;
 text-align: center;
 padding: 15px;
-/*   background-color: yellow; */
 }
-
 .mainLink:hover {
 font-weight: 700;
   font-style: italic;
 }
+
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ second panel ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ Content Title ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* clickable "contact" title */
+.contactPanel {
+  flex-grow: 0;
+  z-index: 2;
+  flex-shrink: 0;
+  padding: 0px;
+  margin: 0px;
+  background-color: #FFBE98;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  font-size: 70px;
+  box-shadow: 0px 5px 5px 5px #BCB4FF;
+  padding-left: 15%;
+
+}
+
+/* highlights the words "contact" in the title*/
+.contactPanel:hover {
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ Contact Contents Container lol ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*  the hidden contents that are revealed when "contact" is clicked
+holds EVERYTHING within contact contents*/
+.contactPanelContents {
+flex-grow: 1000;
+    overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+background-color: #FFBE98;
+  transition: all 1s;
+}
+
+/* when the "contact" button is clicked, the contact page slides up */
+.contactPanelContents.visible {
+  max-height: 100vh;
+/*     z-index: 1; */
+  overflow: hidden;
+}
+.contactPanelContents.hidden {
+  max-height: 0px;
+}
+
+/* ~~~~~~~~ Contact details ~~~~~~~~ */
+
+/* placeholder div */
+.email {
+  max-height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

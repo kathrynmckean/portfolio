@@ -19,90 +19,96 @@
     />
     
   </head>
-  <body>
-    <div class="me">
-      <div onclick="closePanels()">
-      <h1>Kathryn McKean</h1>
+  <body><div class="me">
+    <div onclick="closePanels()">
+    <h1>Kathryn McKean</h1>
+    <div id="meDescriptor">
       <h2>Website Development</h2>
-        </div>
-    </div>
-  
-  <div class="page">
-    <div class="shrink" id="shrink"></div>
-    <div class="projectsPanel" onclick="openProjectsPanelContents()">
-      <div>projects</div>
-    </div>
-  
-    <div class="projectsPanelContents hidden" id="projectsPanelContents">
-  <!--   projectContentsFrame is the frame for specific project contents   -->
-        <div class="projectContentsFrame hidden" id="projectContentsFrame" >
-          <div class="folderLayout">
-            <div class="tabs">
-              <div class="backButton" onclick="showFolders()">back</div>
-              <div class="tab tab1">overview</div>
-              <div class="tab tab2">code</div>
-              <div class="tab tab3">thoughts</div>
-            </div>
-            <div class="main">
-            <div class="mainTitle" id="mainTitle">Waluigi Jail</div>
-            <div class="mainSubtitle" id="mainSubtitle">
-  This is an introductory web development project showcasing HTML, CSS, and JavaScript skills. Users interact with the central image, triggering dynamic transformations and text display with each click, demonstrating foundational coding proficiency and creativity.</div>
-         
-              <div class="mainBulletPoints" id="mainBulletPoints">List of skills</div>
-              <a class="mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
-            </div>
-           
-          </div>
-        </div>
-        
-      <div class="projectCardFrame hidden" id="projectCardFrame">
-        
-        <div class="waluigiFolder folder" onclick="openWaluigiContents()"> 
-          <div class="folderBack">
-          <div class="folderTab"></div>
-          <div class="folderFront" style="background-color: #7e0cd6;"></div>
-        </div> <h5 class="folderTitle">waluigiJail</h5>
       </div>
-  
-        <div class="memoryFolder folder" onclick="openMemoryContents()"> 
-          <div class="folderBack">
-          <div class="folderTab"></div>
-          <div class="folderFront" style="background-color: #c76d9d;"></div>
-        </div> <h5 class="folderTitle">memoryGame</h5>
       </div>
-  
-        <div class="noteFolder folder" onclick="openNoteContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #588157;"></div>
-            </div> <h5 class="folderTitle">noteTaker</h5>
-        </div>
-  
-        <div class="petFolder folder" onclick="openPetContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #4367aa;"></div>
-            </div> <h5 class="folderTitle">petCare</h5>
-        </div>
-  
-        <div class="fortuneFolder folder" onclick="openFortuneContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: rgb(51, 21, 142);"></div>
-            </div> <h5 class="folderTitle">gifFortune</h5>
-        </div>
-  
   </div>
 
-    </div>
-  
-    <div class="contactPanel" onclick="openContactPanelContents()">
-     <div>contact</div>
-      </div>
-      <div class="contactPanelContents hidden" id="contactPanelContents">
-          <div class="contactPanelContentsContainer">INFO</div>
-      </div>
+<div class="page">
+  <div class="shrink" id="shrink"></div>
+  <div class="projectsPanel" onclick="openProjectsPanelContents()">
+    <div>projects</div>
   </div>
+
+  <div class="projectsPanelContents hidden" id="projectsPanelContents">
+<!--   projectContentsFrame is the frame for specific project contents   -->
+      <div class="projectContentsFrame hidden" id="projectContentsFrame" >
+        <div class="folderLayout">
+          <div class="tabContainer">
+            <div class="backButton" onclick="showFolders()">back</div>
+            <div class="tab tab1">overview</div>
+            <div class="tab tab2">code</div>
+            <div class="tab tab3">thoughts</div>
+          </div>
+          <div class="main">
+          <div class="mainTitle" id="mainTitle">Waluigi Jail</div>
+          <div class="mainSubtitle" id="mainSubtitle">
+This is an introductory web development project showcasing HTML, CSS, and JavaScript skills. Users interact with the central image, triggering dynamic transformations and text display with each click, demonstrating foundational coding proficiency and creativity.</div>
+       
+            <div class="mainBulletPoints" id="mainBulletPoints">List of skills</div>
+            <a class="mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
+          </div>
+         
+        </div>
+      </div>
+<!--      -->
+<!--      -->
+<!--      -->
+    <div class="projectCardFrame hidden" id="projectCardFrame">
+      
+      <div class="waluigiFolder folder" onclick="openWaluigiContents()"> 
+        <div class="folderBack">
+        <div class="folderTab"></div>
+        <div class="folderFront" style="background-color: #7e0cd6;"></div>
+      </div> <h5 class="folderTitle">waluigiJail</h5>
+    </div>
+
+      <div class="memoryFolder folder" onclick="openMemoryContents()"> 
+        <div class="folderBack">
+        <div class="folderTab"></div>
+        <div class="folderFront" style="background-color: #c76d9d;"></div>
+      </div> <h5 class="folderTitle">memoryGame</h5>
+    </div>
+
+      <div class="noteFolder folder" onclick="openNoteContents()">
+        <div class="folderBack">
+            <div class="folderTab"></div>
+            <div class="folderFront" style="background-color: #588157;"></div>
+          </div> <h5 class="folderTitle">noteTaker</h5>
+      </div>
+
+      <div class="petFolder folder" onclick="openPetContents()">
+        <div class="folderBack">
+            <div class="folderTab"></div>
+            <div class="folderFront" style="background-color: #4367aa;"></div>
+          </div> <h5 class="folderTitle">petCare</h5>
+      </div>
+
+      <div class="fortuneFolder folder" onclick="openFortuneContents()">
+        <div class="folderBack">
+            <div class="folderTab"></div>
+            <div class="folderFront" style="background-color: rgb(51, 21, 142);"></div>
+          </div> <h5 class="folderTitle">gifFortune</h5>
+      </div>
+
+</div>
+    
+<!--      -->
+<!--      -->
+<!--      -->
+  </div>
+
+  <div class="contactPanel" onclick="openContactPanelContents()">
+   <div>contact</div>
+    </div>
+    <div class="contactPanelContents hidden" id="contactPanelContents">
+        <div class="email">email lol</div>
+    </div>
+</div>
   </body>
   <script src="app.js"></script>
 </html>

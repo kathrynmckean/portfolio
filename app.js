@@ -9,6 +9,7 @@ let getTitle = document.getElementById("mainTitle");
 let getSubtitle = document.getElementById("mainSubtitle");
 let getBulletPoints = document.getElementById("mainBulletPoints");
 let getLink = document.getElementById("mainLink");
+let getMeDescriptor = document.getElementById("meDescriptor");
 
 function closePanels() {
    if (getContactPanelContents.classList.contains("visible")) {closeContactPanelContents()}
@@ -34,6 +35,8 @@ function openProjectsPanelContents() {
 //     make the excess page shrink
     // document.getElementById("shrink").style.flexGrow = ".001";
     // document.getElementById("shrink").style.maxHeight = "0px";
+//     hide descriptor
+    getMeDescriptor.style.display = "none";
   } else {
    closeProjectsPanelContents();
   }
@@ -66,6 +69,8 @@ closeProjectsPanelContents();
     // getContactPanelContents.style.display = "flex";
     getContactPanelContents.classList.remove("hidden");
     getContactPanelContents.classList.add("visible");
+    //     hide descriptor
+    // getMeDescriptor.style.display = "none";
     //     make the excess page shrink
     // document.getElementById("shrink").style.flexGrow = ".001";
   } else {
