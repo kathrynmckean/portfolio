@@ -1,4 +1,11 @@
+/* goals for today: 
+make the meDescriptor reappear when the folders are closed - done!
+probably make a meDescriptor show and hide function - done!
+make meDescriptor fade in and out maybe... idk - tried it, didnt like it
+add functions for all the project folders - done :D
 
+TOGGLE BUTTON FOR CODING VS NON-CODING
+*/
 
 .dm-serif display-regular {
   font-family: "DM Serif Display", serif;
@@ -63,12 +70,31 @@ flex-grow: 1;
   font-weight: 600;
 }
 
-/* My descriptor */
-.me h2 {
-  margin-top: 12px;
+/* holds all the stuff below my name */
+.meSubtitle {
+display: flex;
+flex-direction: column;
+
+}
+
+/* the line under my name, a description of myself */
+.meSubtitle h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
   font-size: 25px;
   z-index: -50;
 /*     z-index: -5; */
+}
+
+.link {
+font-size: 25px;
+margin: 10px 0px;
+padding: 0px;
+text-decoration: none;
+color: black;
+}
+.link:hover {
+ font-style: italic;
 }
 
 
@@ -83,7 +109,7 @@ flex-grow: 1;
   justify-content: flex-start;
   align-items: center;
   font-size: 70px;
-  box-shadow: 0px 5px 5px 5px #FFBE98;
+  box-shadow: 0px -7px 5px -5px #FFBE98;
   padding-left: 10%;
 }
 
@@ -181,7 +207,7 @@ font-size: 17px;
   width: 120px;
   height: 90px;
   background-color: purple;
-  border-radius: 10px;
+  border-radius: 10px 10px 5px 5px;
 }
 
 .folderTitle {
@@ -226,6 +252,7 @@ to {opacity: 0;}
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 375px;
 }
 
 
@@ -269,6 +296,7 @@ background-color: #FFFEEC;
 height: 100%;
 border-radius: 10px;
 padding: 30px;
+    min-height: 250px;
 display: grid;
 grid-gap: 10px;
 grid-template-rows: 15% 70% 15%;
@@ -330,7 +358,7 @@ font-weight: 700;
   align-items: center;
   border: none;
   font-size: 70px;
-  box-shadow: 0px 5px 5px 5px #BCB4FF;
+  box-shadow: 0px -7px 5px -5px #BCB4FF;
   padding-left: 15%;
 
 }
@@ -347,7 +375,7 @@ font-weight: 700;
 /*  the hidden contents that are revealed when "contact" is clicked
 holds EVERYTHING within contact contents*/
 .contactPanelContents {
-flex-grow: 1000;
+flex-grow: 2000;
     overflow: hidden;
   display: flex;
   flex-direction: row;
