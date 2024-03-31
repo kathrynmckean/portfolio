@@ -1,12 +1,3 @@
-/* goals for today: 
-make the meDescriptor reappear when the folders are closed - done!
-probably make a meDescriptor show and hide function - done!
-make meDescriptor fade in and out maybe... idk - tried it, didnt like it
-add functions for all the project folders - done :D
-
-TOGGLE BUTTON FOR CODING VS NON-CODING
-*/
-
 .dm-serif display-regular {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
@@ -22,399 +13,102 @@ TOGGLE BUTTON FOR CODING VS NON-CODING
   font-weight: 600;
   font-style: normal;
 }
-
 body {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 500;
   margin: 0px;
-  line-height: 1.5;
-  background-color: #FFFEEC;
-  min-width: 800px;
+  padding: 0px;
+  font-size: 20px;
+  background-color: #cad2c5;
 }
 
-
-/* The container holding everything but the header */
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 400px;
-  height: 100vh;
-}
-
-/* .shrink takes up the rest of the page when the tabs are all closed
-I can't use flex-end because it forces content above the window */
-.shrink {
-flex-grow: 1;
-}  
-
-/* My name, the header for the page */
-.me {
+.header {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   position: absolute;
+  font-size: 50px;
+  line-height: .8;
   top: 10px;
   right: 10%;
+  z-index: 100;
+  width: 250px;
   text-align: right;
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: normal;
-  width: 300px;
-
-  line-height: .8;
 }
 
-/* My name, Kathryn McKean */
-.me h1 {
-  margin: 0px 0px;
-  font-size: 54px;
-  z-index: 5;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
+.subHeader {
+  position: absolute;
+    font-size: 17px;
+    right: 10%;
+    top: 80px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-/* holds all the stuff below my name */
-.meSubtitle {
-display: flex;
-flex-direction: column;
-
-}
-
-/* the line under my name, a description of myself */
-.meSubtitle h2 {
-  margin-top: 10px;
-  margin-bottom: 30px;
+.subHeader a {
   font-size: 25px;
-  z-index: -50;
-/*     z-index: -5; */
+    margin: 10px 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
 }
 
-.link {
-font-size: 25px;
-margin: 10px 0px;
-padding: 0px;
-text-decoration: none;
-color: black;
-}
-.link:hover {
- font-style: italic;
+.subHeader a:hover {
+  font-style: italic;
 }
 
+.projectWrapper {
+  position: absolute;
+  bottom: 10vh;
+  height: 90vh;
+  max-height: 10vh;
+  background-color: #84a98c;
+  z-index: 10;
+  width: 100%;
+  transition: max-height 1s;
+  /* min-height: 95px; */
+}
+.projectWrapper.open {
+  max-height: 90vh;
+}
 
-/* ~~~~~~~~~~~~~~~~~~~~~~ Projects Title ~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* clickable "Projects" title */
-.projectsPanel {
-  flex-shrink: 0;
-  background-color: #aecfac;
-  display: flex;
-  overflow: hidden;
-  justify-content: flex-start;
-  align-items: center;
+.projectTitle {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
   font-size: 70px;
-  box-shadow: 0px -7px 5px -5px #FFBE98;
   padding-left: 10%;
+  height: 95px;
 }
 
-/* highlights the words "projects" */
-.projectsPanel:hover {
-  font-weight: 600;
-  font-style: italic;
-}
+.projectContents {
+height: 80vh;
 
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~ Projects Contents Container ~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* The hidden panel that opens when selecting the Projects tab
-Holds EVERYTHING inside the projects panel*/
-.projectsPanelContents { 
-  flex-grow: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  background-color: #aecfac;
-  transition: all 1s;
-}
-
-/* When the "projects" title is selected, the contents become visible and they slide up */
-.projectsPanelContents.visible {
-  max-height: 100vh;
-  z-index: 1;
-  overflow: hidden;
-/*     min-height: 360px; */
-/*  having a min-height messes with the transition  */
-}
-
-/* When the "projects" title isn't selected, the contents are still technically there, but slide out until they have no height */
-.projectsPanelContents.hidden {
-  max-height: 0px;
-}
-
-/* ~~~~~~~~ First project content page: FOLDERS ~~~~~~~~ */
-
-/* The container holding clickable FOLDERS for each project */
-.projectCardFrame {
- display: inherit;
- width: 555px;
- min-height: 50%;
-  align-items: center;
- flex-wrap: wrap;
- border-radius: 0px 0px 10px 10px;
- min-height: 300px;
-}
-.projectCardFrame.hidden {
-animation: fadeOut .1s;
-display: none;
-}
-
-/* ~~~~~~~~~~~~~~ FOLDERS ~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* the class stylizing all folder icons and names of icons */
-.folder {
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 100px;
-width: 105px;
-margin: 30px;
-padding: 10px;
-border-radius: 10px;
-font-size: 17px;
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~ FOLDER ICON ~~~~~~~~~~~~~~~~~~ */
-
-.folderBack {
-  width: 120px;
-    height: 80px;
-  border-radius: 0px 10px 15px 15px;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.folderTab {
-  background-color: inherit;
-  width: 40px;
-  height: 18px;
-  border-radius: 10px;
-  margin-top: -8px;
-}
-
-.folderFront {
-  width: 120px;
-  height: 90px;
-  background-color: purple;
-  border-radius: 10px 10px 5px 5px;
-}
-
-.folderTitle {
-  margin: 5px;
-}
-/* highlights the text under the folder icon */
-.folder:hover {
-font-weight: 700;
-  font-style: italic;
 }
 
 
-/* ~~~~~~~~~~~~~~~~~~ Inner Details ~~~~~~~~~~~~~~~~~ */
-
-/* the container holding inner details */
-.projectContentsFrame {
-  width: 600px;
-  max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn .25s;
-}
-.projectContentsFrame.hidden {
-  animation: fadeOut .25s;
-  display: none;
+.aboutWrapper {
+  position: absolute;
+  bottom: 0vh;
+  height: 90vh;
+  max-height: 10vh;
+  background-color: #52796f;
+  z-index: 20;
+  width: 100%;
+  transition: max-height 1s;
+  /* min-height: 95px; */
 }
 
-@keyframes fadeIn {
-from {opacity: 0;}
-to {opacity: 1;}
+.aboutWrapper.open {
+  max-height: 90vh;
 }
-@keyframes fadeOut {
-from {display: flex;}
-to {opacity: 0;}
-}
-
-
-/* The layout of the inner details */
-.folderLayout {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 375px;
-}
-
-
-/* Takes you back to the folder page, inline with tabs but not the same style */
-.backButton {
-margin: 0px;
-padding: 5px 5px 0px 15px;
-}
-.backButton:hover {
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* The container holding the three tabs on the inner project details */
-.tabContainer {
-display: flex;
-}
-
-/* Stylizes all three tabs */
-.tab {
-width: auto;
-border-radius: 10px 10px  0px 0px;
-padding: 5px 15px 0px 15px;
-margin-left: 10px;
-}
-.tab:hover {
-font-weight: 700;
-  font-style: italic;
-}
-.tab1 {
-background-color: #FFFEEC;}
-.tab2 {
-background-color: #FFBE98;}
-.tab3 {
-background-color: #BCB4FF;}
-
-/* ~~~~~~~~~~~~~~~~~ inner project main content ~~~~~~~~~~~~ */
-
-.main { 
-background-color: #FFFEEC;
-height: 100%;
-border-radius: 10px;
-padding: 30px;
-    min-height: 250px;
-display: grid;
-grid-gap: 10px;
-grid-template-rows: 15% 70% 15%;
-grid-template-columns: 60% 40%;
-grid-template-areas:
-  "title skill"
-  "subtitle skill"
-  "subtitle link"
-}
-
-
-/* template for project title */
-.mainTitle {
-grid-area: title;
-font-size: 25px;
-}
-
-/* template for project description */
-.mainSubtitle {
-grid-area: subtitle;
-}
-
-/* template for the bullet points to the side of project details */
-.mainBulletPoints {
-grid-area: skill;
-  border-radius: 10px;
-  background-color: #fad648;
-padding: 10px;
-}
-
-/* template for "visit webpage" button */
-.mainLink {
-grid-area: link;
-text-align: center;
-padding: 15px;
-}
-.mainLink:hover {
-font-weight: 700;
-  font-style: italic;
-}
-
-
-
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~ second panel ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~ Content Title ~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* clickable "contact" title */
-.contactPanel {
-  flex-grow: 0;
-  z-index: 2;
-  flex-shrink: 0;
-  padding: 0px;
-  margin: 0px;
-  background-color: #FFBE98;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border: none;
+.aboutTitle {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
   font-size: 70px;
-  box-shadow: 0px -7px 5px -5px #BCB4FF;
-  padding-left: 15%;
-
+  padding-left: 20%;
+  height: 95px;
 }
 
-/* highlights the words "contact" in the title*/
-.contactPanel:hover {
-    font-weight: 600;
-    font-style: italic;
+.aboutContents {
+  height: 80vh;
 }
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~ Contact Contents Container lol ~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/*  the hidden contents that are revealed when "contact" is clicked
-holds EVERYTHING within contact contents*/
-.contactPanelContents {
-flex-grow: 2000;
-    overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-background-color: #FFBE98;
-  transition: all 1s;
-}
-
-/* when the "contact" button is clicked, the contact page slides up */
-.contactPanelContents.visible {
-  max-height: 100vh;
-/*     z-index: 1; */
-  overflow: hidden;
-}
-.contactPanelContents.hidden {
-  max-height: 0px;
-}
-
-/* ~~~~~~~~ Contact details ~~~~~~~~ */
-
-/* placeholder div */
-.email {
-  max-height: 500px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
