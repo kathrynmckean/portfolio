@@ -28,13 +28,95 @@
     </div>
 
     <div class="projectWrapper" id="projectWrapper">
-      <div class="projectTitle" onclick="openProjectWrapper()">projects</div>
-      <div class="projectContents">contents</div>
+      <div class="projectTitle hoverTitle" onclick="openProjectContents()">projects</div>
+      <div class="projectContents" id="projectContents">
+        
+<!--     the first page. becomes hidden when a project is selected     -->
+      <div class="mainFrame folderPage" id="folderFrame">
+       
+         <div class="tabContainer folderPage">
+              <div class="tab coding">coding</div>
+              <div class="tab personal">personal</div>
+            </div>
+        
+        <div class="mainBody folderPage">
+        <div class="waluigiFolder folder coding" onclick="openWaluigiContents()"> 
+          <div class="folderBack">
+          <div class="folderTab"></div>
+          <div class="folderFront" style="background-color: #7e0cd6;"></div>
+        </div> <h5 class="folderTitle">waluigiJail</h5>
+      </div>
+  
+        <div class="memoryFolder folder coding" onclick="openMemoryContents()"> 
+          <div class="folderBack">
+          <div class="folderTab"></div>
+          <div class="folderFront" style="background-color: #c76d9d;"></div>
+        </div> <h5 class="folderTitle">memoryGame</h5>
+      </div>
+  
+        <div class="noteFolder folder coding" onclick="openNoteContents()">
+          <div class="folderBack">
+              <div class="folderTab"></div>
+              <div class="folderFront" style="background-color: #588157;"></div>
+            </div> <h5 class="folderTitle">noteTaker</h5>
+        </div>
+  
+        <div class="petFolder folder coding" onclick="openPetContents()">
+          <div class="folderBack">
+              <div class="folderTab"></div>
+              <div class="folderFront" style="background-color: #4367aa;"></div>
+            </div> <h5 class="folderTitle">petCare</h5>
+        </div>
+  
+        <div class="fortuneFolder folder coding" onclick="openFortuneContents()">
+          <div class="folderBack">
+              <div class="folderTab"></div>
+              <div class="folderFront" style="background-color: rgb(51, 21, 142);"></div>
+            </div> <h5 class="folderTitle">gifFortune</h5>
+        </div>
+          <div class="3DFolder personal folder hidden" id="3DFolder" onclick="open3DContents()">
+          <div class="folderBack">
+              <div class="folderTab"></div>
+              <div class="folderFront" style="background-color: rgb(51, 21, 142);"></div>
+            </div> <h5 class="folderTitle">3D Art</h5>
+        </div>
+          <div class="2DFolder personal folder hidden" id="2DFolder" onclick="open2DContents()">
+          <div class="folderBack">
+              <div class="folderTab"></div>
+              <div class="folderFront" style="background-color: rgb(51, 21, 142);"></div>
+            </div> <h5 class="folderTitle">2D Art</h5>
+        </div>
+      </div>
+        </div>
+        
+<!--    the hidden second page      -->
+        <div class="mainFrame projectPage hidden" id="projectFrame">
+          <div class="tabContainer projectPage">
+              <div class="backButton tab" onclick="projectFrameClosing()">back</div>
+              <div class="tab tab1">overview</div>
+              <div class="tab tab2">code</div>
+              <div class="tab tab3">thoughts</div>
+            </div>
+       
+        
+        <div class="mainBody projectPage">
+          <div class="mainTitle" id="mainTitle">PROJECT TITLE</div>
+            <div class="mainSubtitle" id="mainSubtitle">PROJECT DESCRIPTION</div>
+         
+              <div class="mainBulletPoints" id="mainBulletPoints">BULLET POINTS</div>
+              <a class="mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
+              </div>
+          </div>
+<!--          -->
+        
+        
+      
+        </div>
     </div>
 
     <div class="aboutWrapper" id="aboutWrapper">
-      <div class="aboutTitle" onclick="openAboutWrapper()">about</div>
-      <div class="aboutContents">contents</div>
+      <div class="aboutTitle hoverTitle" onclick="openAboutContents()">about</div>
+      <div class="aboutContents" id="aboutContents">contents</div>
     </div>
 
 

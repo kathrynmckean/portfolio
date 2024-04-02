@@ -1,3 +1,5 @@
+/* i want to test out putting an empty spacer div inside the about wrapper but with a low z-index or something so it doesn't interfere with the clicking */
+
 .dm-serif display-regular {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
@@ -18,6 +20,7 @@ body {
   padding: 0px;
   font-size: 20px;
   background-color: #cad2c5;
+  overflow: hidden;
 }
 
 .header {
@@ -59,18 +62,17 @@ body {
 
 .projectWrapper {
   position: absolute;
-  bottom: 10vh;
-  height: 90vh;
-  max-height: 10vh;
+/*   bottom: 15vh; */
+  bottom: 0px;
+/*   height: 100vh; */
+  max-height: 100vh;
   background-color: #84a98c;
   z-index: 10;
   width: 100%;
   transition: max-height 1s;
-  /* min-height: 95px; */
+/*   min-height: 95px; */
 }
-.projectWrapper.open {
-  max-height: 90vh;
-}
+
 
 .projectTitle {
   font-family: "Montserrat Alternates", sans-serif;
@@ -81,34 +83,225 @@ body {
 }
 
 .projectContents {
-height: 80vh;
+  height: 100vh;
+  max-height: 95px;
+display: flex;
+justify-content: center;
+  align-items: center;
+/*   margin-top: 5%; */
+  overflow: hidden;
+    transition: max-height 1s;
+}
 
+.projectContents.open {
+  max-height: 100vh;
+/*   margin-bottom: 95px; */
 }
 
 
 .aboutWrapper {
   position: absolute;
   bottom: 0vh;
-  height: 90vh;
-  max-height: 10vh;
+/*   height: 90vh; */
+/*   max-height: 10vh; */
   background-color: #52796f;
   z-index: 20;
   width: 100%;
   transition: max-height 1s;
-  /* min-height: 95px; */
+    margin-top: 95px;
+/*   min-height: 95px; */
 }
 
-.aboutWrapper.open {
-  max-height: 90vh;
-}
+
 .aboutTitle {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 400;
   font-size: 70px;
-  padding-left: 20%;
+  padding-left: 10%;
   height: 95px;
 }
 
 .aboutContents {
-  height: 80vh;
+ height: 90vh;
+  max-height: 0px;
+display: flex;
+justify-content: center;
+  align-items: center;
+/*   margin-top: 5%; */
+  overflow: hidden;
+    transition: all 1s;
+/*   margin-top: 95px; */
+}
+.aboutContents.open {
+  max-height: 90vh;
+  margin-bottom: -95px;
+}
+
+
+.mainFrame {
+    height: 75%;
+  min-height: 345px;
+  width: 555px;
+}
+
+.mainBody {
+  background-color: #cad2c5;
+  border-radius: 10px;
+  height: 360px;
+  width: 555px;
+}
+
+
+.mainFrame.folderPage.hidden {
+  display: none;
+}
+
+
+.mainBody.folderPage {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mainBody.projectPage {
+  display: grid;
+grid-template-rows: 15% 75% 10%;
+grid-template-columns: 60% 40%;
+grid-template-areas:
+  "title skill"
+  "subtitle skill"
+  "subtitle link"
+}
+
+/* template for project title */
+.mainTitle {
+grid-area: title;
+font-size: 25px;
+ padding: 35px;
+}
+
+/* template for project description */
+.mainSubtitle {
+grid-area: subtitle;
+  padding: 35px;
+}
+
+/* template for the bullet points to the side of project details */
+.mainBulletPoints {
+grid-area: skill;
+  border-radius: 10px;
+  background-color: #fad648;
+padding: 15px;
+  margin: 15px;
+}
+
+/* template for "visit webpage" button */
+.mainLink {
+grid-area: link;
+text-align: right;
+      padding-right: 20px;
+ text-decoration: none;
+  color: black;
+}
+.mainLink:hover {
+font-weight: 700;
+  font-style: italic;
+}
+
+
+.folder.hidden {
+  display: none;
+}
+
+.folder {
+  display: flex;
+flex-direction: column;
+align-items: center;
+height: 100px;
+width: 105px;
+margin: 30px;
+padding: 10px;
+border-radius: 10px;
+font-size: 17px;
+}
+.folderBack {
+  width: 120px;
+    height: 80px;
+  border-radius: 0px 10px 15px 15px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.folderTab {
+  background-color: inherit;
+  width: 40px;
+  height: 18px;
+  border-radius: 10px;
+  margin-top: -8px;
+}
+
+.folderFront {
+  width: 120px;
+  height: 90px;
+  background-color: purple;
+  border-radius: 10px 10px 5px 5px;
+}
+
+.folderTitle {
+  margin: 5px;
+}
+/* highlights the text under the folder icon */
+.folder:hover {
+font-weight: 700;
+  font-style: italic;
+}
+
+/* The container holding the three tabs on the inner project details */
+.tabContainer {
+display: flex;
+}
+
+.tabContainer.hidden {
+  display: none;
+}
+
+/* Stylizes all three tabs */
+.tab {
+width: auto;
+  height: 28px;
+border-radius: 10px 10px  0px 0px;
+padding: 5px 15px 0px 15px;
+margin-left: 10px;
+}
+.tab:hover {
+font-weight: 700;
+  font-style: italic;
+}
+.tab1 {
+background-color: #cad2c5;}
+.tab2 {
+background-color: #FFBE98;}
+.tab3 {
+background-color: #BCB4FF;}
+.tab.coding {
+  background-color: #cad2c5;
+}
+.tab.personal {
+  background-color: grey;
+}
+
+
+
+
+/* same styling as folderFrame */
+
+
+.hidden {
+  display: none;
+}
+
+.hoverTitle:hover {
+  font-style: italic;
+  font-weight: 600;
 }
