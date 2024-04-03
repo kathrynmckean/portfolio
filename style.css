@@ -5,16 +5,19 @@
   font-weight: 400;
   font-style: normal;
 }  
+
 .dm-serif display-regular-italic {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: italic;
 }
+
 .montserrat-alternates-semibold {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
+
 body {
   margin: 0px;
   padding: 0px;
@@ -23,6 +26,7 @@ body {
   overflow: hidden;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ my name at the top of the page: clicking closes all panels ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .header {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 600;
@@ -63,7 +67,7 @@ body {
 .projectWrapper {
   position: absolute;
 /*   bottom: 15vh; */
-  bottom: 0px;
+  bottom: 95px;
 /*   height: 100vh; */
   max-height: 100vh;
   background-color: #84a98c;
@@ -83,18 +87,18 @@ body {
 }
 
 .projectContents {
-  height: 100vh;
-  max-height: 95px;
+  height: 90vh;
+  max-height: 0px;
 display: flex;
 justify-content: center;
   align-items: center;
-/*   margin-top: 5%; */
+/*   margin-top: 3%; */
   overflow: hidden;
     transition: max-height 1s;
 }
 
 .projectContents.open {
-  max-height: 100vh;
+/*   max-height: 100vh; */
 /*   margin-bottom: 95px; */
 }
 
@@ -103,8 +107,8 @@ justify-content: center;
   position: absolute;
   bottom: 0vh;
 /*   height: 90vh; */
-/*   max-height: 10vh; */
-  background-color: #52796f;
+  max-height: 100vh;
+/*   background-color: #52796f; */
   z-index: 20;
   width: 100%;
   transition: max-height 1s;
@@ -119,10 +123,11 @@ justify-content: center;
   font-size: 70px;
   padding-left: 10%;
   height: 95px;
+  background-color: #52796f;
 }
 
 .aboutContents {
- height: 90vh;
+ height: 100vh;
   max-height: 0px;
 display: flex;
 justify-content: center;
@@ -130,18 +135,21 @@ justify-content: center;
 /*   margin-top: 5%; */
   overflow: hidden;
     transition: all 1s;
+  background-color: #52796f;
 /*   margin-top: 95px; */
 }
 .aboutContents.open {
-  max-height: 90vh;
-  margin-bottom: -95px;
+/*   max-height: 100vh; */
+/*   margin-bottom: -190px; */
 }
 
 
+
+
 .mainFrame {
-    height: 75%;
+/*     height: 75%;
   min-height: 345px;
-  width: 555px;
+  width: 555px; */
 }
 
 .mainBody {
@@ -161,6 +169,7 @@ justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
+
 .mainBody.projectPage {
   display: grid;
 grid-template-rows: 15% 75% 10%;
@@ -169,6 +178,13 @@ grid-template-areas:
   "title skill"
   "subtitle skill"
   "subtitle link"
+}
+
+.mainBody.folderPage.personal {
+  background-color: #BCB4FF;
+}
+.mainBody.folderPage.coding {
+background-color: #cad2c5;
 }
 
 /* template for project title */
@@ -249,7 +265,8 @@ font-size: 17px;
 }
 
 .folderTitle {
-  margin: 5px;
+  margin-top: 5px;
+  font-size: 17px;
 }
 /* highlights the text under the folder icon */
 .folder:hover {
@@ -269,7 +286,7 @@ display: flex;
 /* Stylizes all three tabs */
 .tab {
 width: auto;
-  height: 28px;
+  height: 24px;
 border-radius: 10px 10px  0px 0px;
 padding: 5px 15px 0px 15px;
 margin-left: 10px;
@@ -288,7 +305,7 @@ background-color: #BCB4FF;}
   background-color: #cad2c5;
 }
 .tab.personal {
-  background-color: grey;
+  background-color: #BCB4FF;
 }
 
 
