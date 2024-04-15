@@ -1,52 +1,93 @@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  header  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  project panel  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 let getProjectWrapper = document.getElementById("projectWrapper")
 let getProjectContents = document.getElementById("projectContents")
+let getAboutContents = document.getElementById("aboutContents")
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  outer folder screen  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-let getMainBody = document.getElementById("mainBody");
+function openProjectContents() { 
+  // when i click the project title i want to make the max-height of the wrapper 90vh
+// check if the panel itself is open
+// then check if the other panel is open
+// if other panel is open then only close that panel and return
+// if other panel isn't open then open only this panel
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  inner folder screen  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+if (getAboutContents.classList.contains("open")) {
+  closeAbout();
+} else if (!getProjectContents.classList.contains("open")) {
+ openProjects();
+} else (closeProjects())
+}
+
+
+function openProjects() {
+  console.log('open projects')
+  getProjectContents.style.maxHeight = 'calc(100vh - 190px)';
+  getProjectContents.classList.add("open")
+}
+
+function closeProjects() {
+  console.log('close projects')
+  getProjectContents.style.maxHeight = '0px';
+  getProjectContents.classList.remove("open")
+}
+
+function openAboutContents() {
+  // if the panel is closed then open both panels
+  // max-height becomes calc(100% - 190px)
+  // console.log(math);
+  
+   // getAboutContents.style.height = 'calc(100% - 95px)';
+  console.log("done")
+  
+  if (getProjectContents.classList.contains('open')) {
+    if(getAboutContents.classList.contains('open')) {
+      closeAbout();
+      closeProjects()
+      return
+    } else {
+    openAbout();
+    return }}
+  else {
+    openAbout();
+    openProjects()
+    
+  }
+      
+  
+  
+// if (getProjectContents.classList.contains("open")) {
+//   if(getAboutContents.classList.contains("open") ) {
+//     getAboutContents.classList.remove("open")
+//     getProjectContents.classList.remove("open")
+//     return
+//   } else {
+//     getAboutContents.classList.add("open")
+//     return
+//   }
+
+// } else {
+//   getAboutContents.classList.add("open")
+//   getProjectContents.classList.add("open")
+// }
+}
+
+
+function openAbout() {
+  getAboutContents.style.maxHeight = 'calc(100vh - 190px)';
+  getAboutContents.classList.add('open')
+}
+function closeAbout() {
+  getAboutContents.style.maxHeight = '0px';
+  getAboutContents.classList.remove('open')
+}
+
+
 let getTitle = document.getElementById("mainTitle");
 let getSubtitle = document.getElementById("mainSubtitle");
 let getBulletPoints = document.getElementById("mainBulletPoints");
 let getLink = document.getElementById("mainLink");
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  about panel   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-let getAboutContents = document.getElementById("aboutContents")
 
 
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  header  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  project panel  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-function openProjectContents() { 
-  if (getAboutContents.classList.contains("open")) { closeAbout();
-  } else if (!getProjectContents.classList.contains("open")) {openProjects();
-  } else (closeProjects())
-  }
-
-  function openProjects() {
-    getProjectContents.style.maxHeight = 'calc(100vh - 190px)';
-    getProjectContents.classList.add("open")
-  }
-  
-  function closeProjects() {
-    getProjectContents.style.maxHeight = '0px';
-    getProjectContents.classList.remove("open")
-  }
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  folder screen  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  inner folder screen  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function projectFrameOpening() {
   document.getElementById("projectFrame").classList.remove("hidden");
   document.getElementById("folderFrame").classList.add("hidden");
@@ -59,51 +100,17 @@ function projectFrameClosing() {
     document.getElementById("folderFrame").classList.remove("hidden");
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  about panel  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-function openAboutContents() {
-  // if both panels are open then close both panels
-  // if only the project panel is open then only open the about panel
-  // if both panels are closed then open both
-  if (getProjectContents.classList.contains('open')) {
-    if(getAboutContents.classList.contains('open')) {
-      closeAbout();
-      closeProjects()
-      return
-    } else {
-    openAbout();
-    return }}
-  else {
-    openAbout();
-    openProjects() 
-  }
-}
-
-
-function openAbout() {
-  getAboutContents.style.maxHeight = 'calc(100vh - 190px)';
-  getAboutContents.classList.add('open')
-}
-
-function closeAbout() {
-  getAboutContents.style.maxHeight = '0px';
-  getAboutContents.classList.remove('open')
-}
-
-
-
-
-
-
-
-
-
-
+let getMainBody = document.getElementById("mainBody");
+let getPersonalTabTitle = document.querySelector(".tab.personal")
+let getCodingTabTitle = document.querySelector('.tab.coding')
 
 
 function showPersonalFolders() {
   getMainBody.classList.add("personal");
   getMainBody.classList.remove("coding");
+  getPersonalTabTitle.classList.add('focus');
+  getCodingTabTitle.classList.remove('focus')
+
   // hide coding projects
   // query selector all for class of folder and coding, add hidden
   let getCodingFolders = document.querySelectorAll(".folder.coding");
@@ -117,10 +124,12 @@ function showPersonalFolders() {
     elem.classList.remove('hidden');
   });
 }
-
 function showCodingFolders() {
     getMainBody.classList.remove("personal");
   getMainBody.classList.add("coding");
+
+  getPersonalTabTitle.classList.remove('focus');
+  getCodingTabTitle.classList.add('focus')
   // show coding projects
   // query selector all for class of folder and coding, remove hidden
   let getCodingFolders = document.querySelectorAll(".folder.coding");
@@ -136,13 +145,12 @@ function showCodingFolders() {
 }
 
 
-
 function openWaluigiContents() {
 //   show projectFrame
 //   hide folderFrame
   projectFrameOpening();
   getTitle.innerHTML = "Waluigi Jail";
-  getSubtitle.innerHTML = "This is an introductory web development project intended to develop HTML, CSS, and JavaScript skills. Users interact with the central image, triggering dynamic transformations and text display with each click, demonstrating foundational coding proficiency and creativity."
+  getSubtitle.innerHTML = "A project intended to develop HTML, CSS, and JavaScript skills. Users interact with the central image, triggering dynamic transformations and text display with each click, demonstrating foundational coding proficiency and creativity."
   getBulletPoints.innerHTML = "123";
   getLink.setAttribute("href", "kathryn.mckean.github.io/waluigijail/");
 }

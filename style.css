@@ -5,32 +5,52 @@
   font-weight: 400;
   font-style: normal;
 }  
-
 .dm-serif display-regular-italic {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: italic;
 }
-
 .montserrat-alternates-semibold {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
+/* body text */
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+/*  300-700  */
+}
+
+
+:root {
+  --offWhiteColor: #FBF7F4;
+  --offWhiteColor2: #E1E1E1;
+  --brightColor1: #C49BBB;
+  --brightColor2: #727AAC;
+/*  to use these variables you put var(--variableName)  */
+}
+
 body {
   margin: 0px;
   padding: 0px;
   font-size: 20px;
-  background-color: #cad2c5;
+  background-color: var(--offWhiteColor);
   overflow: hidden;
+  
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ my name at the top of the page: clicking closes all panels ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .header {
   font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  font-weight: 800;
+/*   font-style: normal; */
   position: absolute;
   font-size: 50px;
   line-height: .8;
@@ -43,7 +63,7 @@ body {
 
 .subHeader {
   position: absolute;
-    font-size: 17px;
+    /* font-size: 17px; */
     right: 10%;
     top: 80px;
     z-index: 0;
@@ -51,7 +71,10 @@ body {
     flex-direction: column;
     align-items: flex-end;
 }
-
+.subHeader h2 {
+  font-weight: 500;
+    font-size: 22px;
+}
 .subHeader a {
   font-size: 25px;
     margin: 10px 0px;
@@ -70,7 +93,8 @@ body {
   bottom: 95px;
 /*   height: 100vh; */
   max-height: 100vh;
-  background-color: #84a98c;
+  background-color: var(--brightColor1);
+  box-shadow: 0px 9px 5px 10px var(--brightColor2);
   z-index: 10;
   width: 100%;
   transition: max-height 1s;
@@ -91,21 +115,16 @@ body {
   max-height: 0px;
 display: flex;
 justify-content: center;
-  align-items: center;
-/*   margin-top: 3%; */
-  overflow: hidden;
+  overflow: scroll;
     transition: max-height 1s;
-}
-
-.projectContents.open {
-/*   max-height: 100vh; */
-/*   margin-bottom: 95px; */
 }
 
 
 .aboutWrapper {
   position: absolute;
   bottom: 0vh;
+  background-color: var(--brightColor2);
+  box-shadow: 0px 9px 5px 10px  var(--brightColor1);
 /*   height: 90vh; */
   max-height: 100vh;
 /*   background-color: #52796f; */
@@ -123,47 +142,43 @@ justify-content: center;
   font-size: 70px;
   padding-left: 10%;
   height: 95px;
-  background-color: #52796f;
 }
 
 .aboutContents {
+  overflow: scroll;
  height: 100vh;
   max-height: 0px;
 display: flex;
 justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 /*   margin-top: 5%; */
-  overflow: hidden;
+  overflow: scroll;
     transition: all 1s;
-  background-color: #52796f;
 /*   margin-top: 95px; */
 }
-.aboutContents.open {
-/*   max-height: 100vh; */
-/*   margin-bottom: -190px; */
-}
 
 
 
+
+
+
+/* the contents within the project panel */
 
 .mainFrame {
-/*     height: 75%;
-  min-height: 345px;
-  width: 555px; */
+  margin-top: 15vh;
 }
+
 
 .mainBody {
-  background-color: #cad2c5;
+  background-color: var(--offWhiteColor);
   border-radius: 10px;
   height: 360px;
-  width: 555px;
+  width: 600px;
 }
-
 
 .mainFrame.folderPage.hidden {
   display: none;
 }
-
 
 .mainBody.folderPage {
   display: flex;
@@ -178,13 +193,6 @@ grid-template-areas:
   "title skill"
   "subtitle skill"
   "subtitle link"
-}
-
-.mainBody.folderPage.personal {
-  background-color: #BCB4FF;
-}
-.mainBody.folderPage.coding {
-background-color: #cad2c5;
 }
 
 /* template for project title */
@@ -232,7 +240,7 @@ font-weight: 700;
 flex-direction: column;
 align-items: center;
 height: 100px;
-width: 105px;
+width: 120px;
 margin: 30px;
 padding: 10px;
 border-radius: 10px;
@@ -267,6 +275,7 @@ font-size: 17px;
 .folderTitle {
   margin-top: 5px;
   font-size: 17px;
+  font-weight: 500;
 }
 /* highlights the text under the folder icon */
 .folder:hover {
@@ -284,11 +293,13 @@ display: flex;
 }
 
 /* Stylizes all three tabs */
+
 .tab {
+  background-color: var(--offWhiteColor2);
 width: auto;
   height: 24px;
 border-radius: 10px 10px  0px 0px;
-padding: 5px 15px 0px 15px;
+padding: 3px 15px 3px 15px;
 margin-left: 10px;
 }
 .tab:hover {
@@ -301,14 +312,20 @@ background-color: #cad2c5;}
 background-color: #FFBE98;}
 .tab3 {
 background-color: #BCB4FF;}
-.tab.coding {
+.tab.focus {
+  background-color: var(--offWhiteColor);
+}
+.backButton {
+  background: none;
+}
+/* .tab.coding {
   background-color: #cad2c5;
 }
 .tab.personal {
   background-color: #BCB4FF;
 }
 
-
+ */
 
 
 /* same styling as folderFrame */
@@ -321,4 +338,37 @@ background-color: #BCB4FF;}
 .hoverTitle:hover {
   font-style: italic;
   font-weight: 600;
+}
+
+
+/* contents within the about panel */
+
+.aboutGridLayout {
+  display: grid;
+grid-template-rows: 70% 30%;
+grid-template-columns: 50% 50%;
+grid-template-areas:
+  "work me"
+  "work links";
+  width: 775px;
+  margin-top: 6%;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--offWhiteColor);
+  height: 450px;
+}
+
+.workExperience {
+  grid-area: work;
+  padding: 10px;
+}
+
+.contactButtons {
+  grid-area: links;
+  padding: 10px;
+}
+
+.contactRightPanel {
+  grid-area: me;
+  padding: 10px;
 }
