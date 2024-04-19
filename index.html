@@ -20,12 +20,12 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   </head>
-  <body>    <div class="header">Kathryn McKean</div>
+  <body>    <div class="header" onclick="closeAllPanels()">Kathryn McKean</div>
 
     <div class="subHeader">
       <h2>Website Development</h2>
-      <a href="https://www.github.com/kathrynmckean" target="_blank">Github ></a>
-      <a href="https://www.linkedin.com/in/katiemckean" target="_blank">LinkedIn ></a>
+      <a class="goTo" href="https://www.github.com/kathrynmckean" target="_blank">Github ></a>
+      <a class="goTo" href="https://www.linkedin.com/in/katiemckean" target="_blank">LinkedIn ></a>
     </div>
 
     <div class="projectWrapper" id="projectWrapper">
@@ -137,9 +137,44 @@
       <div class="aboutTitle hoverTitle" onclick="openAboutContents()">about</div>
       <div class="aboutContents" id="aboutContents">
       <div class="aboutGridLayout">
-        <div class="workExperience">work experience</div>
-        <div class="contactButtons">links to github, etc</div>
-        <div class="contactRightPanel">bubbles w skills</div>
+        <div class="workExperience">
+          <p>
+            I am a versatile and driven professional with a background in healthcare and a passion for <span>creativity</span>. My journey into coding has been fueled by my love for design, both digital and physical.<br><br>
+
+            Above all else, I understand the importance of embracing a well-rounded skill set and thus enjoy exploring new areas to branch out my knowledge. I’ve started with the fundamentals - <span>HTML5, JS, CSS3</span> - and built from there.<br> <br>
+         
+            I am excited to contribute to forward-thinking companies that value personal and professional growth. <span>Explore my portfolio</span> to see how my skills and experiences can add value to your team.
+          </p>
+        </div>
+        <div class="contactButtons">
+          <a class="goTo" href="https://www.github.com/kathrynmckean" target="_blank"><span class="contactGoTo">Github ></span></a>
+          <a class="goTo" href="https://www.linkedin.com/in/katiemckean" target="_blank"><span class="contactGoTo">LinkedIn ></span></a>
+          <a class="goTo" href="" target="_blank"><span class="contactGoTo">Resume ></span></a>
+          <a class="goTo" href="" target="_blank"><span class="contactGoTo">kmckean907@gmail.com ></span></a>
+        </div>
+        <div class="contactRightPanel">
+          
+          <svg width="425" height="460" class="meFrame" viewBox="0 0 496 548" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Group 7">
+            <ellipse id="Ellipse 1" cx="143.745" cy="211.445" rx="143.745" ry="211.445" transform="matrix(0.716212 -0.697883 0.676308 0.736619 2.04688 234.835)" fill="#585481"/>
+            <mask id="mask0_18_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="107" y="47" width="320" height="400">
+            <ellipse id="Ellipse 2" cx="154.939" cy="203.437" rx="154.939" ry="203.437" transform="matrix(0.938922 -0.34413 0.325986 0.945375 55.2358 108.325)" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_18_18)">
+            <rect id="me 1" x="10.1138" y="13.457" width="493.66" height="519.506" transform="rotate(0.282237 10.1138 13.457)" fill="url(#pattern0_18_18)"/>
+            </g>
+            </g>
+            <defs>
+            <pattern id="pattern0_18_18" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_18_18" transform="matrix(0.000490152 0 0 0.000465766 -0.0158848 0)"/>
+            </pattern>
+            <image id="image0_18_18" data-name="me(edit).png" width="2105" height="2147" xlink:href="me.png"></image>
+          
+          </defs>
+            </svg>
+            
+
+        </div>
       </div>
       </div>
     </div>

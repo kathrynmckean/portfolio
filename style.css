@@ -27,10 +27,10 @@
 
 
 :root {
-  --offWhiteColor: #FBF7F4;
-  --offWhiteColor2: #E1E1E1;
-  --brightColor1: #C49BBB;
-  --brightColor2: #727AAC;
+  --offWhiteColor: #E2EB98;
+  --offWhiteColor2: #EBD598;
+  --brightColor1: #BAD9A2;
+  --brightColor2: #9DC4B5;
 /*  to use these variables you put var(--variableName)  */
 }
 
@@ -75,17 +75,7 @@ body {
   font-weight: 500;
     font-size: 22px;
 }
-.subHeader a {
-  font-size: 25px;
-    margin: 10px 0px;
-    padding: 0px;
-    text-decoration: none;
-    color: black;
-}
 
-.subHeader a:hover {
-  font-style: italic;
-}
 
 .projectWrapper {
   position: absolute;
@@ -345,12 +335,12 @@ background-color: #BCB4FF;}
 
 .aboutGridLayout {
   display: grid;
-grid-template-rows: 70% 30%;
-grid-template-columns: 50% 50%;
+grid-template-rows: 50% 50%;
+grid-template-columns: 60% 40%;
 grid-template-areas:
   "work me"
   "work links";
-  width: 775px;
+  width: 765px;
   margin-top: 6%;
   padding: 40px;
   border-radius: 20px;
@@ -361,14 +351,63 @@ grid-template-areas:
 .workExperience {
   grid-area: work;
   padding: 10px;
+  margin: 0px;
+}
+.workExperience p {
+  margin: 0px;
+}
+
+.goTo {
+  margin: 5px 0px;
+  padding: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+.goTo:hover {
+  font-style: italic;
 }
 
 .contactButtons {
   grid-area: links;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  z-index: 5;
 }
+
+
 
 .contactRightPanel {
   grid-area: me;
   padding: 10px;
+}
+
+
+.meFrame {
+  margin-top: -118px;
+  margin-left: -50px;
+}
+
+
+span {
+  position:relative;
+  z-index:1;
+}
+span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background-color: #c76d9d80;
+  left: -2px;
+  bottom: -4px;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+.contactGoTo::after {
+background-color: #9DC4B590;
 }

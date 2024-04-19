@@ -212,3 +212,9 @@ function openETContents() {
   // getLink.setAttribute("href", "kathryn.mckean.github.io/gifFortune/")
 //   hide link
 }
+
+// when header is clicked close both panels 
+function closeAllPanels() {
+  closeAbout();
+  closeProjects();
+}
