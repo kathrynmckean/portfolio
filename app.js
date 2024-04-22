@@ -22,12 +22,16 @@ function openProjects() {
   console.log('open projects')
   getProjectContents.style.maxHeight = 'calc(100vh - 190px)';
   getProjectContents.classList.add("open")
+  changeHeaderSize()
+  // changeHeaderSize();
 }
 
 function closeProjects() {
   console.log('close projects')
   getProjectContents.style.maxHeight = '0px';
-  getProjectContents.classList.remove("open")
+  getProjectContents.classList.remove("open");
+  changeHeaderSize()
+  // changeHeaderSize();
 }
 
 function openAboutContents() {
@@ -74,10 +78,13 @@ function openAboutContents() {
 function openAbout() {
   getAboutContents.style.maxHeight = 'calc(100vh - 190px)';
   getAboutContents.classList.add('open')
+  changeHeaderSize();
+
 }
 function closeAbout() {
   getAboutContents.style.maxHeight = '0px';
   getAboutContents.classList.remove('open')
+  changeHeaderSize()
 }
 
 
@@ -217,4 +224,39 @@ function openETContents() {
 function closeAllPanels() {
   closeAbout();
   closeProjects();
+  changeHeaderSize();
+}
+
+let getHeader = document.querySelector(".header");
+
+function changeHeaderSize() {
+
+  if (getAboutContents.classList.contains("open")) {
+    getHeader.classList.add('smallFont');
+    getHeader.classList.remove("bigFont")
+  console.log("make small??");
+  } else if (getProjectContents.classList.contains('open')) {
+    getHeader.classList.add('smallFont');
+    getHeader.classList.remove("bigFont");
+  console.log("make small??");
+  } else {
+    getHeader.classList.remove('smallFont');
+    getHeader.classList.add("bigFont");
+  console.log("make big??");
+  }
+}
+
+
+let text = document.getElementById('myEmail').textContent;
+const copyContent = async () => {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Email address copied to clipboard');
+    // show .confirm
+    document.querySelector(".confirm").style.opacity = "100%"
+
+    console.log(text)
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
 }

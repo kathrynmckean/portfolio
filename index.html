@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&family=Yatra+One&display=swap" rel="stylesheet">
+
+
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
       rel="stylesheet"
@@ -20,14 +26,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   </head>
-  <body>    <div class="header" onclick="closeAllPanels()">Kathryn McKean</div>
+  <body>    
+    <div class="headerContainer">
+    <div class="header bigFont" onclick="closeAllPanels()">Kathryn<br>McKean</div>
 
     <div class="subHeader">
       <h2>Website Development</h2>
-      <a class="goTo" href="https://www.github.com/kathrynmckean" target="_blank">Github ></a>
-      <a class="goTo" href="https://www.linkedin.com/in/katiemckean" target="_blank">LinkedIn ></a>
     </div>
-
+  </div>
     <div class="projectWrapper" id="projectWrapper">
       <div class="projectTitle hoverTitle" onclick="openProjectContents()">projects</div>
       <div class="projectContents" id="projectContents">
@@ -138,19 +144,20 @@
       <div class="aboutContents" id="aboutContents">
       <div class="aboutGridLayout">
         <div class="workExperience">
-          <p>
-            I am a versatile and driven professional with a background in healthcare and a passion for <span>creativity</span>. My journey into coding has been fueled by my love for design, both digital and physical.<br><br>
+            I am a versatile and driven professional with a background in healthcare and a passion for <span class="highlight">creativity</span>. My journey into coding has been fueled by my love for design, both digital and physical.<br><br>
 
-            Above all else, I understand the importance of embracing a well-rounded skill set and thus enjoy exploring new areas to branch out my knowledge. I’ve started with the fundamentals - <span>HTML5, JS, CSS3</span> - and built from there.<br> <br>
+            Above all else, I understand the importance of embracing a well-rounded skill set and thus enjoy exploring new areas to branch out my knowledge. I’ve started with the fundamentals - <span class="highlight">HTML, JS, CSS</span> - and built from there.<br> <br>
          
-            I am excited to contribute to forward-thinking companies that value personal and professional growth. <span>Explore my portfolio</span> to see how my skills and experiences can add value to your team.
-          </p>
+            I am excited to contribute to forward-thinking companies that value personal and professional growth. <span class="highlight">Explore my portfolio</span> to see how my skills and experiences can add value to your team.
         </div>
         <div class="contactButtons">
-          <a class="goTo" href="https://www.github.com/kathrynmckean" target="_blank"><span class="contactGoTo">Github ></span></a>
-          <a class="goTo" href="https://www.linkedin.com/in/katiemckean" target="_blank"><span class="contactGoTo">LinkedIn ></span></a>
-          <a class="goTo" href="" target="_blank"><span class="contactGoTo">Resume ></span></a>
-          <a class="goTo" href="" target="_blank"><span class="contactGoTo">kmckean907@gmail.com ></span></a>
+          <a class="goTo" href="https://www.github.com/kathrynmckean" target="_blank"><span class="highlight contactGoTo">Github</span> ></a>
+          <a class="goTo" href="https://www.linkedin.com/in/katiemckean" target="_blank"><span class="highlight contactGoTo">LinkedIn</span> ></a>
+          <a class="goTo" href="kathrynMcKeanResume.pdf" target="_blank"><span class="highlight contactGoTo">Resume</span> ></a>
+    
+          <a  onclick="copyContent()" class="goTo"><span id="myEmail" class="highlight contactGoTo">kmckean907@gmail.com</span> ></a>
+          <span class="confirm">* Email copied to clipboard</span>
+
         </div>
         <div class="contactRightPanel">
           
