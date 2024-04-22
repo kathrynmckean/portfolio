@@ -98,13 +98,14 @@ display: flex;
 justify-content: center;
   overflow: scroll;
     transition: max-height 1s;
+  align-items: center;
 }
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ the contents within the project panel ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .mainFrame {
-  margin-top: 15vh;
+/*   margin-top: 15vh; */
 }
 
 
@@ -194,26 +195,18 @@ margin-left: 10px;
 font-weight: 700;
   font-style: italic;
 }
-.tab1 {
+/* .tab1 {
 background-color: #cad2c5;}
 .tab2 {
 background-color: #FFBE98;}
 .tab3 {
-background-color: #BCB4FF;}
+background-color: #BCB4FF;} */
 .tab.focus {
   background-color: var(--offWhiteColor);
 }
 .backButton {
   background: none;
 }
-/* .tab.coding {
-  background-color: #cad2c5;
-}
-.tab.personal {
-  background-color: #BCB4FF;
-}
-
- */
 
 
 /* same styling as folderFrame */
@@ -452,4 +445,12 @@ font-weight: 700;
   font-weight: 300;
   font-style: normal;
 /*  300-700  */
+}
+
+.hidden {
+  display: none;
+}
+
+.mainBody.thoughts {
+
 }

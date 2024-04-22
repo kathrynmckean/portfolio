@@ -102,6 +102,8 @@ function projectFrameOpening() {
 
 function projectFrameClosing() {
   // runs when the back button is pressed
+  // first we reset the inner tabs so the next folder opened will open on the overview
+  resetInnerTabs()
   // shows all the folders again
     document.getElementById("projectFrame").classList.add("hidden");
     document.getElementById("folderFrame").classList.remove("hidden");
@@ -132,6 +134,7 @@ function showPersonalFolders() {
   });
 }
 function showCodingFolders() {
+  
     getMainBody.classList.remove("personal");
   getMainBody.classList.add("coding");
 
@@ -259,4 +262,46 @@ const copyContent = async () => {
   } catch (err) {
     console.error('Failed to copy: ', err);
   }
+}
+
+function openTab(id) {
+  console.log(id);
+  // on click add className focus to the tab with id id
+  let allTabs = document.querySelectorAll('.innerTab');
+  allTabs.forEach(function (elem) {
+    elem.classList.remove('focus');
+  });
+  let selectedTab = document.querySelector(`#${id}`);
+  selectedTab.classList.add('focus');
+  // run another function with name like ${id}LoadContents
+  // ${id}LoadContents();
+}
+
+//runs when you click back
+function resetInnerTabs() {
+    let allTabs = document.querySelectorAll('.innerTab');
+  allTabs.forEach(function (elem) {
+    elem.classList.remove('focus');
+  });
+  let selectedTab = document.querySelector(`#tabOverview`);
+  selectedTab.classList.add('focus');
+}
+
+function tabThoughtsLoadContents(id) {
+  console.log('hi')
+  openTab(id);
+  let getThoughtsElements = document.querySelectorAll(".thoughts");
+   getThoughtsElements.forEach(function (elem) {
+    elem.classList.remove('hidden');
+  });
+   let getOverviewElements = document.querySelectorAll(".overview");
+   getOverviewElements.forEach(function (elem) {
+    elem.classList.add('hidden');
+  });
+  document.getElementById("mainBody").classList.remove('projectPage');
+}
+
+function tabOverviewLoadContents(id) {
+  openTab(id);
+  
 }

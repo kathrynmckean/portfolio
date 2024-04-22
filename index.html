@@ -26,6 +26,36 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   </head>
+  <body> 
+      
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McKean Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&family=Yatra+One&display=swap" rel="stylesheet">
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  </head>
   <body>    
     <div class="headerContainer">
     <div class="header bigFont" onclick="closeAllPanels()">Kathryn<br>McKean</div>
@@ -118,21 +148,25 @@
         <div class="mainFrame projectPage hidden" id="projectFrame">
           <div class="tabContainer projectPage">
               <div class="backButton tab" onclick="projectFrameClosing()">back</div>
-              <div class="tab tab1">overview</div>
-              <div class="tab tab2">code</div>
-              <div class="tab tab3">thoughts</div>
+              <div class="tab innerTab focus" id="tabOverview" onclick="tabOverviewLoadContents(this.id)">overview</div>
+<!--               <div class="tab innerTab" id="tabCode" onclick="openTab(this.id)">code</div> -->
+              <div class="tab innerTab" id="tabThoughts" onclick="tabThoughtsLoadContents(this.id)">thoughts</div>
             </div>
        
         
-        <div class="mainBody projectPage">
-          <div class="mainTitle" id="mainTitle">PROJECT TITLE</div>
-            <div class="mainSubtitle" id="mainSubtitle">PROJECT DESCRIPTION</div>
+        <div class="mainBody projectPage" id="mainBody">
+          <div class="overview mainTitle" id="mainTitle">PROJECT TITLE</div>
+            <div class="overview mainSubtitle" id="mainSubtitle">PROJECT DESCRIPTION</div>
          
-              <div class="mainBulletPoints" id="mainBulletPoints">BULLET POINTS</div>
-              <a class="mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
+              <div class="overview mainBulletPoints" id="mainBulletPoints">BULLET POINTS</div>
+              <a class="overview mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
+<!--     second tab - thoughts       -->
+            <div class="thoughts thoughtsParagraph hidden" id="thoughtsParagraph">PROJECT DESCRIPTION</div>
+         
+              <div class="thoughts thoughtsPicture hidden" id="thoughtsPicture">BULLET POINTS</div>
+          
               </div>
           </div>
-<!--          -->
         
         
       
@@ -185,6 +219,11 @@
       </div>
       </div>
     </div>
+
+
+  </body>
+  <script src="app.js"></script>
+</html>
 
 
   </body>
