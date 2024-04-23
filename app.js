@@ -103,7 +103,8 @@ function projectFrameOpening() {
 function projectFrameClosing() {
   // runs when the back button is pressed
   // first we reset the inner tabs so the next folder opened will open on the overview
-  resetInnerTabs()
+  resetInnerTabs();
+  tabOverviewLoadContents()
   // shows all the folders again
     document.getElementById("projectFrame").classList.add("hidden");
     document.getElementById("folderFrame").classList.remove("hidden");
@@ -279,13 +280,20 @@ function openTab(id) {
 
 //runs when you click back
 function resetInnerTabs() {
+  //resets the tabs themselves
     let allTabs = document.querySelectorAll('.innerTab');
   allTabs.forEach(function (elem) {
     elem.classList.remove('focus');
   });
   let selectedTab = document.querySelector(`#tabOverview`);
   selectedTab.classList.add('focus');
+  
+  //pull back up the overview screen
+ 
 }
+
+
+let getMainBodyProjects = document.getElementById('mainBodyProjects')
 
 function tabThoughtsLoadContents(id) {
   console.log('hi')
@@ -298,10 +306,29 @@ function tabThoughtsLoadContents(id) {
    getOverviewElements.forEach(function (elem) {
     elem.classList.add('hidden');
   });
-  document.getElementById("mainBody").classList.remove('projectPage');
+  // getMainBodyProjects.classList.remove('projectPage');
+  getMainBodyProjects.classList.replace('projectPage', "thoughtsPage")
 }
 
-function tabOverviewLoadContents(id) {
-  openTab(id);
+function tabOverviewLoadContents() {
+  openTab('tabOverview');
+  
+  let getThoughtsElements = document.querySelectorAll(".thoughts");
+
+  let getMainBodyProjects = document.getElementById('mainBodyProjects');
+
+
+  if(getMainBodyProjects.classList.contains('thoughtsPage')){
+      let getOverviewElements = document.querySelectorAll(".overview");
+   getOverviewElements.forEach(function (elem) {
+    elem.classList.remove('hidden');
+  });
+  getThoughtsElements.forEach(function (elem) {
+    elem.classList.add('hidden');
+  });
+  getMainBodyProjects.classList.replace('thoughtsPage', "projectPage");
+  } else {
+return
+  }
   
 }

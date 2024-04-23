@@ -116,9 +116,6 @@ justify-content: center;
   width: 600px;
 }
 
-.mainFrame.folderPage.hidden {
-  display: none;
-}
 
 .mainBody.folderPage {
   display: flex;
@@ -212,9 +209,7 @@ background-color: #BCB4FF;} */
 /* same styling as folderFrame */
 
 
-.hidden {
-  display: none;
-}
+
 
 .hoverTitle:hover {
   font-style: italic;
@@ -223,6 +218,27 @@ background-color: #BCB4FF;} */
 
 
 
+
+.mainBody.thoughtsPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.thoughts {
+  margin: 20px;;
+}
+
+.thoughtsParagraph {
+ width: 300px;
+}
+.thoughtsPicture {
+  max-height: 250px;
+  border: 2px solid purple;
+  border-radius: 10px;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ the second panel: about ~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -451,6 +467,9 @@ font-weight: 700;
   display: none;
 }
 
-.mainBody.thoughts {
 
+
+
+.hidden {
+  display: none !important;
 }
