@@ -41,6 +41,7 @@ body {
   position: relative;
   z-index: 100;
   text-align: right;
+  cursor: pointer;
 }
 
 /* when you open a panel the header shrinks to fit more aesthetically */
@@ -89,6 +90,7 @@ body {
   font-size: 70px;
   padding-left: 10%;
   height: 95px;
+  cursor: pointer;
 }
 
 .projectContents {
@@ -104,10 +106,10 @@ justify-content: center;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ the contents within the project panel ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.mainFrame {
-/*   margin-top: 15vh; */
-}
 
+.click  {
+  margin: 10px;
+}
 
 .mainBody {
   background-color: var(--offWhiteColor);
@@ -181,6 +183,7 @@ display: flex;
 /* Stylizes all three tabs */
 
 .tab {
+  cursor: pointer;
   background-color: var(--offWhiteColor2);
 width: auto;
   height: 24px;
@@ -235,9 +238,11 @@ background-color: #BCB4FF;} */
  width: 300px;
 }
 .thoughtsPicture {
-  max-height: 250px;
+  height: 250px;
+  width: 200px;
   border: 2px solid purple;
   border-radius: 10px;
+  background-color: blue;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ the second panel: about ~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -265,6 +270,7 @@ background-color: #BCB4FF;} */
   font-size: 70px;
   padding-left: 10%;
   height: 95px;
+  cursor: pointer;
 }
 
 .aboutContents {
@@ -463,13 +469,27 @@ font-weight: 700;
 /*  300-700  */
 }
 
-.hidden {
+
+#folder0, #folder6, #folder20, #folder26 {
+  visibility: hidden !important;
+}
+
+#hideButtonLeft, #hideButtonRight {
   display: none;
 }
 
-
-
-
 .hidden {
   display: none !important;
+}
+
+
+/* right left buttons */
+
+.material-symbols-outlined {
+  cursor: pointer;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

@@ -30,246 +30,191 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- right left buttons -->
+    <!-- right -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>McKean Portfolio</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Seymour+One&family=Yatra+One&display=swap"
-          rel="stylesheet"
-        />
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        />
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
-        
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>McKean Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&family=Yatra+One&display=swap" rel="stylesheet">
-
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  </head>
-  <body>    
     <div class="headerContainer">
-    <div class="header bigFont" onclick="closeAllPanels()">Kathryn<br>McKean</div>
-
-    <div class="subHeader">
-      <h2>Website Development</h2>
+      <div class="header bigFont" onclick="closeAllPanels()">Kathryn<br>McKean</div>
+  
+      <div class="subHeader">
+        <h2>Website Development</h2>
+      </div>
     </div>
-  </div>
-    <div class="projectWrapper" id="projectWrapper">
-      <div class="projectTitle hoverTitle" onclick="openProjectContents()">projects</div>
-      <div class="projectContents" id="projectContents">
-        
-<!--     the first page. becomes hidden when a project is selected     -->
-      <div class="mainFrame folderPage" id="folderFrame">
-       
-         <div class="tabContainer folderPage">
-              <div class="tab coding focus" onclick="showCodingFolders()">coding</div>
-              <div class="tab personal" onclick="showPersonalFolders()">personal</div>
-            </div>
-        
-        <div class="mainBody folderPage coding" id="mainBody">
-        <div class="waluigiFolder folder coding" onclick="openWaluigiContents()"> 
-          <div class="folderBack">
-          <div class="folderTab"></div>
-          <div class="folderFront" style="background-color: #7e0cd6;"></div>
-        </div> <h5 class="folderTitle">waluigiJail</h5>
-      </div>
-  
-        <div class="memoryFolder folder coding" onclick="openMemoryContents()"> 
-          <div class="folderBack">
-          <div class="folderTab"></div>
-          <div class="folderFront" style="background-color: #c76d9d;"></div>
-        </div> <h5 class="folderTitle">memoryGame</h5>
-      </div>
-  
-        <div class="noteFolder folder coding" onclick="openNoteContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #588157;"></div>
-            </div> <h5 class="folderTitle">noteTaker</h5>
-        </div>
-  
-        <div class="petFolder folder coding" onclick="openPetContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #4367aa;"></div>
-            </div> <h5 class="folderTitle">petCare</h5>
-        </div>
-  
-        <div class="fortuneFolder folder coding" onclick="openFortuneContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: rgb(51, 21, 142);"></div>
-            </div> <h5 class="folderTitle">gifFortune</h5>
-        </div>
-          <div class="ETFolder personal folder hidden" id="ETFolder" onclick="openETContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #09415A;"></div>
-            </div> <h5 class="folderTitle">ET: the lamp</h5>
-        </div>
-          <div class="metalFolder personal folder hidden" id="metalFolder" onclick="openMetalContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #90A583;"></div>
-            </div> <h5 class="folderTitle">Metalwork</h5>
-        </div>
-          <div class="prostheticFolder personal folder hidden" id="prostheticFolder" onclick="openProstheticContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #DFBBB1;"></div>
-            </div> <h5 class="folderTitle">Prosthetics</h5>
-        </div>
-          <div class="2DFolder personal folder hidden" id="2DFolder" onclick="open2DContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #CBB3BF;"></div>
-            </div> <h5 class="folderTitle">2D Artwork</h5>
-        </div>
-           <div class="3DFolder personal folder hidden" id="3DFolder" onclick="open3DContents()">
-          <div class="folderBack">
-              <div class="folderTab"></div>
-              <div class="folderFront" style="background-color: #8789C0;"></div>
-            </div> <h5 class="folderTitle">3D Artwork</h5>
-        </div>
-      </div>
-        </div>
-        
-<!--    the hidden second page      -->
-        <div class="mainFrame projectPage hidden" id="projectFrame">
-          <div class="tabContainer projectPage">
-              <div class="backButton tab" onclick="projectFrameClosing()">back</div>
-              <div class="tab innerTab focus" id="tabOverview" onclick="tabOverviewLoadContents(this.id)">overview</div>
-<!--               <div class="tab innerTab" id="tabCode" onclick="openTab(this.id)">code</div> -->
-              <div class="tab innerTab" id="tabThoughts" onclick="tabThoughtsLoadContents(this.id)">thoughts</div>
-            </div>
-       
-        
-        <div class="mainBody projectPage" id="mainBodyProjects">
-          <div class="overview mainTitle" id="mainTitle">PROJECT TITLE</div>
-            <div class="overview mainSubtitle" id="mainSubtitle">PROJECT DESCRIPTION</div>
-         
-              <div class="overview mainBulletPoints" id="mainBulletPoints">BULLET POINTS</div>
-              <a class="overview mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
-<!--     second tab - thoughts       -->
-            <div class="thoughts thoughtsParagraph hidden" id="thoughtsParagraph">PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION zm ckc ckckc kc kc kc kck </div>
-         
-               <img
-                    class="thoughts thoughtsPicture hidden"
-                    href="firstWaPic"
-                    id="thoughtsPicture"
-                    src="firstWaPic.png"
-                    alt=""
-                  />
-          
-              </div>
+      <div class="projectWrapper" id="projectWrapper">
+        <div class="projectTitle hoverTitle" onclick="openProjectContents()">projects</div>
+        <div class="projectContents" id="projectContents">
+          <div class="click clickLeft" id="hideButtonLeft" onclick="scrollFolder(this.id)" >
+            <span class="material-symbols-outlined">
+              arrow_back_ios
+              </span>
           </div>
-        
-        
-      
-        </div>
-    </div>
-
-    <div class="aboutWrapper" id="aboutWrapper">
-      <div class="aboutTitle hoverTitle" onclick="openAboutContents()">about</div>
-      <div class="aboutContents" id="aboutContents">
-      <div class="aboutGridLayout">
-        <div class="workExperience">
-            I am a versatile and driven professional with a background in healthcare and a passion for <span class="highlight">creativity</span>. My journey into coding has been fueled by my love for design, both digital and physical.<br><br>
-
-            Above all else, I understand the importance of embracing a well-rounded skill set and thus enjoy exploring new areas to branch out my knowledge. I’ve started with the fundamentals - <span class="highlight">HTML, JS, CSS</span> - and built from there.<br> <br>
+          
+  <!--     the first page. becomes hidden when a project is selected     -->
+        <div class="mainFrame folderPage" id="folderFrame">
          
-            I am excited to contribute to forward-thinking companies that value personal and professional growth. <span class="highlight">Explore my portfolio</span> to see how my skills and experiences can add value to your team.
+           <div class="tabContainer folderPage">
+                <div class="tab coding focus" onclick="showCodingFolders()">coding</div>
+                <div class="tab personal" onclick="showPersonalFolders()">personal</div>
+              </div>
+          
+          <div class="mainBody folderPage coding" id="mainBody">
+          <div class="waluigiFolder folder coding" id="folder1" onclick="openFolder(this.id)"> 
+            <!--         <div class="waluigiFolder folder coding" id="folder1" onclick="openFolder1(this.id)">  -->
+            <div class="folderBack">
+            <div class="folderTab"></div>
+            <div class="folderFront" style="background-color: #7e0cd6;"></div>
+          </div> <h5 class="folderTitle">waluigiJail</h5>
         </div>
-        <div class="contactButtons">
-          <a class="goTo" href="https://www.github.com/kathrynmckean" target="_blank"><span class="highlight contactGoTo">Github</span> ></a>
-          <a class="goTo" href="https://www.linkedin.com/in/katiemckean" target="_blank"><span class="highlight contactGoTo">LinkedIn</span> ></a>
-          <a class="goTo" href="kathrynMcKeanResume.pdf" target="_blank"><span class="highlight contactGoTo">Resume</span> ></a>
     
-          <a  onclick="copyContent()" class="goTo"><span id="myEmail" class="highlight contactGoTo">kmckean907@gmail.com</span> ></a>
-          <span class="confirm">* Email copied to clipboard</span>
-
+          <div class="memoryFolder folder coding" id="folder2" onclick="openFolder(this.id)"> 
+            <div class="folderBack">
+            <div class="folderTab"></div>
+            <div class="folderFront" style="background-color: #c76d9d;"></div>
+          </div> <h5 class="folderTitle">memoryGame</h5>
         </div>
-        <div class="contactRightPanel">
+    
+          <div class="noteFolder folder coding" id="folder3" onclick="openFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: #588157;"></div>
+              </div> <h5 class="folderTitle">noteTaker</h5>
+          </div>
+    
+          <div class="petFolder folder coding" id="folder4" onclick="openFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: #4367aa;"></div>
+              </div> <h5 class="folderTitle">petCare</h5>
+          </div>
+    
+          <div class="fortuneFolder folder coding" id="folder5" onclick="openFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: rgb(51, 21, 142);"></div>
+              </div> <h5 class="folderTitle">gifFortune</h5>
+          </div>
+            <div class="ETFolder personal folder hidden" id="pfolder1" onclick="openPersonalFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: #09415A;"></div>
+              </div> <h5 class="folderTitle">ET: the lamp</h5>
+          </div>
+            <div class="metalFolder personal folder hidden" id="pfolder2" onclick="openPersonalFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: #90A583;"></div>
+              </div> <h5 class="folderTitle">Metalwork</h5>
+          </div>
+            <div class="prostheticFolder personal folder hidden" id="pfolder3" onclick="openPersonalFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: #DFBBB1;"></div>
+              </div> <h5 class="folderTitle">Prosthetics</h5>
+          </div>
+            <div class="2DFolder personal folder hidden" id="pfolder4" onclick="openPersonalFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: #CBB3BF;"></div>
+              </div> <h5 class="folderTitle">2D Artwork</h5>
+          </div>
+             <div class="3DFolder personal folder hidden" id="pfolder5" onclick="openPersonalFolder(this.id)">
+            <div class="folderBack">
+                <div class="folderTab"></div>
+                <div class="folderFront" style="background-color: #8789C0;"></div>
+              </div> <h5 class="folderTitle">3D Artwork</h5>
+          </div>
+        </div>
+          </div>
           
-          <svg width="425" height="460" class="meFrame" viewBox="0 0 496 548" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Group 7">
-            <ellipse id="Ellipse 1" cx="143.745" cy="211.445" rx="143.745" ry="211.445" transform="matrix(0.716212 -0.697883 0.676308 0.736619 2.04688 234.835)" fill="#585481"/>
-            <mask id="mask0_18_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="107" y="47" width="320" height="400">
-            <ellipse id="Ellipse 2" cx="154.939" cy="203.437" rx="154.939" ry="203.437" transform="matrix(0.938922 -0.34413 0.325986 0.945375 55.2358 108.325)" fill="#D9D9D9"/>
-            </mask>
-            <g mask="url(#mask0_18_18)">
-            <rect id="me 1" x="10.1138" y="13.457" width="493.66" height="519.506" transform="rotate(0.282237 10.1138 13.457)" fill="url(#pattern0_18_18)"/>
-            </g>
-            </g>
-            <defs>
-            <pattern id="pattern0_18_18" patternContentUnits="objectBoundingBox" width="1" height="1">
-            <use xlink:href="#image0_18_18" transform="matrix(0.000490152 0 0 0.000465766 -0.0158848 0)"/>
-            </pattern>
-            <image id="image0_18_18" data-name="me(edit).png" width="2105" height="2147" xlink:href="me.png"></image>
+  <!--    the hidden second page      -->
+          <div class="mainFrame projectPage hidden" id="projectFrame">
+            <div class="tabContainer projectPage">
+                <div class="backButton tab" onclick="projectFrameClosing()">back</div>
+                <div class="tab innerTab focus" id="tabOverview" onclick="tabOverviewLoadContents(this.id)">overview</div>
+  <!--               <div class="tab innerTab" id="tabCode" onclick="openTab(this.id)">code</div> -->
+                <div class="tab innerTab" id="tabThoughts" onclick="tabThoughtsLoadContents(this.id)">thoughts</div>
+              </div>
+         
           
-          </defs>
-            </svg>
+          <div class="mainBody projectPage" id="mainBodyProjects">
+            <div class="overview mainTitle" id="mainTitle">PROJECT TITLE</div>
+              <div class="overview mainSubtitle" id="mainSubtitle">PROJECT DESCRIPTION</div>
+           
+                <div class="overview mainBulletPoints" id="mainBulletPoints">BULLET POINTS</div>
+                <a class="overview mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
+  <!--     second tab - thoughts       -->
+              <div class="thoughts thoughtsParagraph hidden" id="thoughtsParagraph">PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION PROJECT DESCRIPTION zm ckc ckckc kc kc kc kck </div>
+           
+                 <img
+                      class="thoughts thoughtsPicture hidden"
+                      
+                      id="thoughtsPicture"
+                      src=""
+                      alt=""
+                    />
+                </div>
+            </div>
+           <div class="click clickRight"  id="hideButtonRight" onclick="scrollFolder(this.id)">
+            <span class="material-symbols-outlined">
+              arrow_forward_ios
+              </span>
+          </div>
+          </div>
+      </div>
+  
+      <div class="aboutWrapper" id="aboutWrapper">
+        <div class="aboutTitle hoverTitle" onclick="openAboutContents()">about</div>
+        <div class="aboutContents" id="aboutContents">
+        <div class="aboutGridLayout">
+          <div class="workExperience">
+              I am a versatile and driven professional with a background in healthcare and a passion for <span class="highlight">creativity</span>. My journey into coding has been fueled by my love for design, both digital and physical.<br><br>
+  
+              Above all else, I understand the importance of embracing a well-rounded skill set and thus enjoy exploring new areas to branch out my knowledge. I’ve started with the fundamentals - <span class="highlight">HTML, JS, CSS</span> - and built from there.<br> <br>
+           
+              I am excited to contribute to forward-thinking companies that value personal and professional growth. <span class="highlight">Explore my portfolio</span> to see how my skills and experiences can add value to your team.
+          </div>
+          <div class="contactButtons">
+            <a class="goTo" href="https://www.github.com/kathrynmckean" target="_blank"><span class="highlight contactGoTo">Github</span> ></a>
+            <a class="goTo" href="https://www.linkedin.com/in/katiemckean" target="_blank"><span class="highlight contactGoTo">LinkedIn</span> ></a>
+            <a class="goTo" href="kathrynMcKeanResume.pdf" target="_blank"><span class="highlight contactGoTo">Resume</span> ></a>
+      
+            <a  onclick="copyContent()" class="goTo"><span id="myEmail" class="highlight contactGoTo">kmckean907@gmail.com</span> ></a>
+            <span class="confirm">* Email copied to clipboard</span>
+  
+          </div>
+          <div class="contactRightPanel">
             
-
+            <svg width="425" height="460" class="meFrame" viewBox="0 0 496 548" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Group 7">
+              <ellipse id="Ellipse 1" cx="143.745" cy="211.445" rx="143.745" ry="211.445" transform="matrix(0.716212 -0.697883 0.676308 0.736619 2.04688 234.835)" fill="#585481"/>
+              <mask id="mask0_18_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="107" y="47" width="320" height="400">
+              <ellipse id="Ellipse 2" cx="154.939" cy="203.437" rx="154.939" ry="203.437" transform="matrix(0.938922 -0.34413 0.325986 0.945375 55.2358 108.325)" fill="#D9D9D9"/>
+              </mask>
+              <g mask="url(#mask0_18_18)">
+              <rect id="me 1" x="10.1138" y="13.457" width="493.66" height="519.506" transform="rotate(0.282237 10.1138 13.457)" fill="url(#pattern0_18_18)"/>
+              </g>
+              </g>
+              <defs>
+              <pattern id="pattern0_18_18" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_18_18" transform="matrix(0.000490152 0 0 0.000465766 -0.0158848 0)"/>
+              </pattern>
+              <image id="image0_18_18" data-name="me(edit).png" width="2105" height="2147" xlink:href="me.png"></image>
+            
+            </defs>
+              </svg>
+              
+  
+          </div>
+        </div>
         </div>
       </div>
-      </div>
-    </div>
-
-
-  </body>
-  <script src="app.js"></script>
-</html>
-
+  
+  
   </body>
   <script src="app.js"></script>
 </html>
