@@ -1,16 +1,13 @@
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~ overall info ~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
 /* colors on the page */
 :root {
-  --offWhiteColor: #E2EB98;
-  --offWhiteColor2: #EBD598;
-  --brightColor1: #BAD9A2;
-  --brightColor2: #9DC4B5;
+  --offWhiteColor: #e2eb98;
+  --offWhiteColor2: #ebd598;
+  --brightColor1: #bad9a2;
+  --brightColor2: #9dc4b5;
   --darkerColor1: #9a98b4;
-/*  to use these variables you put var(--variableName)  */
+  /*  to use these variables you put var(--variableName)  */
 }
 
 body {
@@ -19,7 +16,7 @@ body {
   font-size: 20px;
   background-color: var(--offWhiteColor);
   overflow: hidden;
-  
+
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -34,8 +31,8 @@ body {
 }
 
 .header {
-    font-family: "Yatra One", system-ui;
-    transition: font-size 1s;
+  font-family: "Yatra One", system-ui;
+  transition: font-size 1s;
   font-weight: 800;
   line-height: 0.8;
   position: relative;
@@ -53,10 +50,10 @@ body {
 }
 
 .subHeader {
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .subHeader h2 {
@@ -65,12 +62,7 @@ body {
   margin-top: 0px;
 }
 
-
-
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~ the first panel: projects ~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
 .projectWrapper {
   position: absolute;
@@ -83,6 +75,11 @@ body {
   transition: max-height 1s;
 }
 
+.hoverTitle:hover {
+  font-style: italic;
+  font-weight: 600;
+  /* both the project and about title are hovertitles and have this appearance on hover */
+}
 
 .projectTitle {
   font-family: "Montserrat Alternates", sans-serif;
@@ -96,84 +93,18 @@ body {
 .projectContents {
   height: 90vh;
   max-height: 0px;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
   overflow: scroll;
-    transition: max-height 1s;
+  transition: max-height 1s;
   align-items: center;
 }
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ the contents within the project panel ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
-.click  {
-  margin: 10px;
-}
-
-.mainBody {
-  background-color: var(--offWhiteColor);
-  border-radius: 10px;
-  height: 360px;
-  width: 600px;
-}
-
-
-.mainBody.folderPage {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.mainBody.projectPage {
-  display: grid;
-grid-template-rows: 15% 75% 10%;
-grid-template-columns: 60% 40%;
-grid-template-areas:
-  "title skill"
-  "subtitle skill"
-  "subtitle link"
-}
-
-/* template for project title */
-.mainTitle {
-grid-area: title;
-font-size: 25px;
- padding: 35px;
-}
-
-/* template for project description */
-.mainSubtitle {
-grid-area: subtitle;
-  padding: 35px;
-}
-
-/* template for the bullet points to the side of project details */
-.mainBulletPoints {
-grid-area: skill;
-  border-radius: 10px;
-  background-color: #fad648;
-padding: 15px;
-  margin: 15px;
-}
-
-/* template for "visit webpage" button */
-.mainLink {
-grid-area: link;
-text-align: right;
-      padding-right: 20px;
- text-decoration: none;
-  color: black;
-}
-.mainLink:hover {
-font-weight: 700;
-  font-style: italic;
-}
-
-
-
-/* The container holding the three tabs on the inner project details */
 .tabContainer {
-display: flex;
+  display: flex;
+  /* The container holding the three tabs on the inner project details */
 }
 
 .tabContainer.hidden {
@@ -185,84 +116,141 @@ display: flex;
 .tab {
   cursor: pointer;
   background-color: var(--offWhiteColor2);
-width: auto;
+  width: auto;
   height: 24px;
-border-radius: 10px 10px  0px 0px;
-padding: 3px 15px 3px 15px;
-margin-left: 10px;
+  border-radius: 10px 10px 0px 0px;
+  padding: 3px 15px 3px 15px;
+  margin-left: 10px;
 }
+
 .tab:hover {
-font-weight: 700;
+  font-weight: 700;
   font-style: italic;
 }
-/* .tab1 {
-background-color: #cad2c5;}
-.tab2 {
-background-color: #FFBE98;}
-.tab3 {
-background-color: #BCB4FF;} */
+
 .tab.focus {
   background-color: var(--offWhiteColor);
 }
+
+.mainBody {
+  background-color: var(--offWhiteColor);
+  border-radius: 10px;
+  height: 360px;
+  width: 600px;
+}
+
+/* ~~~~~~~~~~~~~~~~ FolderPage */
+
+.mainBody.folderPage {
+  display: flex;
+  flex-wrap: wrap;
+  /* temporary styling when the folders are all on screen */
+  /* folder icon styling is at the bottom of the page in the icons tab */ 
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~ ProjectPage */
+
 .backButton {
   background: none;
 }
 
+.mainBody.projectPage {
+  display: grid;
+  grid-template-rows: 15% 75% 10%;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    "title skill"
+    "subtitle skill"
+    "subtitle link";
+  /* temporary styling when a folder is opened and a project is showing */
+}
 
-/* same styling as folderFrame */
+.click {
+  margin: 10px;
+  /* the two buttons that click between folders */
+}
 
+.mainTitle {
+  grid-area: title;
+  font-size: 25px;
+  padding: 35px;
+  /* template for project title */
+}
 
+.mainSubtitle {
+  grid-area: subtitle;
+  padding: 35px;
+  /* template for project description */
+}
 
+.mainBulletPoints {
+  grid-area: skill;
+  border-radius: 10px;
+  background-color: #fad648;
+  padding: 15px;
+  margin: 15px;
+  /* template for the bullet points to the side of project details */
+}
 
-.hoverTitle:hover {
+.mainLink {
+  grid-area: link;
+  text-align: right;
+  padding-right: 20px;
+  text-decoration: none;
+  color: black;
+  /* template for "visit webpage" button */
+}
+
+.mainLink:hover {
+  font-weight: 700;
   font-style: italic;
-  font-weight: 600;
 }
 
 
-
+/* ~~~~~~~~~~~~~~~~~ ThoughtsPage */
 
 .mainBody.thoughtsPage {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-
 .thoughts {
-  margin: 20px;;
+  margin: 20px;
 }
 
 .thoughtsParagraph {
- width: 300px;
+  width: 300px;
 }
+
 .thoughtsPicture {
-  height: 250px;
-  width: 200px;
-  border: 2px solid purple;
+  min-height: 200px;
+  max-height: 250px;
+  min-width: 100px;;
+  max-width: 200px;
+  border: 2px solid black;
   border-radius: 10px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ the second panel: about ~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
 .aboutWrapper {
   position: absolute;
   bottom: 0vh;
   background-color: var(--brightColor2);
-  box-shadow: 0px 9px 5px 10px  var(--darkerColor1);
-/*   height: 90vh; */
+  box-shadow: 0px 9px 5px 10px var(--darkerColor1);
+  /*   height: 90vh; */
   max-height: 100vh;
-/*   background-color: #52796f; */
+  /*   background-color: #52796f; */
   z-index: 20;
   width: 100%;
   transition: max-height 1s;
-    margin-top: 95px;
-/*   min-height: 95px; */
+  margin-top: 95px;
+  /*   min-height: 95px; */
 }
-
 
 .aboutTitle {
   font-family: "Montserrat Alternates", sans-serif;
@@ -275,31 +263,26 @@ background-color: #BCB4FF;} */
 
 .aboutContents {
   overflow: scroll;
- height: 100vh;
+  height: 100vh;
   max-height: 0px;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
   /* align-items: center; */
-/*   margin-top: 5%; */
+  /*   margin-top: 5%; */
   overflow: scroll;
-    transition: all 1s;
-/*   margin-top: 95px; */
+  transition: all 1s;
+  /*   margin-top: 95px; */
 }
-
-
-
-
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~ contents within the about panel ~~~~~~~~~~~~~~~~~~~ */
 
 .aboutGridLayout {
   display: grid;
-grid-template-rows: 50% 50%;
-grid-template-columns: 60% 40%;
-grid-template-areas:
-  "work me"
-  "work links";
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    "work me"
+    "work links";
   width: 765px;
   margin-top: 6%;
   padding: 40px;
@@ -315,7 +298,6 @@ grid-template-areas:
   margin: 0px;
 }
 
-
 /* the box holding my picture */
 .contactRightPanel {
   grid-area: me;
@@ -326,8 +308,6 @@ grid-template-areas:
   margin-top: -118px;
   margin-left: -50px;
 }
-
-
 
 /* all links, removes the generic stylization */
 .goTo {
@@ -341,7 +321,6 @@ grid-template-areas:
   font-style: italic;
 }
 
-
 /* box holding contact buttons */
 .contactButtons {
   grid-area: links;
@@ -354,11 +333,10 @@ grid-template-areas:
   margin-bottom: -20px;
 }
 
-
 /* the highlight accentuating certain words, including the contact buttons */
 .highlight {
-  position:relative;
-  z-index:1;
+  position: relative;
+  z-index: 1;
 }
 .highlight::after {
   content: "";
@@ -373,8 +351,8 @@ grid-template-areas:
 }
 /* gives contact buttons a different color than the other highlighted words */
 .contactGoTo::after {
-background-color: #9DC4B590;
-padding-right: 20px;
+  background-color: #9dc4b590;
+  padding-right: 20px;
 }
 
 /* when you click my email this confirmation fades in */
@@ -383,31 +361,26 @@ padding-right: 20px;
   opacity: 0%;
   padding: 0px 6px;
   margin-top: 3px;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
-
-
-
-
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ ICONS AND MISC STUFF ~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ the folder icon  ~~~~~~~~~~~~~~~~~~~~~~~ */
 .folder {
   display: flex;
-flex-direction: column;
-align-items: center;
-height: 100px;
-width: 120px;
-margin: 30px;
-padding: 10px;
-border-radius: 10px;
-font-size: 17px;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 120px;
+  margin: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 17px;
 }
 .folderBack {
   width: 120px;
-    height: 80px;
+  height: 80px;
   border-radius: 0px 10px 15px 15px;
   background-color: black;
   display: flex;
@@ -438,7 +411,7 @@ font-size: 17px;
 }
 /* highlights the text under the folder icon */
 .folder:hover {
-font-weight: 700;
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -448,7 +421,7 @@ font-weight: 700;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
-}  
+}
 .dm-serif display-regular-italic {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
@@ -466,15 +439,18 @@ font-weight: 700;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-/*  300-700  */
+  /*  300-700  */
 }
 
-
-#folder0, #folder6, #folder20, #folder26 {
+#folder0,
+#folder6,
+#folder20,
+#folder26 {
   visibility: hidden !important;
 }
 
-#hideButtonLeft, #hideButtonRight {
+#hideButtonLeft,
+#hideButtonRight {
   display: none;
 }
 
@@ -482,14 +458,9 @@ font-weight: 700;
   display: none !important;
 }
 
-
 /* right left buttons */
 
 .material-symbols-outlined {
   cursor: pointer;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }

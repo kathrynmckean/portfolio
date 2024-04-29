@@ -263,7 +263,16 @@ let getRightClick = document.querySelector('.clickRight')
 
 function assignLeftRight(num) {
   // function that parses the number within the id of the opened folder, adds one, subtracts one, and assigns those to the buttons
-  
+  if (num>10) {
+    num = (Number(num)-20)
+    let leftButtonNumber = (Number(num)-1);
+    leftButtonNumber = `pfolder${leftButtonNumber}`
+    getLeftClick.id = `${leftButtonNumber}`;
+
+    let rightButtonNumber = (Number(num)+1);
+    rightButtonNumber = `pfolder${rightButtonNumber}`
+    getRightClick.id = `${rightButtonNumber}`;
+  } else {
   // the left button will be one less than the current folder
   let leftButtonNumber = (Number(num)-1);
    // add back in the word folder
@@ -277,6 +286,9 @@ function assignLeftRight(num) {
   // get the button's id and set it to the above
   getRightClick.id = `${rightButtonNumber}`;
 }
+}
+
+
 
 
 
@@ -320,7 +332,8 @@ function openPersonalFolder(xyz) {
   let currentNumber = parseInt(xyz.replace("pfolder", ""))
   let indexNumber = (Number(currentNumber)-1);
 
-  assignLeftRight(currentNumber);
+  let makeDifferentNumber = (Number(currentNumber)+20)
+  assignLeftRight(makeDifferentNumber);
   projectFrameOpening();
 
   const personalProjectsData = personalProjectData[indexNumber];
