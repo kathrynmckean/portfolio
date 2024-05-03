@@ -1,58 +1,70 @@
 // I want to finish what I've got before going back and changing it to be more dynamic
 
-// import { projectData } from "./data";
-// import { projectData } from './data';
-
 const projectData = [
   {
     projectId: 1,
-    title: "Waluigi Jail from obj",
+    title: "Waluigi Jail",
     content: "A project intended to develop HTML, CSS, and JavaScript skills. Users interact with the central image, triggering dynamic transformations and text display with each click, demonstrating foundational coding proficiency and creativity.",
-    floating : "n/a",
-    link: "kathryn.mckean.github.io/waluigijail/",
-    thoughts: "words",
+    floating : ['HTML', 'CSS', 'JS', 'Design'],
+    link: "https://kathrynmckean.github.io/waluigiJail/",
+    thoughts: "I think this is a very silly project. It was actually the first project I had ever worked on, but I value it as a building block toward larger projects.",
     img: "pics/firstWaPic.png",
     color: "#7e0cd6",
+    className: "waluigiJail",
+    folderNum: 'folder1',
+    type: "Coding",
   },
   {
     projectId: 2,
     title: "Memory Game",
     content: "This is a simple project centered around JavaScript, focusing on state management and the utilization of for loops.",
-    link: "kathryn.mckean.github.io/memorygame/",
-    floating : "n/a",
+    link: "https://kathrynmckean.github.io/NoteTaker/",
+    floating : ['HTML', 'CSS', 'JS', 'For Loops'],
     thoughts: "kjk kk nwkdfn",
-    img: "pics/",
+    img: "pics/finishedMG.png",
     color: "#c76d9d",
+    className: "memoryGame",
+    folderNum: 'folder2',
+    type: "Coding",
   },
   {
     projectId: 3,
     title: "Note Taker",
     content: "Develops CRUD skills through a simple note making page. You can create, read, update, and delete notes.",
-    floating : "n/a",
-    link: "kathryn.mckean.github.io/noteTaker/",
-    thoughts: "j j dfljerje",
+    floating : ['HTML', 'CSS', 'JS', 'CRUD', 'Firebase'],
+    link: "https://kathrynmckean.github.io/noteTaker/",
+    thoughts: "As the next step, the project aims to integrate Firebase for convenient note storage and access. Currently, the app is simply a proof of CRUD skills, adding a database will make it functional.",
     img: "me.png",
     color: "#588157",
+    className: "noteTaker",
+    folderNum: 'folder3',
+    type: "Coding",
   },
   {
     projectId: 4,
     title: "MAYS (Pet Care)",
     content: "A A webpage for a local petcare company. Utilized Figma to design the webpage.",
-    floating : "n/a",
-    link: "kathryn.mckean.github.io/MAYS/",
+    floating : ['HTML', 'CSS', 'JS', 'Figma'],
+    link: "https://kathrynmckean.github.io/MAYS/",
     thoughts: "  lkjseklsdfffff",
     img: "me.png",
     color: "#4367aa",
+    className: "petCare",
+    folderNum: 'folder4',
+    type: "Coding",
   },
   {
     projectId: 5,
     title: "Gif Fortune Teller",
     content: "Using the giphy API, your fortune is told. The user inputs their question and a related gif is shown. Like a giphy search bar, but more interesting",
-    floating : "n/a",
-    link: "kathryn.mckean.github.io/gifFortune/",
+    floating : ['GiphyAPI', 'SVG Design', 'JS', 'Design'],
+    link: "https://kathrynmckean.github.io/gifFortune/",
     thoughts: "lsfljsf",
     img: "me.png",
     color: "#33158E",
+    className: "gifFortune",
+    folderNum: 'folder5',
+    type: "Coding",
   },
 ]
 
@@ -63,160 +75,159 @@ const personalProjectData = [
     projectId: 1,
     title: "ET: The Lamp",
     content: "Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel)",
-    floating : "insert photo",
+    floating : ['Design', 'Handbuilding', 'kdkjdf', 'dlk'],
     // link: "kathryn.mckean.github.io/waluigijail/",
     thoughts: "This was made for someone who loves ET and ambient lighting.",
     img: "pics/et1.png",
     color: "#7e0cd6",
+    className: "ET",
+    folderNum: 'pfolder1',
+    type: "Personal",
+    visibility: "hidden"
   },
   {
     projectId: 2,
     title: "Metalwork",
     content: "This is a simple project centered around JavaScript, focusing on state management and the utilization of for loops.",
     link: "kathryn.mckean.github.io/memorygame/",
-    floating : "n/a",
+    floating : ['Welding', 'Lost Wax Casting', 'Sand Casting', 'Design',],
     thoughts: "kjk kk nwkdfn",
     img: "pics/floral.png",
     color: "#c76d9d",
+    className: "Metalwork",
+    folderNum: 'pfolder2',
+    type: "Personal",
+    visibility: "hidden"
   },
   {
     projectId: 3,
     title: "Prosthetics",
     content: "Develops CRUD skills through a simple note making page. You can create, read, update, and delete notes.",
-    floating : "n/a",
+    floating : ['Chair-side Manner', 'Lost Wax Casting', '3D Printing', 'CAD', 'Resin Lamination'],
     link: "kathryn.mckean.github.io/noteTaker/",
     thoughts: "j j dfljerje",
     img: "pics/pinkLeg.png",
     color: "#588157",
+    className: "Prosthetics",
+    folderNum: 'pfolder3',
+    type: "Personal",
+    visibility: "hidden"
   },
   {
     projectId: 4,
     title: "2D",
     content: "A A webpage for a local petcare company. Utilized Figma to design the webpage.",
-    floating : "n/a",
+    floating : ['HTML', 'CSS', 'JS', 'Design'],
     link: "kathryn.mckean.github.io/MAYS/",
     thoughts: "  lkjseklsdfffff",
     img: "pics/us.png",
     color: "#4367aa",
+    className: "2D",
+    folderNum: 'pfolder4',
+    type: "Personal",
+    visibility: "hidden"
   },
   {
     projectId: 5,
     title: "3D",
     content: "Using the giphy API, your fortune is told. The user inputs their question and a related gif is shown. Like a giphy search bar, but more interesting",
-    floating : "n/a",
+    floating : ['HTML', 'CSS', 'JS', 'Design'],
     link: "kathryn.mckean.github.io/gifFortune/",
     thoughts: "lsfljsf",
     img: "pics/woodsculpture.png",
     color: "#33158E",
+    className: "3D",
+    folderNum: 'pfolder5',
+    type: "Personal",
+    visibility: "hidden"
   },
 ]
 
-// so if i click between two folders I want it to open on the overview, so update the openfolder functions to reflect that
-
-
+//defining all the variables
 
 let getProjectWrapper = document.getElementById("projectWrapper")
 let getProjectContents = document.getElementById("projectContents")
 let getAboutContents = document.getElementById("aboutContents")
-
-function openProjectContents() { 
-  // when i click the project title i want to make the max-height of the wrapper 90vh
-// check if the panel itself is open
-// then check if the other panel is open
-// if other panel is open then only close that panel and return
-// if other panel isn't open then open only this panel
-
-if (getAboutContents.classList.contains("open")) {
-  closeAbout();
-} else if (!getProjectContents.classList.contains("open")) {
- openProjects();
-} else (closeProjects())
-}
-
-
-function openProjects() {
-  console.log('open projects')
-  getProjectContents.style.maxHeight = 'calc(100vh - 190px)';
-  getProjectContents.classList.add("open")
-  changeHeaderSize()
-  // changeHeaderSize();
-}
-
-function closeProjects() {
-  console.log('close projects')
-  getProjectContents.style.maxHeight = '0px';
-  getProjectContents.classList.remove("open");
-  changeHeaderSize()
-  // changeHeaderSize();
-}
-
-function openAboutContents() {
-  // if the panel is closed then open both panels
-  // max-height becomes calc(100% - 190px)
-  // console.log(math);
-  
-   // getAboutContents.style.height = 'calc(100% - 95px)';
-  console.log("done")
-  
-  if (getProjectContents.classList.contains('open')) {
-    if(getAboutContents.classList.contains('open')) {
-      closeAbout();
-      closeProjects()
-      return
-    } else {
-    openAbout();
-    return }}
-  else {
-    openAbout();
-    openProjects()
-    
-  }
-      
-}
-
-
-function openAbout() {
-  getAboutContents.style.maxHeight = 'calc(100vh - 190px)';
-  getAboutContents.classList.add('open')
-  changeHeaderSize();
-
-}
-function closeAbout() {
-  getAboutContents.style.maxHeight = '0px';
-  getAboutContents.classList.remove('open')
-  changeHeaderSize()
-}
-
-
 let getTitle = document.getElementById("mainTitle");
 let getSubtitle = document.getElementById("mainSubtitle");
 let getBulletPoints = document.getElementById("mainBulletPoints");
 let getLink = document.getElementById("mainLink");
+let getMainBody = document.getElementById("mainBody");
+let getPersonalTabTitle = document.querySelector(".tab.personal")
+let getCodingTabTitle = document.querySelector('.tab.coding')
 
 
+// ~~~~~~~ FUNCTIONS THAT CONTROL PANEL OPENING/CLOSING
+
+function openProjectContents() {  // determines if the panels are open and opens/closes the panels accordingly
+  if (getAboutContents.classList.contains("open")) { closeAbout() } 
+    else if (!getProjectContents.classList.contains("open")) { openProjects() } 
+    else (closeProjects())
+  }
+
+
+function openProjects() { // does the actual opening
+  console.log('open projects')
+  getProjectContents.style.maxHeight = 'calc(100vh - 190px)';
+  getProjectContents.classList.add("open")
+  changeHeaderSize();
+}
+
+function closeProjects() { // does the actual closing
+  console.log('close projects')
+  getProjectContents.style.maxHeight = '0px';
+  getProjectContents.classList.remove("open");
+  changeHeaderSize();
+}
+
+function openAboutContents() { // determines if the panels are open and opens/closes the panels accordingly
+  if (getProjectContents.classList.contains('open')) {
+    if(getAboutContents.classList.contains('open')) {
+      closeAbout();
+      closeProjects();
+      return;
+    } else {
+       openAbout();
+       return; }}
+      else {
+        openAbout();
+        openProjects(); 
+     }}
+
+
+function openAbout() { // does the actual opening
+  getAboutContents.style.maxHeight = 'calc(100vh - 190px)';
+  getAboutContents.classList.add('open');
+  changeHeaderSize();
+}
+
+function closeAbout() { // does the actual closing
+  getAboutContents.style.maxHeight = '0px';
+  getAboutContents.classList.remove('open');
+  changeHeaderSize();
+}
+
+
+
+// ~~~~~~~~ FUNCTIONS WITHIN THE 'PROJECT' PANEL
 
 function projectFrameOpening() {
   document.getElementById("projectFrame").classList.remove("hidden");
   document.getElementById("folderFrame").classList.add("hidden");
 }
 
-function projectFrameClosing() {
-  // runs when the back button is pressed
-  // first we reset the inner tabs so the next folder opened will open on the overview
+function projectFrameClosing() { // runs when the back button is pressed, shows the list of folders again
+  // Reset the inner tabs so the next folder opened will open on the overview
   resetInnerTabs();
-  tabOverviewLoadContents()
+  tabOverviewLoadContents();
   // shows all the folders again
     document.getElementById("projectFrame").classList.add("hidden");
     document.getElementById("folderFrame").classList.remove("hidden");
   // change buttons back to hidden by changing id to hideButtonLeft and hideButtonRight
-  getLeftClick.id = "hideButtonLeft"
-  getRightClick.id = "hideButtonRight"
-  
+  getLeftClick.id = "hideButtonLeft";
+  getRightClick.id = "hideButtonRight";
 }
 
-let getMainBody = document.getElementById("mainBody");
-let getPersonalTabTitle = document.querySelector(".tab.personal")
-let getCodingTabTitle = document.querySelector('.tab.coding')
 
 
 function showPersonalFolders() {
@@ -227,13 +238,13 @@ function showPersonalFolders() {
 
   // hide coding projects
   // query selector all for class of folder and coding, add hidden
-  let getCodingFolders = document.querySelectorAll(".folder.coding");
+  let getCodingFolders = document.querySelectorAll(".folder.Coding");
   getCodingFolders.forEach(function (elem) {
     elem.classList.add('hidden');
   });
   // show personal projects
   // same thing, but remove hidden
-  let getPersonalFolders = document.querySelectorAll(".folder.personal");
+  let getPersonalFolders = document.querySelectorAll(".folder.Personal");
   getPersonalFolders.forEach(function (elem) {
     elem.classList.remove('hidden');
   });
@@ -247,13 +258,13 @@ function showCodingFolders() {
   getCodingTabTitle.classList.add('focus')
   // show coding projects
   // query selector all for class of folder and coding, remove hidden
-  let getCodingFolders = document.querySelectorAll(".folder.coding");
+  let getCodingFolders = document.querySelectorAll(".folder.Coding");
   getCodingFolders.forEach(function (elem) {
     elem.classList.remove('hidden');
   });
   // hide personal projects
   // same thing, but add hidden
-  let getPersonalFolders = document.querySelectorAll(".folder.personal");
+  let getPersonalFolders = document.querySelectorAll(".folder.Personal");
   getPersonalFolders.forEach(function (elem) {
     elem.classList.add('hidden');
   });
@@ -295,15 +306,16 @@ function assignLeftRight(num) {
 let getThoughtsParagraph = document.getElementById('thoughtsParagraph')
 let getThoughtsPicture = document.getElementById('thoughtsPicture')
 
-function openFolder(xyz) {
-  console.log('replacement open folder function')
+function openCodingFolder(xyz) {
+  
+  tabOverviewLoadContents()
   // remove 'folder' and youre left with the number uyou want to open
   let currentNumber = parseInt(xyz.replace("folder", ""))
   let indexNumber = (Number(currentNumber)-1);
 
   assignLeftRight(currentNumber);
   projectFrameOpening();
-
+  
   const projectsData = projectData[indexNumber];
 
   let title = projectsData.title ?? "N/A";
@@ -312,23 +324,36 @@ function openFolder(xyz) {
   let subtitleContent = projectsData.content ?? "N/A";
   getSubtitle.innerHTML = `${subtitleContent}`
 
-  let floating = projectsData.floating ?? "N/A";
-  getBulletPoints.innerHTML = `${floating}`;
+
+  getBulletPoints.innerHTML = ''
+  let floating = projectsData.floating ?? [];
+  const floatingItems = floating.map((item) => {
+let makeListItem = document.createElement('li', `${item}`)
+makeListItem.innerHTML = item;
+getBulletPoints.appendChild(makeListItem);
+  })
+
+
+  // getFirstPgPic.src = `${floating}`
+  // getBulletPoints.innerHTML = `${floating}`;
 
   let link = projectsData.link ?? "N/A";
   getLink.setAttribute("href", `${link}`);
+  getLink.setAttribute('target', '_blank')
 
   let thoughtsContent = projectsData.thoughts ?? "N/A"
   getThoughtsParagraph.innerHTML = `${thoughtsContent}`;
 
   let imgContents = projectsData.img ?? "N/A"
   getThoughtsPicture.src = `${imgContents}`
-
 }
 
 function openPersonalFolder(xyz) {
-  console.log('replacement open folder function')
-  // remove 'folder' and youre left with the number uyou want to open
+  tabOverviewLoadContents()
+  
+  if (xyz.includes('p')){
+
+  
   let currentNumber = parseInt(xyz.replace("pfolder", ""))
   let indexNumber = (Number(currentNumber)-1);
 
@@ -344,18 +369,25 @@ function openPersonalFolder(xyz) {
   let subtitleContent = personalProjectsData.content ?? "N/A";
   getSubtitle.innerHTML = `${subtitleContent}`
 
-  let floating = personalProjectsData.floating ?? "N/A";
-  getBulletPoints.innerHTML = `${floating}`;
+  getBulletPoints.innerHTML = ''
+  let floating = personalProjectsData.floating ?? [];
+  const floatingPersonalItems = floating.map((item) => {
+let makeListItem = document.createElement('li', `${item}`)
+makeListItem.innerHTML = item;
+getBulletPoints.appendChild(makeListItem);
 
-  let link = personalProjectsData.link ?? "N/A";
-  getLink.setAttribute("href", `${link}`);
+  })
+  
+
+
+  getLink.classList.add('hidden')
 
   let thoughtsContent = personalProjectsData.thoughts ?? "N/A"
   getThoughtsParagraph.innerHTML = `${thoughtsContent}`;
 
   let imgContents = personalProjectsData.img ?? "N/A"
   getThoughtsPicture.src = `${imgContents}`
-
+}
 }
 
 
@@ -473,15 +505,15 @@ return
 // i know this is really ugly, and I will come back and make it better but i'm trying not look up stuff this iteration
 function scrollFolder(x) {
   if (x == "folder1") {
-    openFolder('folder1')
+    openCodingFolder('folder1');
   } else if (x == "folder2") {
-    openFolder('folder2')
+    openCodingFolder('folder2')
   }  else if (x == "folder3") {
-    openFolder('folder3')
+    openCodingFolder('folder3')
   }  else if (x == "folder4") {
-    openFolder('folder4')
+    openCodingFolder('folder4')
   }  else if (x == "folder5") {
-    openFolder('folder5')
+    openCodingFolder('folder5')
   } else if (x == "pfolder1") {
     openPersonalFolder('pfolder1')
   } else if (x == "pfolder2") {
@@ -496,3 +528,58 @@ function scrollFolder(x) {
     return;
   }
 }
+
+function createFolderIcon(passedInItem) {
+  
+  // create case div ( id folder(x) ) (class of (folder, coding/personal, className(fromarray))
+  let createContainerDiv = document.createElement('div')
+  createContainerDiv.setAttribute("class", `${passedInItem.className} folder ${passedInItem.type} ${passedInItem.visibility}`)
+  createContainerDiv.setAttribute('id', `${passedInItem.folderNum}`)
+  createContainerDiv.setAttribute('onclick', `open${passedInItem.type}Folder(this.id)`)
+  
+  // child div class folderBack
+  let createFolderBack = document.createElement('div')
+  createFolderBack.setAttribute('class', 'folderBack')
+  
+  // child div class folderTab and append to folderBack
+  let createFolderTab = document.createElement('div')
+  createFolderTab.setAttribute('class', 'folderTab')
+  createFolderBack.appendChild(createFolderTab);
+  
+  // child div class folderFront with style="background color = color(fromarray)" and append to folderBack
+  let createFolderFront = document.createElement('div')
+  createFolderFront.setAttribute('class', 'folderFront')
+  createFolderFront.style.backgroundColor = `${passedInItem.color}`
+  createFolderBack.appendChild(createFolderFront);
+  
+  // append the icon to the container
+  createContainerDiv.appendChild(createFolderBack);
+  
+  // find the folder container and append folder to it
+  getMainBody.appendChild(createContainerDiv)
+  
+   // child h5 class folderTitle with innerHTML = className(fromArray)
+  let createFolderTitle = document.createElement('h5')
+  createFolderTitle.setAttribute('class',"folderTitle")
+  createFolderTitle.innerHTML= `${passedInItem.className}`
+  createContainerDiv.appendChild(createFolderTitle);
+  
+}
+
+function preload() {
+  projectData.forEach((item) => {
+    createFolderIcon(item);
+  });
+  personalProjectData.forEach((item) => {
+    createFolderIcon(item);
+  })
+  // theres a known problem with google icons where it takes a split second to initially load the icons. So that's why I'm preloading them to prevent that being visible to the user.
+  getLeftClick.id = `show`;
+  getRightClick.id = "show";
+  setTimeout(() => {
+    getLeftClick.id = `hideButtonLeft`;
+    getRightClick.id = "hideButtonRight";
+  }, "300");
+ 
+  
+} preload()

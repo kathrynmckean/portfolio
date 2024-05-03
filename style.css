@@ -135,8 +135,9 @@ body {
 .mainBody {
   background-color: var(--offWhiteColor);
   border-radius: 10px;
-  height: 360px;
+  height: 400px;
   width: 600px;
+  transition: all 1s;
 }
 
 /* ~~~~~~~~~~~~~~~~ FolderPage */
@@ -158,7 +159,10 @@ body {
 .mainBody.projectPage {
   display: grid;
   grid-template-rows: 15% 75% 10%;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 70% 30%;
+  padding: 30px;
+  height: 300px;
+  width: 520px;
   grid-template-areas:
     "title skill"
     "subtitle skill"
@@ -174,29 +178,45 @@ body {
 .mainTitle {
   grid-area: title;
   font-size: 25px;
-  padding: 35px;
+  /* padding: 35px; */
   /* template for project title */
 }
 
 .mainSubtitle {
   grid-area: subtitle;
-  padding: 35px;
+  /* padding: 35px; */
   /* template for project description */
 }
 
 .mainBulletPoints {
   grid-area: skill;
-  border-radius: 10px;
-  background-color: #fad648;
-  padding: 15px;
-  margin: 15px;
+  /* border-radius: 10px; */
+  /* background-color: #fad648; */
+  padding: 0px;
+  margin: 0px;
+  list-style-position: inside;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   /* template for the bullet points to the side of project details */
 }
+
+.mainBulletPoints li {
+  padding: 4px 13px;
+  border: dashed 1px var(--darkerColor1);
+  border-radius: 15px;
+  box-shadow: 1px 1px var(--darkerColor1), 6px 4px var(--brightColor2);
+  margin: 5px 0px;
+  width: fit-content;
+}
+
+
 
 .mainLink {
   grid-area: link;
   text-align: right;
-  padding-right: 20px;
+  /* padding-right: 20px; */
   text-decoration: none;
   color: black;
   /* template for "visit webpage" button */
@@ -223,17 +243,19 @@ body {
 
 .thoughtsParagraph {
   width: 300px;
+  margin: 30px;
 }
 
 .thoughtsPicture {
-  min-height: 200px;
-  max-height: 250px;
+  max-height: 315px;
   min-width: 100px;;
-  max-width: 200px;
-  border: 2px solid black;
+  max-width: 300px;
+  border: 6px solid var(--darkerColor1);
   border-radius: 10px;
   /* background-color: blue; */
 }
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ the second panel: about ~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -444,8 +466,8 @@ body {
 
 #folder0,
 #folder6,
-#folder20,
-#folder26 {
+#pfolder0,
+#pfolder6 {
   visibility: hidden !important;
 }
 
@@ -463,4 +485,5 @@ body {
 .material-symbols-outlined {
   cursor: pointer;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  /* font-display: block; */
 }
