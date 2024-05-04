@@ -144,7 +144,7 @@ const personalProjectData = [
 ]
 
 //defining all the variables
-
+let getHeader = document.querySelector(".header");
 let getProjectWrapper = document.getElementById("projectWrapper")
 let getProjectContents = document.getElementById("projectContents")
 let getAboutContents = document.getElementById("aboutContents")
@@ -155,6 +155,11 @@ let getLink = document.getElementById("mainLink");
 let getMainBody = document.getElementById("mainBody");
 let getPersonalTabTitle = document.querySelector(".tab.personal")
 let getCodingTabTitle = document.querySelector('.tab.coding')
+let getLeftClick = document.querySelector('.clickLeft');
+let getRightClick = document.querySelector('.clickRight')
+let getThoughtsParagraph = document.getElementById('thoughtsParagraph')
+let getThoughtsPicture = document.getElementById('thoughtsPicture')
+
 
 
 // ~~~~~~~ FUNCTIONS THAT CONTROL PANEL OPENING/CLOSING
@@ -207,11 +212,34 @@ function closeAbout() { // does the actual closing
   changeHeaderSize();
 }
 
+// when header is clicked close both panels 
+function closeAllPanels() {
+  closeAbout();
+  closeProjects();
+  changeHeaderSize();
+}
+
+function changeHeaderSize() { //when you open a panel the header shrinks to fit snugly alongside the panel title
+
+  if (getAboutContents.classList.contains("open")) {
+    getHeader.classList.add('smallFont');
+    getHeader.classList.remove("bigFont")
+  console.log("make small??");
+  } else if (getProjectContents.classList.contains('open')) {
+    getHeader.classList.add('smallFont');
+    getHeader.classList.remove("bigFont");
+  console.log("make small??");
+  } else {
+    getHeader.classList.remove('smallFont');
+    getHeader.classList.add("bigFont");
+  console.log("make big??");
+  }
+}
 
 
 // ~~~~~~~~ FUNCTIONS WITHIN THE 'PROJECT' PANEL
 
-function projectFrameOpening() {
+function projectFrameOpening() { // when you click open a folder, the project contents are shown
   document.getElementById("projectFrame").classList.remove("hidden");
   document.getElementById("folderFrame").classList.add("hidden");
 }
@@ -228,15 +256,14 @@ function projectFrameClosing() { // runs when the back button is pressed, shows 
   getRightClick.id = "hideButtonRight";
 }
 
-
-
-function showPersonalFolders() {
+function showPersonalFolders() { // This hides the coding folders and instead shows the personal folders
   getMainBody.classList.add("personal");
   getMainBody.classList.remove("coding");
+  
+  // highlights the personal tab, unhighlights the coding tab
   getPersonalTabTitle.classList.add('focus');
   getCodingTabTitle.classList.remove('focus')
-
-  // hide coding projects
+  
   // query selector all for class of folder and coding, add hidden
   let getCodingFolders = document.querySelectorAll(".folder.Coding");
   getCodingFolders.forEach(function (elem) {
@@ -249,9 +276,12 @@ function showPersonalFolders() {
     elem.classList.remove('hidden');
   });
 }
+
+
+
 function showCodingFolders() {
   
-    getMainBody.classList.remove("personal");
+  getMainBody.classList.remove("personal");
   getMainBody.classList.add("coding");
 
   getPersonalTabTitle.classList.remove('focus');
@@ -269,8 +299,7 @@ function showCodingFolders() {
     elem.classList.add('hidden');
   });
 }
-let getLeftClick = document.querySelector('.clickLeft');
-let getRightClick = document.querySelector('.clickRight')
+
 
 function assignLeftRight(num) {
   // function that parses the number within the id of the opened folder, adds one, subtracts one, and assigns those to the buttons
@@ -300,12 +329,6 @@ function assignLeftRight(num) {
 }
 
 
-
-
-
-let getThoughtsParagraph = document.getElementById('thoughtsParagraph')
-let getThoughtsPicture = document.getElementById('thoughtsPicture')
-
 function openCodingFolder(xyz) {
   
   tabOverviewLoadContents()
@@ -332,10 +355,6 @@ let makeListItem = document.createElement('li', `${item}`)
 makeListItem.innerHTML = item;
 getBulletPoints.appendChild(makeListItem);
   })
-
-
-  // getFirstPgPic.src = `${floating}`
-  // getBulletPoints.innerHTML = `${floating}`;
 
   let link = projectsData.link ?? "N/A";
   getLink.setAttribute("href", `${link}`);
@@ -378,8 +397,6 @@ getBulletPoints.appendChild(makeListItem);
 
   })
   
-
-
   getLink.classList.add('hidden')
 
   let thoughtsContent = personalProjectsData.thoughts ?? "N/A"
@@ -391,32 +408,6 @@ getBulletPoints.appendChild(makeListItem);
 }
 
 
-
-// when header is clicked close both panels 
-function closeAllPanels() {
-  closeAbout();
-  closeProjects();
-  changeHeaderSize();
-}
-
-let getHeader = document.querySelector(".header");
-
-function changeHeaderSize() {
-
-  if (getAboutContents.classList.contains("open")) {
-    getHeader.classList.add('smallFont');
-    getHeader.classList.remove("bigFont")
-  console.log("make small??");
-  } else if (getProjectContents.classList.contains('open')) {
-    getHeader.classList.add('smallFont');
-    getHeader.classList.remove("bigFont");
-  console.log("make small??");
-  } else {
-    getHeader.classList.remove('smallFont');
-    getHeader.classList.add("bigFont");
-  console.log("make big??");
-  }
-}
 
 
 let text = document.getElementById('myEmail').textContent;
@@ -580,6 +571,8 @@ function preload() {
     getLeftClick.id = `hideButtonLeft`;
     getRightClick.id = "hideButtonRight";
   }, "300");
- 
+
+  let getFirstPage = document.getElementById('firstPage')
+  getFirstPage.style.height = 'calc(100vh - 190px)';
   
 } preload()
