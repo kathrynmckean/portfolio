@@ -21,7 +21,7 @@ const projectData = [
     content:
       "A webpage for a local petcare company that offers dog walking and house sitting. Figma was used to design a one-page website that leads users from introduction to booking. My goal was to keep it simple and focus on their goal: earning a new client's trust.",
     floating: ["Figma", "UI/UX Design", "Visual Hierarchy"],
-    link: "https://kathrynmckean.github.io/MAYS/",
+    link: "https://dribbble.com/shots/23650506-Michelle-At-Your-Service?utm_source=Clipboard_Shot&utm_campaign=KMcKean&utm_content=Michelle%20At%20Your%20Service&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=KMcKean&utm_content=Michelle%20At%20Your%20Service&utm_medium=Social_Share",
     thoughts:
       "I love the use of one-page websites for small businesses; the current MAYS site is overloaded with content and difficult to navigate.",
     img: "pics/MAYSfrontpage.png",
