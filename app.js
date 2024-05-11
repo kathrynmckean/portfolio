@@ -49,7 +49,7 @@ const projectData = [
     title: "Memory Game",
     content:
       "This is a simple project centered around JavaScript, focusing on state management and the utilization of for loops.",
-    link: "https://kathrynmckean.github.io/NoteTaker/",
+    link: "https://kathrynmckean.github.io/memoryGame/",
     floating: ["HTML", "CSS", "JS", "Game States"],
     thoughts:
       "Most real-life projects won't resemble a game, but building this helped me understand arrays and for loops which are essential to web development.",
