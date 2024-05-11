@@ -35,7 +35,6 @@
     <!-- right -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preload" href="pics/snooop.png" as="image">
   </head>
   <body>
     <div class="firstPage" id="firstPage">
@@ -88,7 +87,9 @@
                 <a class="overview mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
                 <!--     second tab - thoughts       -->
                 <div class="thoughts thoughtsParagraph hidden" id="thoughtsParagraph">Filler Text</div>
+               
                 <img class="thoughts thoughtsPicture hidden" id="thoughtsPicture" src="" alt="" /> 
+              
                 <!-- third tab - pictures -->
 
                 <div class="pictures picTitle hidden" id="picTitle">Filler Text</div>
@@ -96,13 +97,13 @@
                 <div class='pictures carousel'>
                     <img class="pictures picPicture hidden" id="picPicture" src="" alt="">
                 </div>
-                <div class="pictures picNav">
+                <div class="pictures picNav hidden">
                   <div class="pictures picNav gray" id="picNavLeft" onclick="navigatePicture('decrease')">
                     <span class="material-symbols-outlined picNav">
                     arrow_back_ios
                     </span>
                   </div>
-                  <span>scroll gallery</span>
+                  <span>view gallery</span>
                   <div class="pictures picNav" id="picNavRight" onclick="navigatePicture('increase')">
                     <span class="material-symbols-outlined picNav">
                       arrow_forward_ios

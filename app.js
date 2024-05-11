@@ -80,7 +80,7 @@ const personalProjectData = [
     projectId: "p1",
     title: "ET: The Lamp",
     content:
-      "Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the wrong color.",
+      "Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the brown instead of his signature blue.",
     floating: ["Design", "Handbuilding"],
     // thoughts: "",
     img: "pics/et1.png",
@@ -94,7 +94,7 @@ const personalProjectData = [
     projectId: "p2",
     title: "Metalwork",
     content:
-      "This is a simple project centered around JavaScript, focusing on state management and the utilization of for loops.",
+      "My time in metalwork has developed skills in welding, lost wax casting, and sand casting. Small-scale metalwork is a new development, but I love being able to make my friends and family handmade jewelry.",
     link: "kathryn.mckean.github.io/memorygame/",
     floating: ["Welding", "Lost Wax Casting", "Sand Casting"],
     img: "pics/floral.png",
@@ -108,7 +108,7 @@ const personalProjectData = [
     projectId: "p3",
     title: "Prosthetics",
     content:
-      "Develops CRUD skills through a simple note making page. You can create, read, update, and delete notes.",
+      "I've worked in this field since 2020, fabricating both facial and limb prosthetics. My work, although uncredited, was featured on the TLC show Body Parts. I also grew a decently sized following online, amassing 7 million likes and 60,000 followers for my prosthetic content.",
     floating: [
       "Chair-side Manner",
       "Lost Wax Casting",
@@ -128,7 +128,7 @@ const personalProjectData = [
     projectId: "p4",
     title: "2D",
     content:
-      "A A webpage for a local petcare company. Utilized Figma to design the webpage.",
+      "Although textiles could be classified as 3D, I typically use fabric and other materials to bring drawings to life and thus have grouped them together. Drawing is a building block that anybody can hone and use toward other projects.",
     floating: ["HTML", "CSS", "JS", "Design"],
     link: "kathryn.mckean.github.io/MAYS/",
     img: "pics/us.png",
@@ -142,7 +142,7 @@ const personalProjectData = [
     projectId: "p5",
     title: "3D",
     content:
-      "Using the giphy API, your fortune is told. The user inputs their question and a related gif is shown. Like a giphy search bar, but more interesting",
+      "When you have access to a wood cutting laser, you've gotta put it to good use! But there's a ton of materials to make art with, such as clay, monster clay (an oil-based clay), wax. Snoopy and my mini-me were both sculpted in oil-based clay and then cast in other materials like liquid plastic or resin.",
     floating: ["HTML", "CSS", "JS", "Design"],
     link: "kathryn.mckean.github.io/gifFortune/",
     img: "pics/woodsculpture.png",
@@ -480,10 +480,12 @@ function loadPicture(imageArr) {
   getPicPicture.src = imageArr[0];
   
 }
+
 const getPicNavLeft = document.getElementById('picNavLeft')
 const getPicNavRight = document.getElementById('picNavRight')
+
 function navigatePicture(direction) {
- console.log(direction);
+ console.log('direction', direction);
 
  if(getPicNavLeft.classList.contains('gray')) {
   getPicNavLeft.classList.remove('gray')
@@ -496,6 +498,7 @@ function navigatePicture(direction) {
   const currentPicture = document.getElementById('picPicture');
   console.log('pre incremented index', currentImageArrayIndex);
   if (currentImageArrayIndex === currentImageArrayMax) {
+    getPicNavRight.classList.add('gray');
     return;
     // gray out the forward button
   }
@@ -511,6 +514,7 @@ function navigatePicture(direction) {
  }
  if (direction === 'decrease') {
   if (currentImageArrayIndex === 0) {
+    getPicNavLeft.classList.add('gray');
     return
   }
   console.log('im decreasing')
@@ -629,7 +633,6 @@ function tabPicturesLoadContents() {
 
 // i know this is really ugly, and I will come back and make it better
 // the solution was right in front of my face... i finally thought about it for 30 seconds and figured it out.
-// i dont even think I need the scrollFolder function. smh. you live and you learn.
 function scrollFolder(folderId) {
   
   // openCodingFolder(`${x}`)
