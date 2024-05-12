@@ -13,6 +13,7 @@ const projectData = [
     img: "pics/gifFortune1.png",
     color: "#33158E",
     className: "gifFortune",
+    classNameSuffix: ".gif",
     type: "Coding",
   },
   {
@@ -27,6 +28,7 @@ const projectData = [
     img: "pics/MAYSfrontpage.png",
     color: "#4367aa",
     className: "petCare",
+    classNameSuffix: ".fig",
     type: "Coding",
   },
   {
@@ -41,6 +43,7 @@ const projectData = [
     img: "pics/notes.png",
     color: "#588157",
     className: "noteTaker",
+    classNameSuffix: ".js",
     type: "Coding",
   },
 
@@ -56,6 +59,7 @@ const projectData = [
     img: "pics/finishedMG.png",
     color: "#c76d9d",
     className: "memoryGame",
+    classNameSuffix: ".js",
     type: "Coding",
   },
   {
@@ -70,6 +74,7 @@ const projectData = [
     img: "pics/firstWaPic.png",
     color: "#7e0cd6",
     className: "waluigiJail",
+    classNameSuffix: ".css",
     type: "Coding",
   },
 ];
@@ -87,6 +92,7 @@ const personalProjectData = [
     images: ["pics/et1.png", "pics/et2.png", "pics/et3.png", 'pics/et4.png'],
     color: "#36468F",
     className: "ET",
+    classNameSuffix: ".png",
     type: "Personal",
     visibility: "hidden",
   },
@@ -98,8 +104,9 @@ const personalProjectData = [
     link: "kathryn.mckean.github.io/memorygame/",
     floating: ["Welding", "Lost Wax Casting", "Sand Casting"],
     img: "pics/floral.png",
-    color: "#A0A4B8",
-    className: "Metalwork",
+    color: "#A6ABAE",
+    className: "metalwork",
+    classNameSuffix: ".png",
     type: "Personal",
     visibility: "hidden",
     images: ["pics/floral.png", "pics/hollow.png", "pics/fishy.png"],
@@ -119,7 +126,8 @@ const personalProjectData = [
     link: "kathryn.mckean.github.io/noteTaker/",
     img: "pics/pinkleg.png",
     color: "#8F7268",
-    className: "Prosthetics",
+    className: "prosthetics",
+    classNameSuffix: ".png",
     type: "Personal",
     visibility: "hidden",
     images: ["pics/sparkle.png", "pics/largeOffset.png", "pics/horses.png"],
@@ -132,9 +140,10 @@ const personalProjectData = [
     floating: ["HTML", "CSS", "JS", "Design"],
     link: "kathryn.mckean.github.io/MAYS/",
     img: "pics/us.png",
-    color: "#4367aa",
+    color: "#306B34",
     className: "2D",
     type: "Personal",
+    classNameSuffix: ".png",
     visibility: "hidden",
     images: ["pics/snooop.png", "pics/zeppo.png", "pics/us.png"],
   },
@@ -146,8 +155,9 @@ const personalProjectData = [
     floating: ["HTML", "CSS", "JS", "Design"],
     link: "kathryn.mckean.github.io/gifFortune/",
     img: "pics/woodsculpture.png",
-    color: "#33158E",
+    color: "#CE5374",
     className: "3D",
+    classNameSuffix: ".png",
     type: "Personal",
     visibility: "hidden",
     images: ["pics/woodsculpture.png", "pics/snoop.png", "pics/bust.png"],
@@ -681,7 +691,8 @@ function createFolderIcon(passedInItem) {
   // child h5 class folderTitle with innerHTML = className(fromArray)
   let createFolderTitle = document.createElement("h5");
   createFolderTitle.setAttribute("class", "folderTitle");
-  createFolderTitle.innerHTML = `${passedInItem.className}`;
+  let suffix = passedInItem.classNameSuffix ?? '.jpeg';
+  createFolderTitle.innerHTML = `${passedInItem.className}${suffix}`;
   createContainerDiv.appendChild(createFolderTitle);
 }
 
