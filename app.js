@@ -122,7 +122,7 @@ const personalProjectData = [
     className: "Prosthetics",
     type: "Personal",
     visibility: "hidden",
-    images: ["pics/pinkleg.png", "pics/largeOffset.png", "pics/horses.png"],
+    images: ["pics/sparkle.png", "pics/largeOffset.png", "pics/horses.png"],
   },
   {
     projectId: "p4",
