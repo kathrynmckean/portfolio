@@ -37,7 +37,7 @@ const projectData = [
     content:
       "Develops CRUD skills through a simple note making page. You can create, read, update, and delete notes.",
     floating: ["HTML", "CSS", "JS", "CRUD"],
-    link: "https://kathrynmckean.github.io/NoteTaker/",
+    link: "https://kathrynmckean.github.io/reactTest/",
     thoughts:
       "As the next step, the project aims to integrate Firebase for convenient note storage and access. Currently, the app is simply a proof of CRUD skills, adding a database will make it functional.",
     img: "pics/notes.png",
