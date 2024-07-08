@@ -35,7 +35,7 @@ const projectData = [
     projectId: 3,
     title: "Note Taker",
     content:
-      "Develops CRUD skills through a simple note making page. You can create, read, update, and delete notes.",
+      "Develops CRUD skills through a simple note making page. You can create, read, update, and delete notes which are saved locally.",
     floating: ["HTML", "CSS", "JS", "CRUD"],
     link: "https://kathrynmckean.github.io/reactTest/",
     thoughts:
