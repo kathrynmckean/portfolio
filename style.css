@@ -7,6 +7,8 @@
   --brightColor1: #bad9a2;
   --brightColor2: #9dc4b5;
   --darkerColor1: #9a98b4;
+  --darkerColor2: #585481;
+  --reddishColor: #A44A3F;
   /*  to use these variables you put var(--variableName)  */
 }
 
@@ -68,7 +70,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 
 .subHeader h2 {
   font-weight: 500;
-  font-size: 26px;
+  font-size: 30px;
   margin-top: 0px;
 }
 
@@ -85,8 +87,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 }
 
 .hoverTitle:hover {
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 600;
+  font-size: 68px;
   /* both the project and about title are hovertitles and have this appearance on hover */
 }
 
@@ -338,7 +341,20 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 /* ~~~~~~~~~~~~~~~~~~~~~ contents within the about panel ~~~~~~~~~~~~~~~~~~~ */
 
 .aboutGridLayout {
-  display: grid;
+      display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+        "greeting me"
+        "work links";
+    width: 765px;
+    margin-top: 6%;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: var(--offWhiteColor);
+    height: 450px;
+
+  /* display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 60% 40%;
   grid-template-areas:
@@ -349,7 +365,17 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
   padding: 40px;
   border-radius: 20px;
   background-color: var(--offWhiteColor);
-  height: 450px;
+  height: 450px; */
+}
+
+/* Greeting */
+.aboutGreeting {
+  grid-area: greeting;
+    font-family: "Danfo", serif;
+    margin-left: -50px;
+    margin-top: -15px;
+    font-size: 59px;
+    color: var(--reddishColor);
 }
 
 /* the paragraph describing myself on the left of the about page */
@@ -391,7 +417,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
   align-items: flex-end;
   justify-content: flex-end;
   z-index: 5;
-  margin-bottom: -20px;
+  margin-bottom: -25px;
+  font-size: 17px;
 }
 
 /* the highlight accentuating certain words, including the contact buttons */
@@ -404,7 +431,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
   position: absolute;
   width: 100%;
   height: 80%;
-  background-color: #c76d9d80;
+  /* background-color: #c76d9d80; */
+  background-color: var(--darkerColor1);
+  opacity: 50%;
   left: -2px;
   bottom: -4px;
   z-index: -1;
@@ -501,6 +530,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
   font-weight: 300;
   font-style: normal;
   /*  300-700  */
+}
+
+
+.danfo {
+  font-family: "Danfo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 0;
 }
 
 #folder0,
