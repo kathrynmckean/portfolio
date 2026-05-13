@@ -27,11 +27,13 @@ body {
 
 .firstPage {
 width: 100%;
+height: calc(100vh - 190px);
 background: rgb(226,235,152);
 background: -moz-linear-gradient(0deg, rgba(226,235,152,1) 50%, rgba(217,201,162,1) 100%);
 background: -webkit-linear-gradient(0deg, rgba(226,235,152,1) 50%, rgba(217,201,162,1) 100%);
 background: linear-gradient(0deg, rgba(226,235,152,1) 50%, rgba(217,201,162,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endColorstr="#d9c9a2",GradientType=1);
+display: flex;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ header: my name and info ~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -75,6 +77,165 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ the first panel: projects ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* new project */
+
+.miniPhotos {
+  /* margin-top: 95px; */
+  /* position: absolute; */
+      /* object-fit: cover;
+      max-height: fit-content;
+      width: 100%; */
+      /* border: 2px solid rgb(96 139 168); */
+      align-self: end;
+      min-width: 5%;
+      justify-content: space-evenly;
+      z-index: 1;
+      transition-duration: .2s;
+
+}
+
+.miniPhotos:hover {
+  transform: scale(1.05);
+}
+
+.backgroundImage {
+  z-index: 0;
+}
+
+#frame0 {
+    max-width: 13%;
+    margin-left: 1%;
+    margin-bottom: 41%;
+} 
+
+#frame1 {
+    max-width: 13%;
+    margin-left: -13%;
+    margin-bottom: 22%;
+}
+#frame2 {
+    max-width: 14%;
+    margin-left: -6%;
+    margin-bottom: 34%;
+}
+
+#frame3 {
+    max-width: 9%;
+    margin-left: -15%;
+    margin-bottom: 16%;
+}
+
+#frame4 {
+    max-width: 10%;
+    margin-left: -6%;
+    margin-bottom: 24%;
+}
+#frame5 {
+max-width: 16%;
+    margin-left: -10%;
+    margin-bottom: 13%;
+}
+#frame6 {
+     max-width: 11%;
+    margin-left: -8%;
+    margin-bottom: 34%;
+    border-radius: 20%;
+}
+#frame7 {
+    max-width: 16%;
+    margin-left: -17%;
+    margin-bottom: 3%;
+}
+#frame8 {
+    max-width: 16%;
+    margin-left: -5%;
+    border-radius: 20%;
+    margin-bottom: 19%;
+}
+#frame9 {
+    max-width: 9%;
+    margin-left: -12%;
+    margin-bottom: 7%;
+}
+#frame10 {
+    max-width: 10%;
+    margin-left: -5%;
+    margin-bottom: 17%;
+    rotate: 5deg;
+}
+#frame11 {
+    max-width: 11%;
+    margin-left: -6%;
+    margin-bottom: 25%;
+    rotate: -5deg;
+}
+#frame12 {
+    max-width: 20%;
+    margin-left: -13%;
+    margin-bottom: 3%;
+    rotate: 5deg;
+}
+#frame13 {
+    max-width: 18%;
+    margin-left: -13%;
+    margin-bottom: 15%;
+    border-radius: 20%;
+}
+#frame14 {
+    max-width: 12%;
+    margin-left: -4%;
+    margin-bottom: 7%;
+}
+#frame15 {
+    max-width: 15%;
+    margin-left: -12%;
+    margin-right: 1%;
+    margin-bottom: 26%;
+    rotate: 25deg;
+}
+
+
+.miniPhotoGrid {
+  display: flex;
+  height: calc(-400px + 100vh);
+  align-self: flex-end;
+    width: 100vw;
+    justify-content: space-around;
+  /* display: grid;
+  grid-template-areas:
+    "1a 2a 3a 4a 5a 6a 7a 8a 9a 10a"
+    "1b 2b 3b 4b 5b 6b 7b 8b 9b 10b"
+    "1c 2c 3c 4c 5c 6c 7c 8c 9c 10c";
+    height: calc(-400px + 100vh);
+    align-self: flex-end;
+    width: 100vw;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+}
+
+.projectBox {
+  display: flex;
+  background-color: #585481;
+  margin: 50px;
+}
+
+#projectImage {
+  background-color: blue;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+
+
+
+
+
+
+
+/*  */
 
 .projectWrapper {
   position: absolute;
@@ -472,7 +633,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
   width: 120px;
   height: 80px;
   border-radius: 0px 10px 15px 15px;
-  background-color: black;
+  background-color: rgb(19, 18, 18);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -490,8 +651,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 .folderFront {
   width: 120px;
   height: 90px;
-  background-color: purple;
-  border-radius: 10px 10px 5px 5px;
+  border-radius: 10px;
+  transition: .5s;
+
+}
+
+.folderFront:hover {
+  transform: skewX(-8deg);
+  margin-left: 5px;
 }
 
 .folderTitle {
@@ -545,7 +712,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 #folder0,
 #folder6,
 #folderp0,
-#folderp6 {
+#folderp7 {
   visibility: hidden !important;
 }
 

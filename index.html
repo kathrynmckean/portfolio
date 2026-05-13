@@ -40,27 +40,47 @@
           <h2>Freelance Artist</h2>
         </div>
       </div>
+      <div class="miniPhotoGrid">
+        <img src="pics/mirror.png" onclick="openProjectContents(`folderp4`)" alt="" class="miniPhotos" id="frame0"> 
+        <img src="pics/et1.png" onclick="openProjectContents(`folderp1`)" alt="" class="miniPhotos" id="frame1">
+        <img src="pics/whaleNecklace.png" onclick="openProjectContents(`folderp2`)" alt="" class="miniPhotos backgroundImage" id="frame2">
+        <img src="pics/mask.png" onclick="openProjectContents(`folderp5`)" alt="" class="miniPhotos" id="frame3">
+        <img src="pics/zeppo.png" onclick="openProjectContents(`folderp4`)" alt="" class="miniPhotos" id="frame4">
+        <img src="pics/spikynecklace.png" onclick="openProjectContents(`folderp2`)" alt="" class="miniPhotos backgroundImage" id="frame5">
+        <img src="pics/bust.png" onclick="openProjectContents(`folderp5`)" alt="" class="miniPhotos" id="frame6">
+        <img src="pics/floral.png" onclick="openProjectContents(`folderp2`)" alt="" class="miniPhotos" id="frame7">
+        <img src="pics/flamingoesBellagio.jpg" onclick="openProjectContents(`folderp5`)" alt="" class="miniPhotos backgroundImage" id="frame8">
+        <img src="pics/prettyLady.png" onclick="openProjectContents(`folderp2`)" alt="" class="miniPhotos" id="frame9">
+        <img src="pics/snoop.png" onclick="openProjectContents(`folderp4`)" alt="" class="miniPhotos" id="frame10">
+        <img src="pics/jaw necklace.png" onclick="openProjectContents(`folderp2`)" alt="" class="miniPhotos backgroundImage" id="frame11">
+        <img src="pics/loon1.png" onclick="openProjectContents(`folderp6`)" alt="" class="miniPhotos" id="frame12">
+        <img src="pics/ToastyCheez.jpg" onclick="openProjectContents(`folderp5`)" alt="" class="miniPhotos backgroundImage" id="frame13">
+        <img src="pics/toasty.png" onclick="openProjectContents(`folderp5`)" alt="" class="miniPhotos backgroundImage" id="frame14">
+        <img src="pics/woodsculpture.png" onclick="openProjectContents(`folderp5`)" alt="" class="miniPhotos" id="frame15">
+
+      </div>
     </div>
         <div class="projectWrapper" id="projectWrapper">
           <div class="projectTitle hoverTitle" onclick="openProjectContents()">projects</div>
           <div class="projectContents" id="projectContents">
+          
             <div class="click clickLeft" id="hideButtonLeft" onclick="scrollFolder(this.id)" >
               <span class="material-symbols-outlined">
                 arrow_back_ios
                 </span>
             </div>
-            
+
     <!--     the first page. becomes hidden when a project is selected     -->
           <div class="mainFrame folderPage" id="folderFrame">
            
-             <div class="tabContainer folderPage">
-                  <div class="tab coding focus" onclick="showCodingFolders()">coding</div>
-                  <div class="tab personal" onclick="showPersonalFolders()">personal</div>
-                </div>
+             <!-- <div class="tabContainer folderPage"> -->
+                  <!-- <div class="tab coding focus" onclick="showCodingFolders()">coding</div> -->
+                  <!-- <div class="tab personal" onclick="showPersonalFolders()">personal</div> -->
+                <!-- </div> -->
             
-            <div class="mainBody folderPage coding" id="mainBody">
-              <!-- grid of folders -->
+            <div class="mainBody folderPage personal" id="mainBody">
           </div>
+
             </div>
             
     <!--    the hidden second page      -->
@@ -75,11 +95,13 @@
            
            
               <div class="mainBody projectPage" id="mainBodyProjects">
+
                 <!-- first tab - overview -->
                 <div class="overview mainTitle" id="mainTitle">Filler Text</div>
                 <div class="overview mainSubtitle" id="mainSubtitle">Filler Text</div>
                 <ul class="overview mainBulletPoints" id="mainBulletPoints"></ul>
                 <a class="overview mainLink" id="mainLink" href="blank" target="_blank">view website ></a>
+
                 <!--     second tab - thoughts       -->
                 <div class="thoughts thoughtsParagraph hidden" id="thoughtsParagraph">Filler Text</div>
                
@@ -98,7 +120,7 @@
                     arrow_back_ios
                     </span>
                   </div>
-                  <span>view gallery</span>
+                  <span>view images</span>
                   <div class="pictures picNav" id="picNavRight" onclick="navigatePicture('increase')">
                     <span class="material-symbols-outlined picNav">
                       arrow_forward_ios
@@ -117,8 +139,9 @@
             </div>
 
             </div>
-        </div>
-    
+        </div> 
+        
+    <!-- about -->
         <div class="aboutWrapper" id="aboutWrapper">
           <div class="aboutTitle hoverTitle" onclick="openAboutContents()">about</div>
           <div class="aboutContents" id="aboutContents">

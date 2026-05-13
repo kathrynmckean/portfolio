@@ -1,84 +1,5 @@
 // I want to finish what I've got before going back and changing it to be more dynamic
 
-const projectData = [
-  {
-    projectId: 1,
-    title: "Gif Fortune Teller",
-    content:
-      "Using the giphy API, your fortune is told. The user inputs their question and a tangentially related gif is shown. In essence this is a giphy search bar, but more interesting.",
-    floating: ["GiphyAPI", "SVG Design", "HTML/CSS/JS"],
-    link: "https://kathrynmckean.github.io/gifFortune/",
-    thoughts:
-      "I wanted to call an API to return some sort of data but I wanted to make it fun and unusual. If I were to update it I would change the styling and placements, but I'm happy to have made something unexpected.",
-    img: "pics/gifFortune1.png",
-    color: "#33158E",
-    className: "gifFortune",
-    classNameSuffix: ".gif",
-    type: "Coding",
-  },
-  {
-    projectId: 2,
-    title: "MAYS (Pet Care)",
-    content:
-      "A webpage for a local petcare company that offers dog walking and house sitting. Figma was used to design a one-page website that leads users from introduction to booking. My goal was to keep it simple and focus on their goal: earning a new client's trust.",
-    floating: ["Figma", "UI/UX Design", "Visual Hierarchy"],
-    link: "https://dribbble.com/shots/23650506-Michelle-At-Your-Service?utm_source=Clipboard_Shot&utm_campaign=KMcKean&utm_content=Michelle%20At%20Your%20Service&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=KMcKean&utm_content=Michelle%20At%20Your%20Service&utm_medium=Social_Share",
-    thoughts:
-      "I love the use of one-page websites for small businesses; the current MAYS site is overloaded with content and difficult to navigate.",
-    img: "pics/MAYSfrontpage.png",
-    color: "#4367aa",
-    className: "petCare",
-    classNameSuffix: ".fig",
-    type: "Coding",
-  },
-  {
-    projectId: 3,
-    title: "Note Taker",
-    content:
-      "Develops CRUD skills through a simple note making page. You can create, read, update, and delete notes which are saved locally.",
-    floating: ["HTML", "CSS", "JS", "CRUD"],
-    link: "https://kathrynmckean.github.io/reactTest/",
-    thoughts:
-      "As the next step, the project aims to integrate Firebase for convenient note storage and access. Currently, the app is simply a proof of CRUD skills, adding a database will make it functional.",
-    img: "pics/notes.png",
-    color: "#588157",
-    className: "noteTaker",
-    classNameSuffix: ".js",
-    type: "Coding",
-  },
-
-  {
-    projectId: 4,
-    title: "Memory Game",
-    content:
-      "This is a simple project centered around JavaScript, focusing on state management and the utilization of for loops.",
-    link: "https://kathrynmckean.github.io/memoryGame/",
-    floating: ["HTML", "CSS", "JS", "Game States"],
-    thoughts:
-      "Most real-life projects won't resemble a game, but building this helped me understand arrays and for loops which are essential to web development.",
-    img: "pics/finishedMG.png",
-    color: "#c76d9d",
-    className: "memoryGame",
-    classNameSuffix: ".js",
-    type: "Coding",
-  },
-  {
-    projectId: 5,
-    title: "Waluigi Jail",
-    content:
-      "A project intended to develop HTML, CSS, and JavaScript skills. Users interact with the central image, triggering dynamic transformations and text display with each click, demonstrating foundational coding proficiency and creativity.",
-    floating: ["HTML", "CSS", "JS"],
-    link: "https://kathrynmckean.github.io/waluigiJail/",
-    thoughts:
-      "I think this is a very silly project. It was actually the first project I had ever worked on, but I value it as a building block toward larger projects.",
-    img: "pics/firstWaPic.png",
-    color: "#7e0cd6",
-    className: "waluigiJail",
-    classNameSuffix: ".css",
-    type: "Coding",
-  },
-];
-
 const personalProjectData = [
   // so the personal project folders are mostly just holding photos with some text at the start. I'll have an array of photos and one or two text blocks.
   {
@@ -86,85 +7,100 @@ const personalProjectData = [
     title: "ET: The Lamp",
     content:
       "Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the brown instead of his signature blue.",
-    floating: ["Design", "Handbuilding"],
-    // thoughts: "",
     img: "pics/et1.png",
     images: ["pics/et1.png", "pics/et2.png", "pics/et3.png", 'pics/et4.png'],
     color: "#36468F",
     className: "ET",
     classNameSuffix: ".png",
     type: "Personal",
-    visibility: "hidden",
+    visibility: "visible",
   },
+  //   {
+  //   projectId: "p1",
+  //   title: "ET: The Lamp",
+  //   content:
+  //     "Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the brown instead of his signature blue.",
+  //   floating: ["Design", "Handbuilding"],
+  //   images: [ 
+  //     { fileName: "pics/et1.png", description: "Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the brown instead of his signature blue." },
+  //     { fileName: "pics/et2.png", description: "2Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the brown instead of his signature blue." },
+  //     { fileName: "pics/et3.png", description: "3Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the brown instead of his signature blue." },
+  //     { fileName: "pics/et4.png", description: "4Made with additive and reductive methods. Lightweight two-part epoxy clay created the basic form which was then sculpted by hand (and dremel). This was made for someone who loves ET and ambient lighting. Astute observers will notice that ET's eyes are the brown instead of his signature blue." },
+  //     ],
+  //   color: "#36468F",
+  //   className: "ET",
+  //   classNameSuffix: ".png",
+  //   type: "Personal",
+  //   visibility: "visible",
+    
+  // },
   {
     projectId: "p2",
     title: "Metalwork",
     content:
-      "My time in metalwork has developed skills in welding, lost wax casting, and sand casting. Small-scale metalwork is a new development, but I love being able to make my friends and family handmade jewelry.",
-    link: "kathryn.mckean.github.io/memorygame/",
-    floating: ["Welding", "Lost Wax Casting", "Sand Casting"],
-    img: "pics/floral.png",
+      "Silversmithing, lost wax casting, sand casting - metalwork is time and effort intensive but can produce some gorgeous sculptures. Combining vintage elements into new jewelry is an interesting development I've been pursuing recently. Although most of my work is unique 1 of 1, lost wax casting is always a pathway to consider since multiples can be made at a rapid pace.",
     color: "#A6ABAE",
     className: "metalwork",
     classNameSuffix: ".png",
     type: "Personal",
-    visibility: "hidden",
-    images: ["pics/floral.png", "pics/hollow.png", "pics/fishy.png"],
+    visibility: "visible",
+    images: ["pics/spikynecklace.png", "pics/floral.png", "pics/prettyLady.png", "pics/whaleNecklace.png", "pics/jaw necklace.png"],
   },
   {
     projectId: "p3",
     title: "Prosthetics",
     content:
-      "I've worked in this field since 2020, fabricating both facial and limb prosthetics. My work, although uncredited, was featured on the TLC show Body Parts. I also grew a decently sized following online, amassing 7 million likes and 60,000 followers for my prosthetic content.",
-    floating: [
-      "Chair-side Manner",
-      "Lost Wax Casting",
-      "3D Printing",
-      "CAD",
-      "Resin Lamination",
-    ],
-    link: "kathryn.mckean.github.io/noteTaker/",
+      "I've worked in this field since 2020, fabricating both silicone facial and carbon fiber limb prosthetics. My work, although uncredited, was featured on the TLC docu-series Body Parts. During the start of my prosthetic career, I worked to grow a decently sized following online, amassing 7 million likes and 60,000 followers for my prosthetic content on TikTok.",
     img: "pics/pinkleg.png",
     color: "#8F7268",
     className: "prosthetics",
     classNameSuffix: ".png",
     type: "Personal",
-    visibility: "hidden",
-    images: ["pics/sparkle.png", "pics/largeOffset.png", "pics/horses.png"],
+    visibility: "visible",
+    images: ["pics/sparkle.png", "pics/horses.png", 'pics/vinyl.png'],
   },
   {
     projectId: "p4",
     title: "2D",
     content:
-      "Although textiles could be classified as 3D, I typically use fabric and other materials to bring drawings to life and thus have grouped them together. Drawing is a building block that anybody can hone and use toward other projects.",
-    floating: ["HTML", "CSS", "JS", "Design"],
-    link: "kathryn.mckean.github.io/MAYS/",
+      "Although many of these projects are 3D, I rarely make a truly 2D artwork. Instead I use fabric, acrylic, and other materials to bring drawings to life and thus have grouped them together. Drawing is a building block that anybody can hone and use toward other projects.",
     img: "pics/us.png",
     color: "#306B34",
     className: "2D",
     type: "Personal",
     classNameSuffix: ".png",
-    visibility: "hidden",
-    images: ["pics/snooop.png", "pics/zeppo.png", "pics/us.png"],
+    visibility: "visible",
+    images: ["pics/mirror.png", "pics/zeppo.png", "pics/us.png", ],
   },
   {
     projectId: "p5",
     title: "3D",
     content:
-      "When you have access to a wood cutting laser, you've gotta put it to good use! But there's a ton of materials to make art with, such as clay, monster clay (an oil-based clay), wax. Snoopy and my mini-me were both sculpted in oil-based clay and then cast in other materials like liquid plastic or resin.",
-    floating: ["HTML", "CSS", "JS", "Design"],
-    link: "kathryn.mckean.github.io/gifFortune/",
-    img: "pics/woodsculpture.png",
+    "Possibly my favorite medium - 3D sculpture. There's a wide range of projects here and even more that I haven't included. From brand activations, seasonal hotel/casino decor, cosplay props, sculpted trophies, dioramas and busts - with the right tools, anything can be made.",
     color: "#CE5374",
     className: "3D",
     classNameSuffix: ".png",
     type: "Personal",
-    visibility: "hidden",
-    images: ["pics/woodsculpture.png", "pics/snoop.png", "pics/bust.png"],
+    visibility: "visible",
+    images: ["pics/ToastyCheez.jpg", "pics/toasty.png", "pics/mask.png", "pics/flamingoesBellagio.jpg", "pics/woodsculpture.png", "pics/snoop.png", "pics/bust.png"],
+
+  },
+  {
+    projectId: "p6",
+    title: "Ceramics",
+    content:"It's an oldie but a goodie, who doesn't like ceramics? We start as kids, going to the local Color-Me-Mine for birthday parties, and as adults we realize your home can be filled with functional and beautiful ceramics. Nothing I make could be found inside a Target, I lean more towards sculptural but functional novelty ware, like you'd find at an eclectic person's estate sale.",
+    color: "#539bce",
+    className: "ceramics",
+    classNameSuffix: ".png",
+    type: "Personal",
+    visibility: "visible",
+    images: ['pics/loon1.png', "pics/frog.png", "pics/cups.png"],
   },
 ];
 
 //defining all the variables
+let getFirstPage = document.getElementById("firstPage");
+let getMiniPhotoGrid = document.querySelector('.miniPhotoGrid');
 let getHeader = document.querySelector(".header");
 let getProjectWrapper = document.getElementById("projectWrapper");
 let getProjectContents = document.getElementById("projectContents");
@@ -186,21 +122,71 @@ let getThoughtsPicture = document.getElementById("thoughtsPicture");
 
 // ~~~~~~~ FUNCTIONS THAT CONTROL PANEL OPENING/CLOSING
 
-function openProjectContents() {
+function openProjectContents(elem) {
   // determines if the panels are open and opens/closes the panels accordingly
   if (getAboutContents.classList.contains("open")) {
     closeAbout();
   } else if (!getProjectContents.classList.contains("open")) {
-    openProjects();
+    openProjects(elem);
   } else closeProjects();
 }
 
-function openProjects() {
+
+function generateRandomNum(min, max) {
+  var num = Math.random() * (max - min) + min;
+  return Math.floor(num);
+}
+
+// window.onload = function() {
+    
+//   // getFirstPage.style.height = "calc(100vh - 190px)";
+//   // console.log( getFirstPage.style.height);
+
+
+//   personalProjectData.forEach(function (elem) {
+//     // for every project
+//     // for each image on the project
+    
+//     let grabImageArray = elem.images;
+//     // let grabImagePosition = elem.positions;
+    
+//     grabImageArray.forEach (function (photo){
+//       let addImage = document.createElement("img");
+//       addImage.setAttribute("src", photo);
+//       addImage.setAttribute('class', "miniPhotos");
+//       let grabImagePositionNumber = grabImageArray.indexOf(photo);  
+//       console.log(grabImagePositionNumber)
+
+//       let assignGridArea = elem.positions[grabImagePositionNumber];
+//       // console.log('assignGridArea '+ assignGridArea)
+//       // addImage.style.gridArea = assignGridArea;
+//       addImage.setAttribute('id', assignGridArea)
+//       // addImage.setAttribute('position', "absolute");
+//       addImage.setAttribute('width', generateRandomNum(90, 115) + "%");
+//       // addImage.style.top = generateRandomNum(10, 60) + "%";
+//       // addImage.style.left = generateRandomNum(5, 85) + "%";
+//       // addImage.setAttribute('visibility', 'visible')
+
+//     getMiniPhotoGrid.appendChild(addImage);
+//     console.log('images loaded')
+//     })
+//   });
+// };
+
+function openProjects(elem) {
   // does the actual opening
   console.log("open projects");
+  // elem is source of photo, update focus image to that source
+  
   getProjectContents.style.maxHeight = "calc(100vh - 190px)";
   getProjectContents.classList.add("open");
+
   changeHeaderSize();
+  if (elem === undefined) {
+      console.log('open general, not specific')
+  } else {
+    openPersonalFolder(elem);
+  }
 }
 
 function closeProjects() {
@@ -717,9 +703,9 @@ const copyContent = async () => {
 };
 
 function preload() {
-  projectData.forEach((item) => {
-    createFolderIcon(item);
-  });
+  // projectData.forEach((item) => {
+  //   createFolderIcon(item);
+  // });
   personalProjectData.forEach((item) => {
     createFolderIcon(item);
   });
@@ -739,8 +725,5 @@ function preload() {
     getLeftClick.id = `hideButtonLeft`;
     getRightClick.id = "hideButtonRight";
   }, "300");
-
-  let getFirstPage = document.getElementById("firstPage");
-  getFirstPage.style.height = "calc(100vh - 190px)";
 }
 preload();
