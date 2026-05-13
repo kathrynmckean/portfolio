@@ -34,6 +34,7 @@ background: -webkit-linear-gradient(0deg, rgba(226,235,152,1) 50%, rgba(217,201,
 background: linear-gradient(0deg, rgba(226,235,152,1) 50%, rgba(217,201,162,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endColorstr="#d9c9a2",GradientType=1);
 display: flex;
+justify-content: center;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~ header: my name and info ~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -201,8 +202,8 @@ max-width: 16%;
   display: flex;
   height: calc(-400px + 100vh);
   align-self: flex-end;
-    width: 100vw;
-    justify-content: space-around;
+    max-width: 150vh;
+    justify-content: space-evenly;
   /* display: grid;
   grid-template-areas:
     "1a 2a 3a 4a 5a 6a 7a 8a 9a 10a"
