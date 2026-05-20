@@ -178,7 +178,7 @@ function openProjects(elem) {
   console.log("open projects");
   // elem is source of photo, update focus image to that source
   
-  getProjectContents.style.maxHeight = "calc(100vh - 190px)";
+  getProjectContents.style.maxHeight = "calc(100svh - 190px)";
   getProjectContents.classList.add("open");
 
   changeHeaderSize();
@@ -216,7 +216,7 @@ function openAboutContents() {
 
 function openAbout() {
   // does the actual opening
-  getAboutContents.style.maxHeight = "calc(100vh - 190px)";
+  getAboutContents.style.maxHeight = "calc(100svh - 190px)";
   getAboutContents.classList.add("open");
   changeHeaderSize();
 }

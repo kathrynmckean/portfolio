@@ -1,3 +1,5 @@
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~ overall info ~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* colors on the page */
@@ -83,17 +85,11 @@ justify-content: center;
 /* new project */
 
 .miniPhotos {
-  /* margin-top: 95px; */
-  /* position: absolute; */
-      /* object-fit: cover;
-      max-height: fit-content;
-      width: 100%; */
-      /* border: 2px solid rgb(96 139 168); */
-      align-self: end;
-      min-width: 5%;
-      justify-content: space-evenly;
-      z-index: 1;
-      transition-duration: .2s;
+  align-self: end;
+  min-width: 5%;
+  justify-content: space-evenly;
+  z-index: 1;
+  transition-duration: .2s;
 
 }
 
@@ -173,28 +169,28 @@ max-width: 16%;
     rotate: -5deg;
 }
 #frame12 {
-    max-width: 20%;
-    margin-left: -13%;
-    margin-bottom: 3%;
-    rotate: 5deg;
+  max-width: 20%;
+  margin-left: -13%;
+  margin-bottom: 3%;
+  rotate: 5deg;
 }
 #frame13 {
-    max-width: 18%;
-    margin-left: -13%;
-    margin-bottom: 15%;
-    border-radius: 20%;
+  max-width: 18%;
+  margin-left: -13%;
+  margin-bottom: 15%;
+  border-radius: 20%;
 }
 #frame14 {
-    max-width: 12%;
-    margin-left: -4%;
-    margin-bottom: 7%;
+  max-width: 12%;
+  margin-left: -4%;
+  margin-bottom: 7%;
 }
 #frame15 {
-    max-width: 15%;
-    margin-left: -12%;
-    margin-right: 1%;
-    margin-bottom: 26%;
-    rotate: 25deg;
+  max-width: 15%;
+  margin-left: -12%;
+  margin-right: 1%;
+  margin-bottom: 26%;
+  rotate: 25deg;
 }
 
 
@@ -202,19 +198,8 @@ max-width: 16%;
   display: flex;
   height: calc(-400px + 100vh);
   align-self: flex-end;
-    max-width: 150vh;
-    justify-content: space-evenly;
-  /* display: grid;
-  grid-template-areas:
-    "1a 2a 3a 4a 5a 6a 7a 8a 9a 10a"
-    "1b 2b 3b 4b 5b 6b 7b 8b 9b 10b"
-    "1c 2c 3c 4c 5c 6c 7c 8c 9c 10c";
-    height: calc(-400px + 100vh);
-    align-self: flex-end;
-    width: 100vw;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
-
+  max-width: 150vh;
+  justify-content: space-evenly;
 }
 
 .projectBox {
@@ -224,7 +209,6 @@ max-width: 16%;
 }
 
 #projectImage {
-  background-color: blue;
   max-width: 300px;
   max-height: 300px;
 }
@@ -488,7 +472,7 @@ max-width: 16%;
   max-height: 0px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   /*   margin-top: 5%; */
   overflow: scroll;
   transition: all 1s;
@@ -510,24 +494,11 @@ max-width: 16%;
         "greeting me"
         "work links";
     width: 765px;
-    margin-top: 6%;
+    margin: 6% 30px;
     padding: 40px;
     border-radius: 20px;
     background-color: var(--offWhiteColor);
     height: 450px;
-
-  /* display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-columns: 60% 40%;
-  grid-template-areas:
-    "work me"
-    "work links";
-  width: 765px;
-  margin-top: 6%;
-  padding: 40px;
-  border-radius: 20px;
-  background-color: var(--offWhiteColor);
-  height: 450px; */
 }
 
 /* Greeting */
@@ -538,6 +509,7 @@ max-width: 16%;
     margin-top: -15px;
     font-size: 59px;
     color: var(--reddishColor);
+        white-space: nowrap;
 }
 
 /* the paragraph describing myself on the left of the about page */
@@ -581,6 +553,7 @@ max-width: 16%;
   z-index: 5;
   margin-bottom: -25px;
   font-size: 17px;
+  white-space: nowrap;
 }
 
 /* the highlight accentuating certain words, including the contact buttons */
@@ -786,3 +759,51 @@ font-size: 15px;
 .gray {
   opacity: 20%;
   }
+
+  @media (max-width: 700px) {
+  /* hide inter-folder arrows */
+  .click {
+    display: none;
+  }
+ .picturesPage {
+  grid-template-rows: 8% 60% 10% 22%;
+  grid-template-columns: 100%;
+  grid-template-areas:         "title"        "carousel"        "nav"        "subtitle";
+  max-width: 80svw;
+  height: min-content;
+  max-height: 60svh;
+ }
+ .picSubtitle {
+  overflow: scroll;
+ }
+ .smallFont {
+  z-index: 0;
+ }
+ .mainBody.folderPage
+ {
+      /* max-width: min-content; */
+    min-width: 344px;
+    height: min-content;
+    max-height: 60svh;
+        margin: 0px 30px;
+ }
+
+
+}
+ @media (max-width: 1000px) {
+  
+ .workExperience {
+    font-size: 19px;
+ }
+ .aboutGridLayout {
+  grid-template-rows: 10% 90%;
+      height: 580px;
+      width: 500px;
+ }
+
+ .meFrame {
+    margin-top: 22px;
+ }
+
+}
+
