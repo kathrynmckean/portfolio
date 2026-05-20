@@ -760,8 +760,32 @@ font-size: 15px;
   opacity: 20%;
   }
 
-  @media (max-width: 700px) {
-  /* hide inter-folder arrows */
+
+
+
+ @media (max-width: 1000px) {
+  
+ .workExperience {
+    font-size: 19px;
+ }
+ .aboutGridLayout {
+  grid-template-rows: 10% 90%;
+      height: 580px;
+      width: 500px;
+ }
+
+ .meFrame {
+    margin-top: 22px;
+ }
+
+.aboutContents {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+}
+
+
+  @media (max-width: 800px) {
   .click {
     display: none;
   }
@@ -781,7 +805,6 @@ font-size: 15px;
  }
  .mainBody.folderPage
  {
-      /* max-width: min-content; */
     min-width: 344px;
     height: min-content;
     max-height: 60svh;
@@ -790,20 +813,42 @@ font-size: 15px;
 
 
 }
- @media (max-width: 1000px) {
-  
- .workExperience {
-    font-size: 19px;
- }
- .aboutGridLayout {
-  grid-template-rows: 10% 90%;
-      height: 580px;
-      width: 500px;
+
+@media (max-width: 600px) {
+ .picturesPage {
+  grid-template-rows: 8% 60% 10% 22%;
+  grid-template-columns: 100%;
+  grid-template-areas:         "title"        "carousel"        "nav"        "subtitle";
+  max-width: 80svw;
+  height: min-content;
+  max-height: 60svh;
  }
 
- .meFrame {
-    margin-top: 22px;
+
+  .aboutGridLayout {
+height: 570px;
+        width: 400px;
  }
+
+ .aboutGreeting {
+      font-size: 49px;
+ }
+
+     .workExperience {
+        font-size: 16px;
+    }
+
+        .aboutGridLayout {
+        height: 600px;
+        width: 400px;
+    }
+  .contactButtons {
+    font-size: 14px;
+  }
+
+  .meFrame {
+        margin-left: -85px;
+  }
+
 
 }
-
