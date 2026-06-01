@@ -132,10 +132,6 @@ function openProjectContents(elem) {
 }
 
 
-function generateRandomNum(min, max) {
-  var num = Math.random() * (max - min) + min;
-  return Math.floor(num);
-}
 
 // window.onload = function() {
     
@@ -274,47 +270,47 @@ function projectFrameClosing() {
   getRightClick.id = "hideButtonRight";
 }
 
-function showPersonalFolders() {
-  // This hides the coding folders and instead shows the personal folders
-  getMainBody.classList.add("personal");
-  getMainBody.classList.remove("coding");
+// function showPersonalFolders() {
+//   // This hides the coding folders and instead shows the personal folders
+//   getMainBody.classList.add("personal");
+//   getMainBody.classList.remove("coding");
 
-  // highlights the personal tab, unhighlights the coding tab
-  getPersonalTabTitle.classList.add("focus");
-  getCodingTabTitle.classList.remove("focus");
+//   // highlights the personal tab, unhighlights the coding tab
+//   getPersonalTabTitle.classList.add("focus");
+//   getCodingTabTitle.classList.remove("focus");
 
-  // query selector all for class of folder and coding, add hidden
-  let getCodingFolders = document.querySelectorAll(".folder.Coding");
-  getCodingFolders.forEach(function (elem) {
-    elem.classList.add("hidden");
-  });
-  // show personal projects
-  // same thing, but remove hidden
-  let getPersonalFolders = document.querySelectorAll(".folder.Personal");
-  getPersonalFolders.forEach(function (elem) {
-    elem.classList.remove("hidden");
-  });
-}
+//   // query selector all for class of folder and coding, add hidden
+//   let getCodingFolders = document.querySelectorAll(".folder.Coding");
+//   getCodingFolders.forEach(function (elem) {
+//     elem.classList.add("hidden");
+//   });
+//   // show personal projects
+//   // same thing, but remove hidden
+//   let getPersonalFolders = document.querySelectorAll(".folder.Personal");
+//   getPersonalFolders.forEach(function (elem) {
+//     elem.classList.remove("hidden");
+//   });
+// }
 
-function showCodingFolders() {
-  getMainBody.classList.remove("personal");
-  getMainBody.classList.add("coding");
+// function showCodingFolders() {
+//   getMainBody.classList.remove("personal");
+//   getMainBody.classList.add("coding");
 
-  getPersonalTabTitle.classList.remove("focus");
-  getCodingTabTitle.classList.add("focus");
-  // show coding projects
-  // query selector all for class of folder and coding, remove hidden
-  let getCodingFolders = document.querySelectorAll(".folder.Coding");
-  getCodingFolders.forEach(function (elem) {
-    elem.classList.remove("hidden");
-  });
-  // hide personal projects
-  // same thing, but add hidden
-  let getPersonalFolders = document.querySelectorAll(".folder.Personal");
-  getPersonalFolders.forEach(function (elem) {
-    elem.classList.add("hidden");
-  });
-}
+//   getPersonalTabTitle.classList.remove("focus");
+//   getCodingTabTitle.classList.add("focus");
+//   // show coding projects
+//   // query selector all for class of folder and coding, remove hidden
+//   let getCodingFolders = document.querySelectorAll(".folder.Coding");
+//   getCodingFolders.forEach(function (elem) {
+//     elem.classList.remove("hidden");
+//   });
+//   // hide personal projects
+//   // same thing, but add hidden
+//   let getPersonalFolders = document.querySelectorAll(".folder.Personal");
+//   getPersonalFolders.forEach(function (elem) {
+//     elem.classList.add("hidden");
+//   });
+// }
 
 function assignLeftRight(num) {
   // function that parses the number within the id of the opened folder, adds one, subtracts one, and assigns those to the buttons
@@ -346,59 +342,59 @@ function assignLeftRight(num) {
 
 
 
-function openCodingFolder(xyz) {
+// function openCodingFolder(xyz) {
 
-  if (getTabOverview.classList.contains("hidden")) {
-    getTabOverview.classList.remove("hidden");
-  }
-  if (getTabThoughts.classList.contains("hidden")) {
-    getTabThoughts.classList.remove("hidden");
-  }
-  if (!getTabPictures.classList.contains("hidden")) {
-    getTabPictures.classList.add("hidden");
-  }
+//   if (getTabOverview.classList.contains("hidden")) {
+//     getTabOverview.classList.remove("hidden");
+//   }
+//   if (getTabThoughts.classList.contains("hidden")) {
+//     getTabThoughts.classList.remove("hidden");
+//   }
+//   if (!getTabPictures.classList.contains("hidden")) {
+//     getTabPictures.classList.add("hidden");
+//   }
 
   
 
-  // remove 'folder' and youre left with the number uyou want to open
-  let currentNumber = parseInt(xyz.replace("folder", ""));
-  let indexNumber = Number(currentNumber) - 1;
+//   // remove 'folder' and youre left with the number uyou want to open
+//   let currentNumber = parseInt(xyz.replace("folder", ""));
+//   let indexNumber = Number(currentNumber) - 1;
 
-  assignLeftRight(currentNumber);
-  projectFrameOpening();
+//   assignLeftRight(currentNumber);
+//   projectFrameOpening();
 
-  const projectsData = projectData[indexNumber];
+//   const projectsData = projectData[indexNumber];
 
-  let title = projectsData.title ?? "N/A";
-  getTitle.innerHTML = `${title}`;
+//   let title = projectsData.title ?? "N/A";
+//   getTitle.innerHTML = `${title}`;
 
-  let subtitleContent = projectsData.content ?? "N/A";
-  getSubtitle.innerHTML = `${subtitleContent}`;
+//   let subtitleContent = projectsData.content ?? "N/A";
+//   getSubtitle.innerHTML = `${subtitleContent}`;
 
-  getBulletPoints.innerHTML = "";
-  let floating = projectsData.floating ?? [];
-  const floatingItems = floating.map((item) => {
-    let makeListItem = document.createElement("li", `${item}`);
-    makeListItem.innerHTML = item;
-    getBulletPoints.appendChild(makeListItem);
-  });
+//   getBulletPoints.innerHTML = "";
+//   let floating = projectsData.floating ?? [];
+//   const floatingItems = floating.map((item) => {
+//     let makeListItem = document.createElement("li", `${item}`);
+//     makeListItem.innerHTML = item;
+//     getBulletPoints.appendChild(makeListItem);
+//   });
 
-  let link = projectsData.link ?? "N/A";
-  getLink.setAttribute("href", `${link}`);
-  getLink.setAttribute("target", "_blank");
-  if (getLink.classList.contains("hidden")) {
-    getLink.classList.remove("hidden");
-    console.log("removing hidden from link");
-  }
+//   let link = projectsData.link ?? "N/A";
+//   getLink.setAttribute("href", `${link}`);
+//   getLink.setAttribute("target", "_blank");
+//   if (getLink.classList.contains("hidden")) {
+//     getLink.classList.remove("hidden");
+//     console.log("removing hidden from link");
+//   }
 
-  let thoughtsContent = projectsData.thoughts ?? "N/A";
-  getThoughtsParagraph.innerHTML = `${thoughtsContent}`;
+//   let thoughtsContent = projectsData.thoughts ?? "N/A";
+//   getThoughtsParagraph.innerHTML = `${thoughtsContent}`;
 
-  let imgContents = projectsData.img ?? "N/A";
-  getThoughtsPicture.src = `${imgContents}`;
+//   let imgContents = projectsData.img ?? "N/A";
+//   getThoughtsPicture.src = `${imgContents}`;
 
-  tabOverviewLoadContents();
-}
+//   tabOverviewLoadContents();
+// }
 
 
 let currentImageArray = [];

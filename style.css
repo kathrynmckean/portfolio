@@ -113,31 +113,35 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 }
 
 #frame0 {
+  /* frame */
     width: 13%;
     margin-left: clamp(10px, 1%, 100px);
     /* margin-left: 10px; */
     /* transform: translateX(10px); */
     width: max(100px, 10%);
     margin-bottom: 39svh;
-    width: clamp(140px, 14%, 300px);
+    width: clamp(150px, 14%, 300px);
 } 
 
 #frame1 {
+  /* et */
     margin-left: clamp(-60px, -4%, -20px);
     /* margin-left: -60px; */
     /* transform: translateX(-25%); */
     margin-bottom: 19svh;
-    width: clamp(130px, 13%, 300px);
+    width: clamp(150px, 13%, 300px);
 }
 #frame2 {
+  /* whale necklace */
     margin-left: clamp(-50px, -4%, -40px);
     /* margin-left: -50px; */
     /* transform: translateX(-4%); */
     margin-bottom: 34svh;
-    width: clamp(130px, 13%, 300px);
+    width: clamp(150px, 13%, 300px);
 }
 
 #frame3 {
+  /* mask */
     /* margin-left: -10%; */
     /* margin-left: -140px; */
     margin-left: clamp(-140px, -10%, -100px);
@@ -147,14 +151,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
 }
 
 #frame4 {
+  /* zeppo */
     /* margin-left: clamp(-100px, -2%, -20px); */
     /* margin-left: -30px; */
     margin-left: clamp(-30px, -2%, -20px);
     /* transform: translateX(-2%); */
     margin-bottom: 22svh;
-    width: clamp(140px, 14%, 300px);
+    width: clamp(160px, 14%, 300px);
 }
 #frame5 {
+  /* spiky necklace */
     /* margin-left: -7%; */
     /* margin-left: -90px; */
     margin-left: clamp(-90px, -7%, -70px);
@@ -163,32 +169,36 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
     width: clamp(150px, 15%, 250px);
 }
 #frame6 {
+  /* bust */
     /* margin-left: -8%; */
     /* margin-left: -135px; */
     margin-left: clamp(-135px, -8%, -90px);
     /* transform: translateX(-8%); */
     margin-bottom: 34svh;
     border-radius: 20%;
-    width: clamp(120px, 11%, 250px);
+    width: clamp(90px, 11%, 250px);
 }
 #frame7 {
+  /* flowers */
     /* margin-left: -5%; */
     /* margin-left: -50px; */
     margin-left: clamp(-50px, -5%, -50px);
     /* transform: translateX(-5%); */
     margin-bottom: 3svh;
-    width: clamp(160px, 16%, 250px);
+    width: clamp(170px, 16%, 250px);
 }
 #frame8 {
+  /* flamingoes */
     /* margin-left: -10%; */
     /* margin-left: -160px; */
     margin-left: clamp(-160px, -10%, -90px);
     /* transform: translateX(-10%); */
     border-radius: 20%;
     margin-bottom: 26svh;
-    width: clamp(160px, 16%, 250px);
+    width: clamp(180px, 16%, 250px);
 }
 #frame9 {
+  /* bronze woman */
     width: clamp(140px, 14%, 250px);
     /* margin-left: -4%; */
     /* margin-left: -50px; */
@@ -197,6 +207,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
     margin-bottom: 7svh;
 }
 #frame10 {
+  /* snoopy */
     width: clamp(90px, 9%, 250px);
     /* margin-left: -8%; */
     /* margin-left: -130px; */
@@ -206,6 +217,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
     rotate: 5deg;
 }
 #frame11 {
+  /* jaw necklace */
     width: clamp(140px, 14%, 250px);
     /* margin-left: -20px; */
     margin-left: clamp(-10px, -3%, -0px);
@@ -214,6 +226,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
     rotate: -5deg;
 }
 #frame12 {
+  /* loon */
     /* margin-left: -4%; */
     /* margin-left: -40px; */
     margin-left: clamp(-40px, -4%, -10px);
@@ -223,23 +236,26 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
     width: clamp(200px, 20%, 300px);
 }
 #frame13 {
+  /* toasty */
     /* margin-left: -14%; */
     /* margin-left: -240px; */
     margin-left: clamp(-240px, -14%, -200px);
     /* transform: translateX(-14%); */
     margin-bottom: 24svh;
     border-radius: 20%;
-    width: clamp(210px, 21%, 350px);
+    width: clamp(260px, 21%, 350px);
 }
 
 #frame14 {
+/* baby toasty */
     /* margin-left: -4%; */
     /* margin-left: -50px; */
     margin-left: clamp(-50px, -4%, -50px);
     margin-bottom: 7svh;
-    width: clamp(140px, 14%, 250px);
+    width: clamp(180px, 14%, 250px);
 }
 #frame15 {
+    /* wood sculpture */
     /* margin-left: -10%; */
     /* margin-left: -130px; */
     margin-left: clamp(-130px, -10%, -90px);
