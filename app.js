@@ -82,7 +82,7 @@ const personalProjectData = [
     classNameSuffix: ".png",
     type: "Personal",
     visibility: "visible",
-    images: ["pics/ToastyCheez.jpg", "pics/toasty.png", "pics/mask.png", "pics/flamingoesBellagio.jpg", "pics/woodsculpture.png", "pics/snoop.png", "pics/bust.png"],
+    images: ["pics/ToastyCheez.jpg", "pics/toasty.png", "pics/cheezItBowl.png", "pics/mask.png", "pics/spookyTree.png", "pics/flamingoesBellagio.jpg", "pics/woodsculpture.png", "pics/snoop.png", "pics/bust.png"],
 
   },
   {
