@@ -112,12 +112,17 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
   z-index: 0;
 }
 
+.imageFrame {
+  width: clamp(150px, 14%, 300px);
+}
+
 img {
   width: 100%;
 }
 
 #frame0 {
   /* frame */
+  /* background-color: #585481; */
     width: 13%;
     margin-left: clamp(10px, 1%, 100px);
     /* margin-left: 10px; */
