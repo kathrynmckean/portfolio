@@ -100,7 +100,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2eb98",endCo
   /* min-width: 5%; */
   justify-content: space-evenly;
   z-index: 1;
-  transition-duration: .2s;
+  /* transition-duration: .2s; */
+  transition: transform .2s ease-in-out;
   margin-bottom: 50px;
 }
 
@@ -122,173 +123,178 @@ img {
 
 #frame0 {
   /* frame */
-  /* background-color: #585481; */
-    width: 13%;
-    margin-left: clamp(10px, 1%, 100px);
-    /* margin-left: 10px; */
-    /* transform: translateX(10px); */
-    width: max(100px, 10%);
+    /* margin-left: clamp(10px, 1%, 100px);
     margin-bottom: 39svh;
-    width: clamp(150px, 14%, 300px);
+    width: clamp(180px, 14%, 300px); */
+
+    margin-left: 15px;
+    margin-bottom: 365px;
+    width: 200px;
 } 
 
 #frame1 {
   /* et */
-    margin-left: clamp(-60px, -4%, -20px);
-    /* margin-left: -60px; */
-    /* transform: translateX(-25%); */
-    margin-bottom: 19svh;
-    width: clamp(150px, 13%, 300px);
+    /* margin-left: clamp(-60px, -4%, -40px);
+    margin-bottom: 20svh;
+    width: clamp(150px, 13%, 300px); */
+
+    margin-left: -60px;
+    margin-bottom: 195px;
+    width: 185px;
 }
 #frame2 {
   /* whale necklace */
-    margin-left: clamp(-50px, -4%, -40px);
-    /* margin-left: -50px; */
-    /* transform: translateX(-4%); */
+    /* margin-left: clamp(-50px, -4%, -40px);
     margin-bottom: 34svh;
-    width: clamp(150px, 13%, 300px);
+    width: clamp(150px, 13%, 300px); */
+
+    margin-left: -60px;
+    margin-bottom: 400px;
+    width: 185px;
 }
 
 #frame3 {
   /* mask */
-    /* margin-left: -10%; */
-    /* margin-left: -140px; */
-    margin-left: clamp(-140px, -10%, -100px);
-    /* transform: translateX(-10%); */
+    /* margin-left: clamp(-140px, -10%, -100px);
     margin-bottom: 16svh;
-    width: clamp(90px, 9%, 300px);
+    width: clamp(90px, 9%, 300px); */
+    
+    margin-left: -130px;
+    margin-bottom: 150px;
+    width: 130px;
 }
 
 #frame4 {
   /* zeppo */
-    /* margin-left: clamp(-100px, -2%, -20px); */
-    /* margin-left: -30px; */
-    margin-left: clamp(-30px, -2%, -20px);
-    /* transform: translateX(-2%); */
+    /* margin-left: clamp(-30px, -2%, -20px);
     margin-bottom: 22svh;
-    width: clamp(160px, 14%, 300px);
+    width: clamp(160px, 14%, 300px); */
+
+    margin-left: -60px;
+    margin-bottom: 235px;
+    width: 200px;
 }
 #frame5 {
   /* spiky necklace */
-    /* margin-left: -7%; */
-    /* margin-left: -90px; */
-    margin-left: clamp(-90px, -7%, -70px);
-    /* transform: translateX(-7%); */
+    /* margin-left: clamp(-90px, -7%, -70px);
     margin-bottom: 7svh;
-    width: clamp(150px, 15%, 250px);
+    width: clamp(150px, 15%, 250px); */
+
+        margin-left: -90px;
+    margin-bottom: 95px;
+    width: 225px;
 }
 #frame6 {
   /* bust */
-    /* margin-left: -8%; */
-    /* margin-left: -135px; */
-    margin-left: clamp(-135px, -8%, -90px);
-    /* transform: translateX(-8%); */
-    margin-bottom: 34svh;
+    /* margin-left: clamp(-135px, -8%, -90px);
+    margin-bottom: 34svh; */
+/* 
+    width: clamp(90px, 11%, 250px); */
     border-radius: 20%;
-    width: clamp(90px, 11%, 250px);
+    margin-left: -130px;
+    margin-bottom: 345px;
+    width: 160px;
 }
 #frame7 {
   /* flowers */
-    /* margin-left: -5%; */
-    /* margin-left: -50px; */
-    margin-left: clamp(-50px, -5%, -50px);
-    /* transform: translateX(-5%); */
+    /* margin-left: clamp(-50px, -5%, -50px);
     margin-bottom: 3svh;
-    width: clamp(170px, 16%, 250px);
+    width: clamp(170px, 16%, 250px); */
+
+    margin-left: -50px;
+    margin-bottom: 30px;
+    width: 225px;
 }
 #frame8 {
   /* flamingoes */
-    /* margin-left: -10%; */
-    /* margin-left: -160px; */
-    margin-left: clamp(-160px, -10%, -90px);
-    /* transform: translateX(-10%); */
-    border-radius: 20%;
+    /* margin-left: clamp(-160px, -10%, -90px);
+    
     margin-bottom: 26svh;
-    width: clamp(180px, 16%, 250px);
+    width: clamp(180px, 16%, 250px); */
+
+    border-radius: 20%;
+    margin-left: -125px;
+    margin-bottom: 245px;
+    width: 200px;
 }
 #frame9 {
   /* bronze woman */
-    width: clamp(140px, 14%, 250px);
-    /* margin-left: -4%; */
-    /* margin-left: -50px; */
+    /* width: clamp(140px, 14%, 250px);
     margin-left: clamp(-50px, -4%, -40px);
-    /* transform: translateX(-4%); */
-    margin-bottom: 7svh;
+    margin-bottom: 7svh; */
+
+    margin-left: -65px;
+    margin-bottom: 65px;
+    width: 185px;
 }
 #frame10 {
   /* snoopy */
-    width: clamp(90px, 9%, 250px);
-    /* margin-left: -8%; */
-    /* margin-left: -130px; */
+    /* width: clamp(90px, 9%, 250px);
     margin-left: clamp(-130px, -8%, -80px);
-    /* transform: translateX(-8%); */
-    margin-bottom: 32svh;
+    margin-bottom: 32svh; */
     rotate: 5deg;
+
+    margin-left: -100px;
+    margin-bottom: 281px;
+    width: 160px;
 }
 #frame11 {
   /* jaw necklace */
-    width: clamp(140px, 14%, 250px);
-    /* margin-left: -20px; */
+    /* width: clamp(140px, 14%, 250px);
     margin-left: clamp(-10px, -3%, -0px);
-    /* transform: translateX(-3%); */
-    margin-bottom: 11svh;
+    margin-bottom: 11svh; */
+
     rotate: -5deg;
+    margin-left: -55px;
+    margin-bottom: 150px;
+    width: 170px;
 }
 #frame12 {
   /* loon */
-    /* margin-left: -4%; */
-    /* margin-left: -40px; */
-    margin-left: clamp(-40px, -4%, -10px);
-    /* transform: translateX(-4%); */
-    margin-bottom: 4svh;
+    /* margin-left: clamp(-40px, -4%, -10px); */
+    /* margin-bottom: 4svh; */
     rotate: 5deg;
-    width: clamp(200px, 20%, 300px);
+    /* width: clamp(200px, 20%, 300px); */
+
+    margin-left: -30px;
+    margin-bottom: 35px;
+    width: 245px;
 }
 #frame13 {
   /* toasty */
-    /* margin-left: -14%; */
-    /* margin-left: -240px; */
-    margin-left: clamp(-240px, -14%, -200px);
-    /* transform: translateX(-14%); */
-    margin-bottom: 24svh;
+    /* margin-left: clamp(-240px, -14%, -200px); */
+    /* margin-bottom: 24svh; */
     border-radius: 20%;
-    width: clamp(260px, 21%, 350px);
+    /* width: clamp(260px, 21%, 350px); */
+
+    margin-left: -260px;
+    margin-bottom: 250px;
+    width: 260px;
 }
 
 #frame14 {
 /* baby toasty */
-    /* margin-left: -4%; */
-    /* margin-left: -50px; */
-    margin-left: clamp(-50px, -4%, -50px);
+    /* margin-left: clamp(-50px, -4%, -50px);
     margin-bottom: 7svh;
-    width: clamp(180px, 14%, 250px);
+    width: clamp(180px, 14%, 250px); */
+
+    margin-left: -50px;
+    margin-bottom: 75px;
+    width: 180px;
 }
 #frame15 {
     /* wood sculpture */
-    /* margin-left: -10%; */
-    /* margin-left: -130px; */
-    margin-left: clamp(-130px, -10%, -90px);
-    /* transform: translateX(-10%); */
+    /* margin-left: clamp(-130px, -10%, -90px);
     margin-right: 1%;
-    margin-bottom: 35svh;
+    margin-bottom: 35svh; */
     rotate: 25deg;
-    width: clamp(140px, 14%, 250px);
+    /* width: clamp(140px, 14%, 250px); */
+
+    margin-left: -130px;
+    margin-right: 20px;
+    margin-bottom: 280px;
+    width: 175px;
 }
-
-
-
-
-.projectBox {
-  display: flex;
-  background-color: #585481;
-  margin: 50px;
-}
-
-#projectImage {
-  max-width: 300px;
-  max-height: 300px;
-}
-
 
 
 
