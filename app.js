@@ -102,6 +102,7 @@ const personalProjectData = [
 let getFirstPage = document.getElementById("firstPage");
 let getMiniPhotoGrid = document.querySelector('.miniPhotoGrid');
 let getHeader = document.querySelector(".header");
+let getHeaderBackground = document.querySelector(".headerBackground");
 let getProjectWrapper = document.getElementById("projectWrapper");
 let getProjectContents = document.getElementById("projectContents");
 let getAboutContents = document.getElementById("aboutContents");
@@ -233,19 +234,21 @@ function closeAllPanels() {
 
 function changeHeaderSize() {
   //when you open a panel the header shrinks to fit snugly alongside the panel title
-
+  
   if (getAboutContents.classList.contains("open")) {
     getHeader.classList.add("smallFont");
     getHeader.classList.remove("bigFont");
-    console.log("make small??");
+    getHeaderBackground.classList.add('smallBackground');
+    
   } else if (getProjectContents.classList.contains("open")) {
     getHeader.classList.add("smallFont");
     getHeader.classList.remove("bigFont");
-    console.log("make small??");
+    getHeaderBackground.classList.add('smallBackground');
+
   } else {
     getHeader.classList.remove("smallFont");
     getHeader.classList.add("bigFont");
-    console.log("make big??");
+    getHeaderBackground.classList.remove('smallBackground');
   }
 }
 
